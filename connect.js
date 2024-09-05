@@ -20,26 +20,23 @@ const auth = getAuth(app);
 
 signInAnonymously(auth)
 .then(pass => {
+  const uid = pass.user.uid;
   const dataRef = ref(database, 'data/' + pass.user.uid);
   console.log(pass);
-  function write(userId, name, email, imageUrl) {
-    set(ref, {
-      username: name,
-      email: email,
-      profile_picture : imageUrl
-    });
+  function write(url,data) {
+    set(ref(database, 'data/' + uid + url), data);
   }
-  onValue(ref(database, 'data/position' + pass.user.uid), (snapshot) => {
+  onValue(ref(database, 'data/position'), (snapshot) => {
     const data = snapshot.val();
+    console.log(snapshot);
   });
   function read(url) {
-    get(child(dbRef, `users/${url}`)).then((snapshot) => {
-      if (snapshot.exists()) {
-        console.log(snapshot.val());
-      } else {
-        console.log("No data available");
-      }
-    }).catch((error) => {
+    get(child(dataRef, `users/${url}`))
+    .then((snapshot) => {
+      if (snapshot.exists()) console.log(snapshot.val());
+      else console.log("No data available");
+    })
+    .catch((error) => {
       console.error(error);
     });
   }
