@@ -44,7 +44,7 @@ signInAnonymously(auth)
     });
   }
   const newPostKey = push(child(ref(db), 'data'));
-  console.log(newPostKey)
+  console.log(newPostKey);
 })
 .catch(error => {
   const errorCode = error.code;
