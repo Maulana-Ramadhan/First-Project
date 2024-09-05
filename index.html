@@ -7,6 +7,7 @@
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+      import { getDatabase } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
       const firebaseConfig = {
         apiKey: "AIzaSyAY2bOvEZnMlNOSuJAHjHXA38LXyca1qG0",
         authDomain: "myproject-fef24.firebaseapp.com",
@@ -15,7 +16,8 @@
         storageBucket: "myproject-fef24.appspot.com",
         messagingSenderId: "330858606744",
         appId: "1:330858606744:web:d36923fdbb80e5932020ed",
-        measurementId: "G-CSFLLP262Z"
+        measurementId: "G-CSFLLP262Z",
+        databaseURL: "",
       };
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
