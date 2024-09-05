@@ -1,7 +1,7 @@
 console.log("walaw");
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+import { getDatabase, ref, set, get} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
 const firebaseConfig = {
     apiKey: "AIzaSyAY2bOvEZnMlNOSuJAHjHXA38LXyca1qG0",
@@ -16,16 +16,26 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase(app);
-const auth = getAuth();
+const auth = getAuth(app);
+const dataRef = ref(database, 'data/' + userId);
+
 signInAnonymously(auth)
 .then(pass => {
   console.log(pass);
+  function writeUserData(userId, name, email, imageUrl) {
+  set(ref, {
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}
 })
 .catch(error => {
   const errorCode = error.code;
   const errorMessage = error.message;
   console.error(errorMessage);
 });
+
 onAuthStateChanged(auth, user => {
   if (user) {
     const uid = user.uid;
