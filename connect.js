@@ -23,7 +23,7 @@ signInAnonymously(auth)
 .then(pass => {
   console.log(pass);
   function writeUserData(userId, name, email, imageUrl) {
-  set(ref, {
+  set(ref + uid, {
     username: name,
     email: email,
     profile_picture : imageUrl
