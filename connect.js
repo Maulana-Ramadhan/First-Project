@@ -17,11 +17,11 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase(app);
 const auth = getAuth(app);
-const dataRef = ref(database, 'data/');
 
 signInAnonymously(auth)
 .then(pass => {
   console.log(pass);
+  const dataRef = ref(database, 'data/' + user.uid);
   function writeUserData(userId, name, email, imageUrl) {
   set(ref + uid, {
     username: name,
