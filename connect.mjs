@@ -17,18 +17,17 @@ const analytics = getAnalytics(app);
 const database = getDatabase(app);
 const auth = getAuth();
 signInAnonymously(auth)
-    .then(pass => {
-        console.log(pass);
-    })
-    .catch(error => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error(errorMessage);
-    });
+.then(pass => {
+  console.log(pass);
+})
+.catch(error => {
+  const errorCode = error.code;
+  const errorMessage = error.message;
+  console.error(errorMessage);
+});
 onAuthStateChanged(auth, user => {
-    if (user) {
-        const uid = user.uid;
-        console.log(uid);
-    } else {
-    }
+  if (user) {
+    const uid = user.uid;
+    console.log(uid);
+  } else {}
 });
