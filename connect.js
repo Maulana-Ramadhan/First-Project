@@ -23,12 +23,12 @@ signInAnonymously(auth)
   console.log(pass);
   const dataRef = ref(database, 'data/' + user.uid);
   function writeUserData(userId, name, email, imageUrl) {
-  set(ref + uid, {
-    username: name,
-    email: email,
-    profile_picture : imageUrl
-  });
-}
+    set(ref, {
+      username: name,
+      email: email,
+      profile_picture : imageUrl
+    });
+  }
 })
 .catch(error => {
   const errorCode = error.code;
