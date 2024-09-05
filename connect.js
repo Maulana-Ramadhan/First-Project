@@ -27,7 +27,7 @@ signInAnonymously(auth)
     set(ref(database, 'data/' + uid + url), data);
   };
   window.move = function(x,y) {
-    set(ref(database, 'data/position' + uid), {x,y});
+    set(ref(database, 'data/position/' + uid), {x,y});
   };
   move(0,0);
   onValue(ref(database, 'data/position'), (snapshot) => {
