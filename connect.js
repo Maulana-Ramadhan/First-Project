@@ -43,7 +43,7 @@ signInAnonymously(auth)
       console.error(error);
     });
   }
-  const newPostKey = push(child(ref(database), 'data'));
+  const newPostKey = push(child(ref(database), 'data')).key;
   console.log(newPostKey);
 })
 .catch(error => {
