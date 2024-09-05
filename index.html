@@ -6,7 +6,7 @@
     <style src="style.css" type="text/css" media="all"></style>
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+      import { getAnalytics, getAuth } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
       import { getDatabase } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
       const firebaseConfig = {
         apiKey: "AIzaSyAY2bOvEZnMlNOSuJAHjHXA38LXyca1qG0",
@@ -22,6 +22,27 @@
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
       const database = getDatabase(app);
+      const auth = getAuth();
+  signInAnonymously(auth)
+    .then(() => {
+      // Signed in..
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ...
+    });
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/auth.user
+      const uid = user.uid;
+      // ...
+    } else {
+      // User is signed out
+      // ...
+    }
+  });
     </script>
     <script src="script.js" type="text/javascript" charset="utf-8" defer></script>
     <title></title>
