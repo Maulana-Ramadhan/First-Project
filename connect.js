@@ -29,7 +29,7 @@ signInAnonymously(auth)
       profile_picture : imageUrl
     });
   }
-  onValue(ref(database, 'data/position' + pass.user.uid + '/starCount'), (snapshot) => {
+  onValue(ref(database, 'data/position' + pass.user.uid), (snapshot) => {
     const data = snapshot.val();
   });
   function read(url) {
@@ -43,8 +43,6 @@ signInAnonymously(auth)
       console.error(error);
     });
   }
-  const newPostKey = push(child(ref(database), 'data')).key;
-  console.log(newPostKey);
 })
 .catch(error => {
   const errorCode = error.code;
