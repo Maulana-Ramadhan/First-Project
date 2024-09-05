@@ -32,6 +32,7 @@ signInAnonymously(auth)
   move(0,0);
   onValue(ref(database, 'data/position'), (snapshot) => {
     const data = snapshot.val();
+    window.matane = snapshot;
     console.log(snapshot);
   });
   function read(url) {
