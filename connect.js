@@ -29,6 +29,7 @@ signInAnonymously(auth)
   window.move = function(x,y) {
     set(ref(database, 'data/position' + uid), {x,y});
   };
+  move(0,0);
   onValue(ref(database, 'data/position'), (snapshot) => {
     const data = snapshot.val();
     console.log(snapshot);
