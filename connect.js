@@ -1,7 +1,7 @@
 console.log("walaw");
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
-import { getDatabase, ref, set, get, onValue} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+import { getDatabase, ref, set, get, onValue, child} from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
 const firebaseConfig = {
     apiKey: "AIzaSyAY2bOvEZnMlNOSuJAHjHXA38LXyca1qG0",
@@ -18,16 +18,30 @@ const analytics = getAnalytics(app);
 const database = getDatabase(app);
 const auth = getAuth(app);
 
-  const dataRef = ref(database, 'data/' + auth.currentUser.uid);
 signInAnonymously(auth)
 .then(pass => {
+  const dataRef = ref(database, 'data/' + pass.user.uid);
   console.log(pass);
-  function writeUserData(userId, name, email, imageUrl) {
+  function write(userId, name, email, imageUrl) {
     set(ref, {
       username: name,
       email: email,
       profile_picture : imageUrl
     });
+    onValue(ref(db, 'data/position' + pass.user.uid + '/starCount'), (snapshot) => {
+      const data = snapshot.val();
+    });
+    function read(url) {
+      get(child(dbRef, `users/${url}`)).then((snapshot) => {
+        if (snapshot.exists()) {
+          console.log(snapshot.val());
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });
+    }
   }
 })
 .catch(error => {
