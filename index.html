@@ -33,7 +33,7 @@
         console.error(errorMessage);
       });
       onAuthStateChanged(auth, (user) => {
-        if (user) { const uid = user.uid;}
+        if (user) { const uid = user.uid; console.log(uid);}
         else {}
       });
     </script>
