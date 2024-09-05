@@ -26,6 +26,9 @@ signInAnonymously(auth)
   window.write = function(url,data) {
     set(ref(database, 'data/' + uid + url), data);
   };
+  window.move = function(x,y) {
+    set(ref(database, 'data/position' + uid), {x,y});
+  };
   onValue(ref(database, 'data/position'), (snapshot) => {
     const data = snapshot.val();
     console.log(snapshot);
