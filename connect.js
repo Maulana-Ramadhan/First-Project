@@ -23,9 +23,9 @@ signInAnonymously(auth)
   const uid = pass.user.uid;
   const dataRef = ref(database, 'data/' + pass.user.uid);
   console.log(pass);
-  function write(url,data) {
+  window.write = function(url,data) {
     set(ref(database, 'data/' + uid + url), data);
-  }
+  };
   onValue(ref(database, 'data/position'), (snapshot) => {
     const data = snapshot.val();
     console.log(snapshot);
