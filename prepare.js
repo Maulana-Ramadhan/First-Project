@@ -1,7 +1,7 @@
 const playersName = {};
 
-inputName.addEventListener("click", a => {
-  set(fbg.ref(database, `data/users/${pass.user.uid}/name`), a.srcElement.value);
+ConfirmInputName.addEventListener("click", a => {
+  set(fbg.ref(database, `data/users/${pass.user.uid}/name`), inputName.value);
   for (let i of playersName) {
     const a = document.createElement("div");
     a.innerText = i;
