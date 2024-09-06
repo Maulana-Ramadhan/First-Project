@@ -56,7 +56,7 @@ onAuthStateChanged(auth, user => {
     const uid = user.uid;
     console.log(uid);
     onValue(ref(database, 'data/users'), (snapshot) => {
-      const data = snapshot.key();
+      const data = snapshot;
       console.log(data);
     });
   } else {}
