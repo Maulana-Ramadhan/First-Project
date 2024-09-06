@@ -1,6 +1,6 @@
 
-console.log(fbg);
 console.log(window.fbg);
+console.log(fbg);
 fbg.onAuthStateChanged(auth, user => {
   if (user) {
     onValue(ref(database, `data/users/${pass.user.uid}/name`), (sp) => playersName[pass.user.uid] = sp.val());
