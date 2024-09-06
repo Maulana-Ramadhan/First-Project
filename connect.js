@@ -21,10 +21,10 @@ const auth = getAuth(app);
 signInAnonymously(auth)
 .then(pass => {
   const uid = pass.user.uid;
-  const dataRef = ref(database, 'data/' + pass.user.uid);
+  const dataRef = ref(database, 'data/users' + pass.user.uid);
   console.log(pass);
   window.write = function(url,data) {
-    set(ref(database, 'data/' + uid + url), data);
+    set(ref(database, 'data/users/' + uid + url), data);
   };
   window.Wmove = function(x,y) {
     set(ref(database, 'data/position/' + uid), {x,y});
@@ -35,7 +35,7 @@ signInAnonymously(auth)
     console.log(snapshot);
   });
   function read(url) {
-    get(child(dataRef, `users/${url}`))
+    get(ref(database, `data/${url}`))
     .then((snapshot) => {
       if (snapshot.exists()) console.log(snapshot.val());
       else console.log("No data available");
@@ -55,6 +55,9 @@ onAuthStateChanged(auth, user => {
   if (user) {
     const uid = user.uid;
     console.log(uid);
-    PlayersName[uid];
+    onValue(ref(database, 'data/users'), (snapshot) => {
+      const data = snapshot.key();
+      console.log(data);
+    });
   } else {}
 });
