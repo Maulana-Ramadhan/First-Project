@@ -11,8 +11,11 @@ fbg.onAuthStateChanged(fbg.auth, check => {
   } else {
   }
 });
-fbg.onAuthStateChanged(fbg.auth, user => {
-  console.log(user);
+fbg.onAuthStateChanged(fbg.auth, check => {
+  console.log(check);
+  if (check) {
+    console.log(fbg);
+  }
 });
 fbg.signInAnonymously(fbg.auth).then(pass => {
   ConfirmInputName.addEventListener("click", a => {
