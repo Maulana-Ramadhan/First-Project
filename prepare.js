@@ -7,7 +7,7 @@ fbg.onAuthStateChanged(fbg.auth, user => {
   for (let i of playerName) {
     const a = document.createElement("div");
     a.innerText = i;
-    playerListMenu.innerHTML.appendChild(document.createElement("br"));
+    playerListMenu.innerHTML.appendChild(a);
     playerListMenu.innerHTML.appendChild(document.createElement("br"));
   }
 });
