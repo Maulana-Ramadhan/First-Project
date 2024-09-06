@@ -19,7 +19,9 @@
 //   console.log("error");
 // });
 
-fbg.signInAnonymously(fbg.auth);
+fbg.signInAnonymously(fbg.auth).then(a => {
+  playerListMenu.innerText += "1 palelu \n";
+});
 fbg.onAuthStateChanged(fbg.auth, check => {
   console.log(check);
 });
