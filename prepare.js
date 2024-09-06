@@ -12,6 +12,7 @@ ConfirmInputName.addEventListener("click", a => {
 fbg.onAuthStateChanged(fbg.auth, user => {
   if (user) {
     onValue(fbg.ref(fbg.database, `data/users/${pass.user.uid}/name`), (sp) => playersName[pass.user.uid] = sp.val());
+    console.log(value);
   } else {}
   for (let i of playersName) {
     const a = document.createElement("div");
@@ -19,10 +20,12 @@ fbg.onAuthStateChanged(fbg.auth, user => {
     playerListMenu.innerHTML.appendChild(a);
     playerListMenu.innerHTML.appendChild(document.createElement("br"));
   }
-  console.log(value);
+});
+fbg.onAuthStateChanged(fbg.auth, user => {
+  console.log(user);
 });
 fbg.signInAnonymously(fbg.auth).then(pass => {
-  
+  console.log("login");
 }).catch(error => {
-  
+  console.log("error");
 });
