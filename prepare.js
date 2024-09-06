@@ -23,5 +23,5 @@ fbg.signInAnonymously(fbg.auth).then(a => {
   console.log(a);
 });
 fbg.onAuthStateChanged(fbg.auth, check => {
-  playerListMenu.innerText += "1 palelu \n";
+  playerListMenu.innerText += "1 wadidaw \n";
 });
