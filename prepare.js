@@ -7,6 +7,7 @@ fbg.onAuthStateChanged(fbg.auth, check => {
       playersName[check.uid] = sp.val();
       playerListMenu.innerHTML += `<div>${playersName[check.uid]}</div><br/>`;
     });
+    console.log(check);
   }
 });
 fbg.signInAnonymously(fbg.auth).then(pass => {
