@@ -55,9 +55,9 @@ onAuthStateChanged(auth, user => {
   if (user) {
     const uid = user.uid;
     console.log(uid);
-    onValue(ref(database, 'data/users'), (snapshot) => {
-      const data = snapshot;
-      console.log(data);
+    onValue(ref(database, `data/users/${uid}/name`), (snapshot) => {
+      const data = snapshot.val();
+      playersName[uid] = data;
     });
   } else {}
 });
