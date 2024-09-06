@@ -1,2 +1,1 @@
-console.log("galoo");
-console.log(mau);
+playerListMenu.innerHTML.appendChild(document.createElement("br"))
