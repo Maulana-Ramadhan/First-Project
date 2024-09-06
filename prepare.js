@@ -1,7 +1,7 @@
 const playersName = {};
 
 ConfirmInputName.addEventListener("click", a => {
-  fbg.set(fbg.ref(database, `data/users/${pass.user.uid}/name`), inputName.value);
+  fbg.set(fbg.ref(fbg.database, `data/users/${pass.user.uid}/name`), inputName.value);
   for (let i of playersName) {
     const a = document.createElement("div");
     a.innerText = i;
@@ -11,7 +11,7 @@ ConfirmInputName.addEventListener("click", a => {
 });
 fbg.onAuthStateChanged(fbg.auth, user => {
   if (user) {
-    onValue(fbg.ref(database, `data/users/${pass.user.uid}/name`), (sp) => playersName[pass.user.uid] = sp.val());
+    onValue(fbg.ref(fbg.database, `data/users/${pass.user.uid}/name`), (sp) => playersName[pass.user.uid] = sp.val());
   } else {}
   for (let i of playersName) {
     const a = document.createElement("div");
