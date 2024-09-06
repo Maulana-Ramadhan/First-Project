@@ -26,10 +26,9 @@ signInAnonymously(auth)
   window.write = function(url,data) {
     set(ref(database, 'data/' + uid + url), data);
   };
-  window.move = function(x,y) {
+  window.Wmove = function(x,y) {
     set(ref(database, 'data/position/' + uid), {x,y});
   };
-  move(0,0);
   onValue(ref(database, 'data/position'), (snapshot) => {
     const data = snapshot.val();
     window.matane = snapshot;
@@ -56,5 +55,6 @@ onAuthStateChanged(auth, user => {
   if (user) {
     const uid = user.uid;
     console.log(uid);
+    PlayersName[uid]
   } else {}
 });
