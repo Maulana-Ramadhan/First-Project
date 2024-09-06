@@ -1,11 +1,14 @@
 const playersName = {};
 
 fbg.onAuthStateChanged(fbg.auth, check => {
-  console.log(check);
   if (check) {
     fbg.onValue(fbg.ref(fbg.database, `data/users/${check.uid}/name`), sp => {
       playersName[check.uid] = sp.val();
-      console.log("value");
+      playerListMenu.innerHTML += `<div>${playersName[check.uid]}</div><br/>`;
+      // const a = document.createElement("div");
+      // a.innerText = i;
+      // playerListMenu.innerHTML.appendChild(a);
+      // playerListMenu.innerHTML.appendChild(document.createElement("br"));
     });
   }
 });
