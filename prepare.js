@@ -1,9 +1,8 @@
 
-console.log(window.fbg);
-console.log(fbg);
-fbg.onAuthStateChanged(auth, user => {
+
+fbg.onAuthStateChanged(fbg.auth, user => {
   if (user) {
-    onValue(ref(database, `data/users/${pass.user.uid}/name`), (sp) => playersName[pass.user.uid] = sp.val());
+    onValue(fbg.ref(database, `data/users/${pass.user.uid}/name`), (sp) => playersName[pass.user.uid] = sp.val());
   } else {}
   for (let i of playerName) {
     const a = document.createElement("div");
@@ -12,7 +11,7 @@ fbg.onAuthStateChanged(auth, user => {
     playerListMenu.innerHTML.appendChild(document.createElement("br"));
   }
 });
-fbg.signInAnonymously(auth).then(pass => {
+fbg.signInAnonymously(fbg.auth).then(pass => {
   
 }).catch(error => {
   
