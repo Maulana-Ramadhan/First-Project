@@ -1,1 +1,0 @@
-playerListMenu.innerHTML.appendChild(document.createElement("br"))
