@@ -32,7 +32,6 @@ signInAnonymously(auth)
   onValue(ref(database, 'data/position'), (snapshot) => {
     const data = snapshot.val();
     window.matane = snapshot;
-    console.log(snapshot);
   });
   function read(url) {
     get(ref(database, `data/${url}`))
@@ -54,7 +53,6 @@ signInAnonymously(auth)
 onAuthStateChanged(auth, user => {
   if (user) {
     const uid = user.uid;
-    console.log(uid);
     onValue(ref(database, `data/users/${uid}/name`), (snapshot) => {
       const data = snapshot.val();
       playersName[uid] = data;
