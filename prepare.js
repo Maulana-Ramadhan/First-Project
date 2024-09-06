@@ -9,11 +9,11 @@ ConfirmInputName.addEventListener("click", a => {
     playerListMenu.innerHTML.appendChild(document.createElement("br"));
   }
 });
-fbg.onAuthStateChanged(fbg.auth, user => {
-  if (user) {
+fbg.onAuthStateChanged(fbg.auth, check => {
+  if (check) {
     console.log("user");
-    fbg.onValue(fbg.ref(fbg.database, `data/users/${pass.user.uid}/name`), (sp) => {
-      playersName[pass.user.uid] = sp.val();
+    fbg.onValue(fbg.ref(fbg.database, `data/users/${check.user.uid}/name`), (sp) => {
+      playersName[check.user.uid] = sp.val();
     });
     console.log("user");
   } else {
