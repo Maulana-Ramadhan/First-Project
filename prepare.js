@@ -12,11 +12,11 @@ ConfirmInputName.addEventListener("click", a => {
 fbg.onAuthStateChanged(fbg.auth, user => {
   if (user) {
     onValue(fbg.ref(fbg.database, `data/users/${pass.user.uid}/name`), (sp) => playersName[pass.user.uid] = sp.val());
-    console.log(user);
+    console.log("user");
   } else {
-    console.log(user);
-    
+    console.log("user");
   }
+    console.log("user");
 });
 fbg.onAuthStateChanged(fbg.auth, user => {
   console.log(user);
