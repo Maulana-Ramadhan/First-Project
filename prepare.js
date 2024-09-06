@@ -1,7 +1,7 @@
 const playersName = {};
 let count = 0;
 fbg.onAuthStateChanged(fbg.auth, check => {
-  console.log(count++);
+  console.log(check);
   if (check) {
     fbg.onValue(fbg.ref(fbg.database, `data/users/${check.uid}/name`), sp => {
       playersName[check.uid] = sp.val();
