@@ -55,6 +55,6 @@ onAuthStateChanged(auth, user => {
   if (user) {
     const uid = user.uid;
     console.log(uid);
-    PlayersName[uid]
+    PlayersName[uid];
   } else {}
 });
