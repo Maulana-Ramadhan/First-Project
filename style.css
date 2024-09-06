@@ -6,4 +6,10 @@ html, document, body, body div {
 #inputName {
   top: 50px;
   left: 100px;
+  size: 2;
+}
+#connectButton {
+  size: 3;
+  top: 100px;
+  left: 50px;
 }
