@@ -1,0 +1,9 @@
+html, document, body, body div {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+#inputName {
+  top: 50px;
+  left 100px;
+}
