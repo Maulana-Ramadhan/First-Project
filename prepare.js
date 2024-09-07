@@ -4,13 +4,15 @@ const myColor = function() {
 }();
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
-  console.log(sp);
+  fbg.onValue(fbg.ref(fbg.database, 'data/users/' + sp.val()), (sp) => {
+    console.log(sp);
+  });
 });
-fbg.onAuthStateChanged(fbg.auth, user => {
+fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), true);
     fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {x:0,y:0,myColor});
   } else {
-    fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
+    fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), user.uid);
   }
 });
