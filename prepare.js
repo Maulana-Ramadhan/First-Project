@@ -38,9 +38,9 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
 });
 analog.addEventListener("click", a => {
   switch (a.target.id) {
-    case 'atasAnalog': real[1] += 50; break;
+    case 'atasAnalog': real[1] -= 50; break;
     case 'kananAnalog': real[0] += 50; break;
-    case 'bawahAnalog': real[1] -= 50; break;
+    case 'bawahAnalog': real[1] += 50; break;
     case 'kiriAnalog': real[0] -= 50; break;
   }
   fbg.set(fbg.ref(fbg.database, 'data/users/' + me), real);
