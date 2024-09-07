@@ -20,4 +20,5 @@ html, document, body, body div {
   border-top-right-radius: 25%;
   transform: translate(0,0);
   transition: transform 1s linear;
+  background-color: teal;
 }
