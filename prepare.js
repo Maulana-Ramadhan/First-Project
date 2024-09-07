@@ -4,15 +4,20 @@ const myColor = function() {
 }();
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
+  const thid = sp._node.children_.root_.key;
+  const el = document.createElement("div");
+  el.id = thid;
+  el.className = "players";
+  el.style.backgroundColor = 
   window.waka = sp;
-  fbg.onValue(fbg.ref(fbg.database, 'data/users/' + sp._node.children_.root_.key), (sp) => {
+  fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/pos'), (spm) => {
     
   });
 });
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
-    fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), true);
-    fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {pos:[0,0],myColor});
+    fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), [0,0]);
+    fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), myColor);
   } else {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
   }
