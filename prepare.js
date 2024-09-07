@@ -23,3 +23,9 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
   }
 });
+
+const el = document.createElement("div");
+el.id = "thid";
+el.classList.add("players");
+document.body.appendChild(el);
+  //el.style.backgroundColor = sp.child(thid).val();
