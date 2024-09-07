@@ -26,11 +26,11 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), [0,0]);
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), myColor);
     const el = document.createElement("div");
+    console.log(playrs,user.uid,el,playrs[user.uid]);
     el.id = thid;
     el.classList.add("players");
     el.style.backgroundColor = sp.child(thid).val();
     document.body.appendChild(el);
-    console.log(playrs,user.uid,el,playrs[user.uid]);
     playrs[user.uid] = el;
   } else {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
