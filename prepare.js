@@ -6,15 +6,16 @@ let me = "";
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const thid = sp._node.children_.root_.key;
-  const el = document.createElement("div");
-  el.id = thid;
-  el.classList.add("players");
-  el.style.backgroundColor = sp.child(thid).val();
-  document.body.appendChild(el);
-  window.waka = sp;
-  fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/pos'), (spm) => {
-    el.style.transform = `translate(${spm[0]}px,${spm[1]}px)`;
-  });
+  if (me != thid) {
+    const el = document.createElement("div");
+    el.id = thid;
+    el.classList.add("players");
+    el.style.backgroundColor = sp.child(thid).val();
+    document.body.appendChild(el);
+    fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/pos'), (spm) => {
+      el.style.transform = `translate(${spm[0]}px,${spm[1]}px)`;
+    });
+  }
 });
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   let me = user.uid;
