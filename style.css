@@ -21,3 +21,7 @@ html, document, body, body div {
   transform: translate(0,0);
   transition: transform 1s linear;
 }
+#analog {
+  width: 90vmin;
+  height: 90vmin;
+}
