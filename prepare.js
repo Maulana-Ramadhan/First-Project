@@ -4,7 +4,7 @@ const myColor = function() {
 }();
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
-  const thid = sp._node.children_.root_.key;
+  window.thid = sp._node.children_.root_.key;
   const el = document.createElement("div");
   el.id = thid;
   el.className = "players";
