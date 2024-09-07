@@ -3,6 +3,7 @@ const myColor = function() {
   return rName[Math.floor(Math.random()*12)];
 }();
 let me = "";
+const real = [0,0];
 const playrs = {};
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
@@ -35,5 +36,10 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
   }
 });
 analog.addEventListener("click", a => {
-  console.log(a);
+  switch (a.target.id) {
+    case 'atasAnalog':
+      real[1] += 50;
+      fbg.set(fbg.ref(fbg.database, 'data/users/' + me), real);
+      break;
+  }
 });
