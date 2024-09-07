@@ -22,8 +22,10 @@ html, document, body, body div {
   transition: transform 1s linear;
 }
 #analog {
+  position: fixed;
   width: 90vmin;
   height: 90vmin;
+  bottom: 0;
 }
 #atasAnalog{
   width: 30vmin;
