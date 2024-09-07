@@ -3,6 +3,7 @@ const myColor = function() {
   return rName[Math.floor(Math.random()*12)];
 }();
 let me = "";
+const playrs = {};
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const thid = sp._node.children_.root_.key;
@@ -28,6 +29,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     el.classList.add("players");
     el.style.backgroundColor = sp.child(thid).val();
     document.body.appendChild(el);
+    playrs[user.uid] = el;
   } else {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
   }
