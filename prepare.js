@@ -29,9 +29,9 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     el.id = me;
     el.classList.add("players");
     el.style.backgroundColor = myColor;
-    console.log(playrs,user.uid,el,playrs[user.uid]);
     document.body.appendChild(el);
     playrs[user.uid] = el;
+    console.log(playrs,user.uid,el,playrs[user.uid]);
   } else {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
   }
