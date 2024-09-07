@@ -36,4 +36,4 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
 });
 analog.addEventListener("click", a => {
   console.log(a);
-})
+});
