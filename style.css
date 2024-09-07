@@ -30,22 +30,26 @@ html, document, body, body div {
   height: 30vmin;
   left: calc(100vmin / 3);
   top: 0;
+  background-color: #ff0000;
 }
 #kananAnalog{
   width: 30vmin;
   height: 30vmin;
   left: calc(100vmin / 3 * 2);
   top: calc(100vmin / 3);
+  background-color: #12ff00;
 }
 #bawahAnalog{
   width: 30vmin;
   height: 30vmin;
   left: calc(100vmin / 3);
   top: calc(100vmin / 3 * 2);
+  background-color: #0073ff;
 }
 #kiriAnalog{
   width: 30vmin;
   height: 30vmin;
   left: 0;
   top: calc(100vmin / 3);
+  background-color: #ff00c7;
 }
