@@ -4,11 +4,11 @@ const myColor = function() {
 }();
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
-  window.thid = sp._node.children_.root_.key;
+  const thid = sp._node.children_.root_.key;
   const el = document.createElement("div");
   el.id = thid;
   el.className = "players";
-  el.style.backgroundColor = thid;
+  el.style.backgroundColor = sp.child(thid).val();
   window.waka = sp;
   fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/pos'), (spm) => {
     
