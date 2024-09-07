@@ -7,7 +7,7 @@ fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const thid = sp._node.children_.root_.key;
   const el = document.createElement("div");
   el.id = thid;
-  el.className = "players";
+  el.classList.add("players");
   el.style.backgroundColor = sp.child(thid).val();
   document.body.appendChild(el);
   window.waka = sp;
