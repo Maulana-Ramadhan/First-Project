@@ -28,7 +28,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     const el = document.createElement("div");
     el.id = me;
     el.classList.add("players");
-    el.style.backgroundColor = sp.child(thid).val();
+    el.style.backgroundColor = myColor;
     console.log(playrs,user.uid,el,playrs[user.uid]);
     document.body.appendChild(el);
     playrs[user.uid] = el;
