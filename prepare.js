@@ -34,3 +34,6 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
   }
 });
+analog.addEventListener("click", a => {
+  console.log(a);
+})
