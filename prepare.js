@@ -4,6 +4,7 @@ const myColor = function() {
 }();
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
+  window.waka = sp;
   console.log(sp);
   // fbg.onValue(fbg.ref(fbg.database, 'data/users/' + sp.val()), (sp) => {
     
