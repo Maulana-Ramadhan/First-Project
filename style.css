@@ -31,3 +31,21 @@ html, document, body, body div {
   left: calc(100vmin / 3);
   top: 0;
 }
+#kananAnalog{
+  width: 30vmin;
+  height: 30vmin;
+  left: calc(100vmin / 3 * 2);
+  top: calc(100vmin / 3);
+}
+#bawahAnalog{
+  width: 30vmin;
+  height: 30vmin;
+  left: calc(100vmin / 3);
+  top: calc(100vmin / 3 * 2);
+}
+#kiriAnalog{
+  width: 30vmin;
+  height: 30vmin;
+  left: 0;
+  top: calc(100vmin / 3);
+}
