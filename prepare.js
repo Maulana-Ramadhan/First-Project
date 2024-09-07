@@ -4,9 +4,10 @@ const myColor = function() {
 }();
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
-  fbg.onValue(fbg.ref(fbg.database, 'data/users/' + sp.val()), (sp) => {
-    console.log(sp);
-  });
+  console.log(sp);
+  // fbg.onValue(fbg.ref(fbg.database, 'data/users/' + sp.val()), (sp) => {
+    
+  // });
 });
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
