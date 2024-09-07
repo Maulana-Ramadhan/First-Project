@@ -25,3 +25,9 @@ html, document, body, body div {
   width: 90vmin;
   height: 90vmin;
 }
+#atasAnalog{
+  width: 30vmin;
+  height: 30vmin;
+  left: calc(100vmin / 3);
+  top: 0;
+}
