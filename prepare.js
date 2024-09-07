@@ -8,7 +8,7 @@ fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const el = document.createElement("div");
   el.id = thid;
   el.className = "players";
-  el.style.backgroundColor = 
+  el.style.backgroundColor = thid;
   window.waka = sp;
   fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/pos'), (spm) => {
     
