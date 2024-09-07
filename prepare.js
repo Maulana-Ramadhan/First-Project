@@ -18,7 +18,7 @@ fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   }
 });
 fbg.onAuthStateChanged(fbg.auth, (user) => {
-  let me = user.uid;
+  me = user.uid;
   if (user) {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), [0,0]);
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), myColor);
