@@ -43,8 +43,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
           const me = spm.val();
           el.style.transform = `translate(${me.position[0]}px,${me.position[1]}px) rotate(${me.direction}deg)`;
         });
-      }
-      })
+      }});
       for (const i of sp.val()) { 
         console.log(i);
         }
