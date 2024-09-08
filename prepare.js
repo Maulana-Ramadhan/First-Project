@@ -34,7 +34,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       console.log(sp);
       window.wkwk = sp;
       sp.forEach( i => { if (i.status) {
-        console.log(sp);
+        console.log("sp");
         const el = document.createElement("div");
         el.id = i.uid;
         el.classList.add("players");
@@ -44,8 +44,8 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
           const me = spm.val();
           el.style.transform = `translate(${me.position[0]}px,${me.position[1]}px) rotate(${me.direction}deg)`;
         });
+        console.log("sp");
       }});
-      console.log("sp");
     }).catch(console.error);
     fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
       const thid = sp._node.children_.root_.key;
