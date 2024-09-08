@@ -1,7 +1,7 @@
-const muid = fbg.auth.currentUser.uid;
+const puid = {};
 const real = [0,0];
 const elPlayers = {};
-fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
+fbg.signInAnonymously(fbg.auth).then( a => puid[a.uid] = localStorage.get("myName") || prompt("isi namamu:")).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const thid = sp._node.children_.root_.key;
   if (me != thid) {
@@ -41,5 +41,5 @@ analog.addEventListener("click", a => {
   el.classList.add("players");
   el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
   document.body.appendChild(el);
-  elPlayers["elMe"] = el;
+  elPlayers.elMe = el;
 }());
