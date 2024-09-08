@@ -37,7 +37,7 @@ analog.addEventListener("click", a => {
 (function() {
   const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
   const el = document.createElement("div");
-  el.id = muid;
+  el.id = "elMe";
   el.classList.add("players");
   el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
   document.body.appendChild(el);
