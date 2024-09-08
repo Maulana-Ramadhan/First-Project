@@ -4,7 +4,7 @@ const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).then( a => puid[a.uid] = a.uid).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const thid = sp._node.children_.root_.key;
-  if (elPlayers.elMe != thid) {
+  if (elPlayers.elMe.id != thid) {
     const el = document.createElement("div");
     el.id = thid;
     el.classList.add("players");
@@ -38,8 +38,8 @@ analog.addEventListener("click", a => {
     case 'bawahAnalog': real[1] += 50; break;
     case 'kiriAnalog': real[0] -= 50; break;
   }
-  fbg.set(fbg.ref(fbg.database, 'data/users/' + elPlayers.elMe), real);
-  elPlayers.elMe.style.transform = `translate(${real[0]}px,${real[1]}px)`;
+  fbg.set(fbg.ref(fbg.database, 'data/users/' + elPlayers.elMe.id), real);
+  elPlayers.elMe.id.style.transform = `translate(${real[0]}px,${real[1]}px)`;
 });
 (function() {
   
