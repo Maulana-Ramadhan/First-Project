@@ -29,6 +29,7 @@ analog.addEventListener("click", a => {
     case 'kiriAnalog': real[0] -= 50; break;
   }
   fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
+  console.log(elPlayers[muid[1]]);
   elPlayers[muid[1]].style.transform = `translate(${real[0]}px,${real[1]}px)`;
 });
 (function() {
