@@ -1,10 +1,6 @@
-const myColor = function() {
-  const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
-  return rName[Math.floor(Math.random()*12)];
-}();
-const uid = fbg.auth.currentUser.uid;
+const muid = fbg.auth.currentUser.uid;
 const real = [0,0];
-const playrs = {};
+const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const thid = sp._node.children_.root_.key;
@@ -39,10 +35,11 @@ analog.addEventListener("click", a => {
   playrs[me].style.transform = `translate(${real[0]}px,${real[1]}px)`;
 });
 (function() {
+  const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
   const el = document.createElement("div");
   el.id = me;
   el.classList.add("players");
-  el.style.backgroundColor = myColor;
+  el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
   document.body.appendChild(el);
-  playrs[user.uid] = el;
+  elPlayers[muid] = el;
 }());
