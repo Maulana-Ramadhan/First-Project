@@ -30,7 +30,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       color: el.style.backgroundColor,
     });
       console.log("sp");
-    fbg.get(fbg.child(fbg.ref(fbg.database), 'data/thatIn'), (sp) => {
+    fbg.get(fbg.ref(fbg.database, 'data/thatIn')).then((sp) => {
       console.log(sp);
       window.wkwk = sp;
       for (const i of sp.val()) { 
@@ -48,7 +48,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         });
       }}
       console.log("sp");
-    });
+    }).catch(console.error);
     fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
       const thid = sp._node.children_.root_.key;
       if (muid[1] != thid) {
