@@ -1,4 +1,5 @@
 const muid = [];
+console.log("value");
 const real = {
   position: [0,0],
   direction: 0,
