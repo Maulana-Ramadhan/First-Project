@@ -48,7 +48,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         });
       }}
       console.log("sp");
-    })
+    });
     fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
       const thid = sp._node.children_.root_.key;
       if (muid[1] != thid) {
