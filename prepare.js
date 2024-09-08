@@ -1,6 +1,7 @@
 const muid = fbg.auth.currentUser.uid;
 const real = [0,0];
 const elPlayers = {};
+fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const thid = sp._node.children_.root_.key;
   if (me != thid) {
