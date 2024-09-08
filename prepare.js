@@ -29,6 +29,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       uid: muid[1],
       color: el.style.backgroundColor,
     });
+      console.log("sp");
     fbg.get(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
       console.log(sp);
       window.wkwk = sp;
