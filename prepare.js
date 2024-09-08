@@ -1,4 +1,4 @@
-const puid = {[localStorage.get("myName") || prompt("isi namamu:")]:""};
+const puid = {[localStorage.getItem("myName") || prompt("isi namamu:")]:""};
 const real = [0,0];
 const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).then( a => puid[a.uid] = a.uid).catch(error => console.error(error.message));
