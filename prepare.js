@@ -31,8 +31,8 @@ analog.addEventListener("click", a => {
     case 'bawahAnalog': real[1] += 50; break;
     case 'kiriAnalog': real[0] -= 50; break;
   }
-  fbg.set(fbg.ref(fbg.database, 'data/users/' + me), real);
-  playrs[me].style.transform = `translate(${real[0]}px,${real[1]}px)`;
+  fbg.set(fbg.ref(fbg.database, 'data/users/' + muid), real);
+  elPlayers[muid].style.transform = `translate(${real[0]}px,${real[1]}px)`;
 });
 (function() {
   const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
