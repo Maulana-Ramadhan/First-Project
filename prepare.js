@@ -41,5 +41,5 @@ analog.addEventListener("click", a => {
   el.classList.add("players");
   el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
   document.body.appendChild(el);
-  elPlayers[muid] = el;
+  elPlayers["elMe"] = el;
 }());
