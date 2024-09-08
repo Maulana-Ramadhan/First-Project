@@ -12,7 +12,7 @@ fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
     document.body.appendChild(el);
     window.waka = sp;
     fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/pos'), (spm) => {
-      el.style.transform = `translate(${spm.val()[0]}px,${spm.val()spm[1]}px)`;
+      el.style.transform = `translate(${spm.val()[0]}px,${spm.val()[1]}px)`;
     });
   }
 });
