@@ -11,6 +11,7 @@ fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
     el.style.backgroundColor = sp.child(thid).val();
     document.body.appendChild(el);
     fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/pos'), (spm) => {
+      console.log(el,spm.val());
       el.style.transform = `translate(${spm.val()[0]}px,${spm.val()[1]}px)`;
     });
   }
