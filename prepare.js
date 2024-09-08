@@ -47,6 +47,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
           el.style.transform = `translate(${me.position[0]}px,${me.position[1]}px) rotate(${me.direction}deg)`;
         });
       }}
+      console.log("sp");
     })
     fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
       const thid = sp._node.children_.root_.key;
