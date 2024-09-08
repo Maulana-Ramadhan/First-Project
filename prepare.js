@@ -10,7 +10,7 @@ fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
     el.classList.add("players");
     el.style.backgroundColor = sp.child(thid).val();
     document.body.appendChild(el);
-    fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/pos'), (spm) => {
+    fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid), (spm) => {
       console.log(el,spm);
       el.style.transform = `translate(${spm.val()[0]}px,${spm.val()[1]}px)`;
     });
