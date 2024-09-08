@@ -29,7 +29,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       uid: muid[1],
       color: el.style.backgroundColor,
     });
-    fbg.get(fbg.ref(fbg.database, 'data/thatIn/'), (sp) => {
+    fbg.get(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
       for (const i in sp.val()) { 
         console.log(i);
         if (i.status) {
@@ -45,7 +45,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         });
       }}
     })
-    fbg.onValue(fbg.ref(fbg.database, 'data/thatIn/'), (sp) => {
+    fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
       const thid = sp._node.children_.root_.key;
       if (muid[1] != thid) {
         const el = document.createElement("div");
