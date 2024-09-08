@@ -1,7 +1,10 @@
-//const puid = {[localStorage.getItem("myName") || prompt("isi namamu:")]:""};
+const puid = {};
 const real = [0,0];
 const elPlayers = {};
-fbg.signInAnonymously(fbg.auth).then( a => puid[a.uid] = a.uid).catch(error => console.error(error.message));
+fbg.signInAnonymously(fbg.auth).then( a => {
+  puid[a.uid] = localStorage.getItem("myName") || prompt("isi namamu:");
+  if (!(localStorage.getItem("myName"))) localStorage.setItem("myName",puid[a.uid]);
+}).catch(error => console.error(error.message));
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
     const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
