@@ -1,11 +1,9 @@
-const puid = {[localStorage.getItem("myName") || prompt("isi namamu:")]:""};
+//const puid = {[localStorage.getItem("myName") || prompt("isi namamu:")]:""};
 const real = [0,0];
 const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).then( a => puid[a.uid] = a.uid).catch(error => console.error(error.message));
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
-    fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), [0,0]);
-    fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), myColor);
     const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
     const el = document.createElement("div");
     el.id = user.uid;
@@ -13,6 +11,8 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
     document.body.appendChild(el);
     elPlayers.elMe = el;
+    fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), [0,0]);
+    fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), myColor);
   } else {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
   }
