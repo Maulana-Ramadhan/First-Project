@@ -21,17 +21,9 @@ fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   }
 });
 fbg.onAuthStateChanged(fbg.auth, (user) => {
-  me = user.uid;
   if (user) {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), [0,0]);
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), myColor);
-    const el = document.createElement("div");
-    el.id = me;
-    el.classList.add("players");
-    el.style.backgroundColor = myColor;
-    document.body.appendChild(el);
-    playrs[user.uid] = el;
-    console.log(playrs,user.uid,el,playrs[user.uid]);
   } else {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
   }
@@ -46,3 +38,11 @@ analog.addEventListener("click", a => {
   fbg.set(fbg.ref(fbg.database, 'data/users/' + me), real);
   playrs[me].style.transform = `translate(${real[0]}px,${real[1]}px)`;
 });
+(function() {
+  const el = document.createElement("div");
+  el.id = me;
+  el.classList.add("players");
+  el.style.backgroundColor = myColor;
+  document.body.appendChild(el);
+  playrs[user.uid] = el;
+}());
