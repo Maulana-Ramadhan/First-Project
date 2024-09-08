@@ -1,3 +1,4 @@
+console.log(fbg,fbg?.auth,fbg?.auth?.currentUser,fbg?.auth?.currentUser?.uid);
 const muid = fbg.auth.currentUser.uid;
 const real = [0,0];
 const elPlayers = {};
