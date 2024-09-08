@@ -33,7 +33,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.get(fbg.ref(fbg.database, 'data/thatIn')).then((sp) => {
       console.log(sp);
       window.wkwk = sp;
-      sp.forEach( i => { if (i.status) {
+      sp.forEach( i => { i = i.val(); if (i.status) {
         console.log("sp");
         const el = document.createElement("div");
         el.id = i.uid;
