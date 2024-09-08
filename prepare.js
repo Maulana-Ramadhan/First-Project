@@ -4,7 +4,7 @@ const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).then( a => puid[a.uid] = a.uid).catch(error => console.error(error.message));
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const thid = sp._node.children_.root_.key;
-  if (me != thid) {
+  if (elPlayers.elMe != thid) {
     const el = document.createElement("div");
     el.id = thid;
     el.classList.add("players");
