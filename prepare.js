@@ -2,7 +2,7 @@ const myColor = function() {
   const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
   return rName[Math.floor(Math.random()*12)];
 }();
-const uid = fbg.currentUser.uid;
+const uid = fbg.auth.currentUser.uid;
 const real = [0,0];
 const playrs = {};
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
