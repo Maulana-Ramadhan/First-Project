@@ -28,8 +28,8 @@ analog.addEventListener("click", a => {
     case 'bawahAnalog': real[1] += 50; break;
     case 'kiriAnalog': real[0] -= 50; break;
   }
-  fbg.set(fbg.ref(fbg.database, 'data/users/' + elPlayers.elMe.id), real);
-  elPlayers.elMe.id.style.transform = `translate(${real[0]}px,${real[1]}px)`;
+  fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
+  muid[1].style.transform = `translate(${real[0]}px,${real[1]}px)`;
 });
 (function() {
   
@@ -38,7 +38,7 @@ analog.addEventListener("click", a => {
 fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
   const thid = sp._node.children_.root_.key;
   console.log(elPlayers);
-  if (elPlayers.elMe.id != thid) {
+  if (muid[1] != thid) {
     const el = document.createElement("div");
     el.id = thid;
     el.classList.add("players");
