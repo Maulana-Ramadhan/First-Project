@@ -30,8 +30,9 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       color: el.style.backgroundColor,
     });
     fbg.get(fbg.ref(fbg.database, 'data/thatIn/'), (sp) => {
-      for (const i in sp.val()) { if (i.status) {
+      for (const i in sp.val()) { 
         console.log(i);
+        if (i.status) {
         const el = document.createElement("div");
         el.id = i.uid;
         el.classList.add("players");
