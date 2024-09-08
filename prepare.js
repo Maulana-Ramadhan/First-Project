@@ -5,13 +5,12 @@ const real = {
   direction: 0,
 };
 const elPlayers = {};
-fbg.signInAnonymously(fbg.auth).then( a => {
-  muid.push(localStorage.getItem("myName") || prompt("isi namamu:"));
-  muid.push(a.user.uid);
-  if (!(localStorage.getItem("myName"))) localStorage.setItem("myName",muid[0]);
-}).catch(error => console.error(error.message));
+fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
+    muid.push(localStorage.getItem("myName") || prompt("isi namamu:"));
+    muid.push(a.user.uid);
+    if (!(localStorage.getItem("myName"))) localStorage.setItem("myName",muid[0]);
     const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
     const el = document.createElement("div");
     el.id = muid[0];
@@ -23,6 +22,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       position: [0,0],
       direction: 0,
     });
+    console.log(muid[0]);
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), {
       status: true,
       name: muid[0],
