@@ -22,11 +22,11 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), myColor);
     const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
     const el = document.createElement("div");
-    el.id = "elMe";
+    el.id = user.uid;
     el.classList.add("players");
     el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
     document.body.appendChild(el);
-    elPlayers.elMe = el;
+    elPlayers.elMe = user.uid;
   } else {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), false);
   }
@@ -38,7 +38,7 @@ analog.addEventListener("click", a => {
     case 'bawahAnalog': real[1] += 50; break;
     case 'kiriAnalog': real[0] -= 50; break;
   }
-  fbg.set(fbg.ref(fbg.database, 'data/users/' + muid), real);
+  fbg.set(fbg.ref(fbg.database, 'data/users/' + elPlayers.elMe), real);
   elPlayers.elMe.style.transform = `translate(${real[0]}px,${real[1]}px)`;
 });
 (function() {
