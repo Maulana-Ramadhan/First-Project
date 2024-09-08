@@ -33,6 +33,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       for (const i in sp.val()) { 
         console.log(i);
         if (i.status) {
+          console.log("hello");
         const el = document.createElement("div");
         el.id = i.uid;
         el.classList.add("players");
