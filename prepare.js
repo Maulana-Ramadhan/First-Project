@@ -1,8 +1,9 @@
-const puid = {};
+const muid = [];
 const real = [0,0];
 const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).then( a => {
-  puid[a.uid] = localStorage.getItem("myName") || prompt("isi namamu:");
+  muid.push(localStorage.getItem("myName") || prompt("isi namamu:"));
+  muid.push(a.uid);
   if (!(localStorage.getItem("myName"))) localStorage.setItem("myName",puid[a.uid]);
 }).catch(error => console.error(error.message));
 fbg.onAuthStateChanged(fbg.auth, (user) => {
