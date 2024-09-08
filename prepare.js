@@ -3,6 +3,7 @@ const real = [0,0];
 const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).then( a => {
   muid.push(localStorage.getItem("myName") || prompt("isi namamu:"));
+  console.log(a);
   muid.push(a.uid);
   if (!(localStorage.getItem("myName"))) localStorage.setItem("myName",muid[0]);
 }).catch(error => console.error(error.message));
