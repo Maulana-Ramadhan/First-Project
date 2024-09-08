@@ -31,6 +31,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     });
     fbg.get(fbg.ref(fbg.database, 'data/thatIn/'), (sp) => {
       for (const i in sp.val()) { if (i.status) {
+        console.log(i);
         const el = document.createElement("div");
         el.id = i.uid;
         el.classList.add("players");
