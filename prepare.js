@@ -9,7 +9,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
     const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
     const el = document.createElement("div");
-    el.id = user.uid;
+    el.id = puid[user.uid];
     el.classList.add("players");
     el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
     document.body.appendChild(el);
