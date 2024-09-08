@@ -31,7 +31,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     });
     fbg.get(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
       console.log(sp);
-      window.palade = sp;
+      window.wkwk = sp;
       for (const i of sp.val()) { 
         console.log(i);
         if (i.status) {
