@@ -9,7 +9,7 @@ fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
     muid.push(localStorage.getItem("myName") || prompt("isi namamu:"));
-    muid.push(a.user.uid);
+    muid.push(user.uid);
     if (!(localStorage.getItem("myName"))) localStorage.setItem("myName",muid[0]);
     const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
     const el = document.createElement("div");
