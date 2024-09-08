@@ -4,7 +4,7 @@ const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).then( a => {
   muid.push(localStorage.getItem("myName") || prompt("isi namamu:"));
   console.log(a);
-  muid.push(a.uid);
+  muid.push(a.user.uid);
   if (!(localStorage.getItem("myName"))) localStorage.setItem("myName",muid[0]);
 }).catch(error => console.error(error.message));
 fbg.onAuthStateChanged(fbg.auth, (user) => {
