@@ -30,7 +30,9 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       color: el.style.backgroundColor,
     });
     fbg.get(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
-      for (const i in sp.val()) { 
+      console.log(sp);
+      window.palade = sp;
+      for (const i of sp.val()) { 
         console.log(i);
         if (i.status) {
           console.log("hello");
