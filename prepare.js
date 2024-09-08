@@ -14,7 +14,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     el.classList.add("players");
     el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
     document.body.appendChild(el);
-    elPlayers.elMe = el;
+    elPlayers[user.uid] = el;
     fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), [0,0]);
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), myColor);
   } else {
