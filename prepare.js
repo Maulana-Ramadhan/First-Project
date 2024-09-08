@@ -2,21 +2,6 @@ const puid = {[localStorage.getItem("myName") || prompt("isi namamu:")]:""};
 const real = [0,0];
 const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).then( a => puid[a.uid] = a.uid).catch(error => console.error(error.message));
-fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
-  const thid = sp._node.children_.root_.key;
-  console.log(elPlayers);
-  if (elPlayers.elMe.id != thid) {
-    const el = document.createElement("div");
-    el.id = thid;
-    el.classList.add("players");
-    el.style.backgroundColor = sp.child(thid).val();
-    document.body.appendChild(el);
-    fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid), (spm) => {
-      console.log(el,spm);
-      el.style.transform = `translate(${spm.val()[0]}px,${spm.val()[1]}px)`;
-    });
-  }
-});
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), [0,0]);
@@ -45,3 +30,19 @@ analog.addEventListener("click", a => {
 (function() {
   
 }());
+
+fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
+  const thid = sp._node.children_.root_.key;
+  console.log(elPlayers);
+  if (elPlayers.elMe.id != thid) {
+    const el = document.createElement("div");
+    el.id = thid;
+    el.classList.add("players");
+    el.style.backgroundColor = sp.child(thid).val();
+    document.body.appendChild(el);
+    fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid), (spm) => {
+      console.log(el,spm);
+      el.style.transform = `translate(${spm.val()[0]}px,${spm.val()[1]}px)`;
+    });
+  }
+});
