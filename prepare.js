@@ -93,6 +93,18 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       this.y = a - this.ay;
     }
   };
+  function intr1() {
+  }
+  function intr2() {
+  }
+  function intr3() {
+  }
+  function intr4() {
+  }
+  function intr5() {
+  }
+  function intr6() {
+  }
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
     console.log(touched.x,touched.y,c);
@@ -140,6 +152,21 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     touched.iden = undefined;
     elPlayers[muid[1]].removeEventListener("transitionend", which);
   });
-  
+  document.addEventListener('keydown', (e) => { 
+    switch (e.key) {
+      case 'u': intr1(); return;
+      case 'i': intr2(); return;
+      case 'o': intr3(); return;
+      case 'h': intr4(); return;
+      case 'j': intr5(); return;
+      case 'k': intr6(); return;
+    }
+  }):
+  bIntr1.addEventListener('touchdown', intr1);
+  bIntr2.addEventListener('touchdown', intr2);
+  bIntr3.addEventListener('touchdown', intr3);
+  bIntr4.addEventListener('touchdown', intr4);
+  bIntr5.addEventListener('touchdown', intr5);
+  bIntr6.addEventListener('touchdown', intr6);
 });
 
