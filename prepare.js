@@ -5,7 +5,7 @@ const real = {
   direction: 0,
 };
 const settings = {
-  size: 1,
+  size: 25,
 };
 const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
