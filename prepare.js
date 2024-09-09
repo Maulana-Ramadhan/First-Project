@@ -72,6 +72,12 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     ax: parseFloat(getComputedStyle(analog).getPropertyValue("left")) + (parseFloat(getComputedStyle(analog).getPropertyValue("width"))/2),
     ay: parseFloat(getComputedStyle(analog).getPropertyValue("top")) + (parseFloat(getComputedStyle(analog).getPropertyValue("height"))/2),
     iden: undefined,
+    xc(a) {
+      this.x = a - this.ax;
+    },
+    yc(a) {
+      this.y = a - this.ay;
+    }
   };
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
