@@ -74,12 +74,19 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     iden: undefined,
   };
   function which(a) {
-    
+    const c = (a.clientX**2+a.clientY**2)**(1/2);
+    if (Math.abs(a.clientX/c) > Math.abs(a.clientY/c)) {
+      if (a.clientX/c > 0) real.position[0] += 50;
+      else real.position[0] -= 50;
+    } else {
+      if (a.clientX/c > 0) real.position[1] += 50;
+      else real.position[1] -= 50;
+    }
   }
   analog.addEventListener("touchstart", a => {
     touched.iden = a.targetTouches[0].identifier;
     touched.x = a.targetTouches[0].clientX;
-    touched.y = a.targetTouches[0].clientX;
+    touched.y = a.targetTouches[0].clientY;
     real.position[0] = touched.x;
     real.position[1] = ;
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
