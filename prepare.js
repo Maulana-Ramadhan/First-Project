@@ -1,7 +1,7 @@
 if (!navigator.userAgentData.mobile) {
   analog.remove();
 }
-fullScreenButton.addEventListener(() => {
+fullScreenButton.addEventListener('click', () => {
   document.documentElement.requestFullscreen();
 });
 document.documentElementaddEventListener("fullscreenchange", () => {
