@@ -1,3 +1,6 @@
+if (!navigator.userAgentData.mobile) {
+  analog.remove();
+}
 fullScreenButton.addEventListener(() => {
   document.documentElement.requestFullscreen();
 });
