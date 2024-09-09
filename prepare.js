@@ -85,6 +85,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     ax: parseFloat(getComputedStyle(analog).getPropertyValue("left")) + (parseFloat(getComputedStyle(analog).getPropertyValue("width"))/2),
     ay: parseFloat(getComputedStyle(analog).getPropertyValue("top")) + (parseFloat(getComputedStyle(analog).getPropertyValue("height"))/2),
     iden: undefined,
+    key: undefined,
     xc(a) {
       this.x = a - this.ax;
     },
@@ -105,8 +106,8 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
   }
-  document.addEventListener('keydown', (e) => { 
-    switch(e.key) {
+  function whoch() {
+    switch(touched.key) {
       case 'w': real.position[1] -= settings.size; break;
       case 'd': real.position[0] += settings.size; break;
       case 's': real.position[1] += settings.size; break;
@@ -114,7 +115,16 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
+  }
+  document.addEventListener('keydown', (e) => { 
+    touched.key = e.key;
+    whoch();
+    elPlayers[muid[1]].addEventListener("transitionend", whoch);
   }):
+  document.addEventListener('keyup', (e) => {
+    touched.key = undefined;
+    elPlayers[muid[1]].removeEventListener("transitionend", whoch);
+  });
   analog.addEventListener("touchstart", a => {
     touched.iden = a.targetTouches[0].identifier;
     touched.xc(a.targetTouches[0].clientX);
@@ -127,7 +137,9 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     touched.yc(a.touches[0].clientY);
   }});
   analog.addEventListener("touchend", a => {
+    touched.iden = undefined;
     elPlayers[muid[1]].removeEventListener("transitionend", which);
   });
+  
 });
 
