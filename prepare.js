@@ -132,7 +132,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     touched.key = e.key;
     whoch();
     elPlayers[muid[1]].addEventListener("transitionend", whoch);
-  }):
+  });
   document.addEventListener('keyup', (e) => {
     touched.key = undefined;
     elPlayers[muid[1]].removeEventListener("transitionend", whoch);
@@ -161,7 +161,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       case 'j': intr5(); return;
       case 'k': intr6(); return;
     }
-  }):
+  });
   bIntr1.addEventListener('touchdown', intr1);
   bIntr2.addEventListener('touchdown', intr2);
   bIntr3.addEventListener('touchdown', intr3);
