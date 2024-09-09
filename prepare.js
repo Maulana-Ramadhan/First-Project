@@ -86,11 +86,11 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     const c = (touched.x**2+touched.y**2)**(1/2);
     console.log(touched.x,touched.y,c);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
-      if (touched.x/c > 0) real.position[0] += 50;
-      else real.position[0] -= 50;
+      if (touched.x/c > 0) real.position[0] += settings.size;
+      else real.position[0] -= settings.size;
     } else {
-      if (touched.y/c > 0) real.position[1] += 50;
-      else real.position[1] -= 50;
+      if (touched.y/c > 0) real.position[1] += settings.size;
+      else real.position[1] -= settings.size;
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
