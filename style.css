@@ -17,6 +17,7 @@ html, document, body, body div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10vmin;
 }
 #fullScreenButton {
   width: 25vmin;
