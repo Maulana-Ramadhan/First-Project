@@ -2,6 +2,7 @@ html, document, body, body div {
   position: absolute;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 #inputName {
   top: 50px;
