@@ -100,8 +100,8 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     elPlayers[muid[1]].addEventListener("transitionend", which);
   });
   analog.addEventListener("touchmove", a => { if (a.touches[0].identifier == touched.iden) {
-    touched.x(a.touches[0].clientX);
-    touched.y(a.touches[0].clientY);
+    touched.xc(a.touches[0].clientX);
+    touched.yc(a.touches[0].clientY);
   }});
   analog.addEventListener("touchend", a => {
     elPlayers[muid[1]].removeEventListener("transitionend", which);
