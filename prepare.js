@@ -94,14 +94,14 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
   }
   analog.addEventListener("touchstart", a => {
     touched.iden = a.targetTouches[0].identifier;
-    touched.x = a.targetTouches[0].clientX;
-    touched.y = a.targetTouches[0].clientY;
+    touched.xc(a.targetTouches[0].clientX);
+    touched.yc(a.targetTouches[0].clientY);
     which();
     elPlayers[muid[1]].addEventListener("transitionend", which);
   });
   analog.addEventListener("touchmove", a => { if (a.touches[0].identifier == touched.iden) {
-    touched.x = a.touches[0].clientX;
-    touched.y = a.touches[0].clientY;
+    touched.x(a.touches[0].clientX);
+    touched.y(a.touches[0].clientY);
   }});
   analog.addEventListener("touchend", a => {
     elPlayers[muid[1]].removeEventListener("transitionend", which);
