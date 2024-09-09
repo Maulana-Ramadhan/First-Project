@@ -73,7 +73,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     ay: parseFloat(getComputedStyle(analog).getPropertyValue("top")) + (parseFloat(getComputedStyle(analog).getPropertyValue("height"))/2),
     iden: undefined,
   };
-  function which(a) {
+  function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
       if (touched.x/c > 0) real.position[0] += 50;
