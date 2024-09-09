@@ -74,12 +74,12 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     iden: undefined,
   };
   function which(a) {
-    const c = (a.clientX**2+a.clientY**2)**(1/2);
-    if (Math.abs(a.clientX/c) > Math.abs(a.clientY/c)) {
-      if (a.clientX/c > 0) real.position[0] += 50;
+    const c = (touched.x**2+touched.y**2)**(1/2);
+    if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
+      if (touched.x/c > 0) real.position[0] += 50;
       else real.position[0] -= 50;
     } else {
-      if (a.clientX/c > 0) real.position[1] += 50;
+      if (touched.y/c > 0) real.position[1] += 50;
       else real.position[1] -= 50;
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
