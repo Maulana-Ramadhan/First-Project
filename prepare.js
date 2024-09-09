@@ -80,7 +80,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     touched.iden = a.targetTouches[0].identifier;
     touched.x = a.targetTouches[0].clientX;
     touched.y = a.targetTouches[0].clientX;
-    real.position[0] = ;
+    real.position[0] = touched.x;
     real.position[1] = ;
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
