@@ -65,13 +65,29 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid + 'status'), false);
   }
 });
-analog.addEventListener("click", a => {
-  switch (a.target.id) {
-    case 'atasAnalog': real.position[1] -= 50; real.direction = 0; break;
-    case 'kananAnalog': real.position[0] += 50; real.direction = 90; break;
-    case 'bawahAnalog': real.position[1] += 50; real.direction = 180; break;
-    case 'kiriAnalog': real.position[0] -= 50; real.direction = -90; break;
-  }
-  fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
-  elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
-});
+(function() {
+  const touched = {
+    x: 0,
+    y: 0,
+    x1: 0,
+    x2: 0,
+    iden: undefined,
+  };
+  analog.addEventListener("touchstart", a => {
+    touched.iden = a.targetTouches[0].identifier;
+    touched.x = touched.x1 = a.targetTouches[0].clientX;
+    touched.y = touched.y1 = a.targetTouches[0].clientX;
+    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
+    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
+    elPlayers[muid[1]].addEventListener("transitionend", a => {
+      fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
+      elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
+    });
+  });
+  analog.addEventListener("touchmove", a => {
+    
+  });
+  analog.addEventListener("touchend", a => {
+    
+  });
+}());
