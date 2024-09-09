@@ -1,3 +1,7 @@
+fullScreenButton.addEventListener(e => {
+  document.documentElement.requestFullscreen();
+  e.srcElement.remove();
+});
 const muid = [];
 console.log("value");
 const real = {
@@ -109,4 +113,5 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
   analog.addEventListener("touchend", a => {
     elPlayers[muid[1]].removeEventListener("transitionend", which);
   });
-}());
+});
+
