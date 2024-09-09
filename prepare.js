@@ -1,6 +1,8 @@
-fullScreenButton.addEventListener(e => {
+fullScreenButton.addEventListener(() => {
   document.documentElement.requestFullscreen();
-  e.srcElement.remove();
+});
+document.documentElementaddEventListener("fullscreenchange", () => {
+  containerFullScreen.remove();
 });
 const muid = [];
 console.log("value");
