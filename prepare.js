@@ -168,5 +168,5 @@ function main() {
   bIntr4.addEventListener('touchdown', intr4);
   bIntr5.addEventListener('touchdown', intr5);
   bIntr6.addEventListener('touchdown', intr6);
-});
+}
 
