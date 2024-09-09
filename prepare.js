@@ -4,6 +4,9 @@ const real = {
   position: [0,0],
   direction: 0,
 };
+const settings = {
+  size: 1,
+};
 const elPlayers = {};
 fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
 fbg.onAuthStateChanged(fbg.auth, (user) => {
