@@ -82,24 +82,21 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       if (a.clientX/c > 0) real.position[1] += 50;
       else real.position[1] -= 50;
     }
+    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
+    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
   }
   analog.addEventListener("touchstart", a => {
     touched.iden = a.targetTouches[0].identifier;
     touched.x = a.targetTouches[0].clientX;
     touched.y = a.targetTouches[0].clientY;
-    real.position[0] = touched.x;
-    real.position[1] = ;
-    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
-    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
-    elPlayers[muid[1]].addEventListener("transitionend", a => {
-      
-      fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
-      elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
-    });
+    which();
+    elPlayers[muid[1]].addEventListener("transitionend", which);
   });
-  analog.addEventListener("touchmove", a => {
+  analog.addEventListener("touchmove", a => { if (a.touches[0].identifier == touched.iden) {
+    touched.x = a.targetTouches[0].clientX;
+    touched.y = a.targetTouches[0].clientY;
     
-  });
+  }});
   analog.addEventListener("touchend", a => {
     
   });
