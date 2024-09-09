@@ -4,7 +4,7 @@ if (!navigator.userAgentData.mobile) {
 fullScreenButton.addEventListener('click', () => {
   document.documentElement.requestFullscreen();
 });
-document.documentElementaddEventListener("fullscreenchange", () => {
+document.documentElement.addEventListener("fullscreenchange", () => {
   containerFullScreen.remove();
   main();
 });
