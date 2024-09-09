@@ -1,7 +1,6 @@
 :root {
   --size: 25px;
 }
-
 html, document, body, body div {
   position: absolute;
   padding: 0;
@@ -41,10 +40,45 @@ html, document, body, body div {
   transform: translate(0,0);
   transition: transform .5s linear;
 }
+#mobileOnly {
+  width: 100vw;
+  height: 50px;
+  
+}
 #analog {
   position: fixed;
-  width: 90vmin;
-  height: 90vmin;
+  width: 50px;
+  height: 100%;
   bottom: 0;
+  left: 10px;
+  border-radius: 50px;
   outline: black solid 1px;
+}
+.intr{
+  height: 10px;
+  width: 15px;
+}
+#intr1{
+  left: 70px;
+  top: 15px;
+}
+#intr1{
+  left: 90px;
+  top: 15px;
+}
+#intr1{
+  left: 110px;
+  top: 15px;
+}
+#intr1{
+  left: 60px;
+  top: 30px;
+}
+#intr1{
+  left: 80px;
+  top: 30px;
+}
+#intr1{
+  left: 100px;
+  top: 30px;
 }
