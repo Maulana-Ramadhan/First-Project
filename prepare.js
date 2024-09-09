@@ -3,6 +3,7 @@ fullScreenButton.addEventListener(() => {
 });
 document.documentElementaddEventListener("fullscreenchange", () => {
   containerFullScreen.remove();
+  main();
 });
 const muid = [];
 console.log("value");
@@ -74,7 +75,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid + 'status'), false);
   }
 });
-(function() {
+(function main() {
   const touched = {
     x: 0,
     y: 0,
@@ -101,6 +102,16 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
   }
+  document.addEventListener('keydown', (e) => { 
+    switch(e.key) {
+      case 'w': real.position[1] -= settings.size; break;
+      case 'd': real.position[0] += settings.size; break;
+      case 's': real.position[1] += settings.size; break;
+      case 'a': real.position[0] -= settings.size; break; 
+    }
+    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
+    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
+  }):
   analog.addEventListener("touchstart", a => {
     touched.iden = a.targetTouches[0].identifier;
     touched.xc(a.targetTouches[0].clientX);
