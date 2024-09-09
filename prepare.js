@@ -75,7 +75,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
   };
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
-    console.log(touched,c);
+    console.log(touched.x,touched.y,c);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
       if (touched.x/c > 0) real.position[0] += 50;
       else real.position[0] -= 50;
