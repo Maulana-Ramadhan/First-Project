@@ -69,6 +69,8 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
   const touched = {
     x: 0,
     y: 0,
+    ax: parseFloat(getComputedStyle(analog).getPropertyValue("left")) + (parseFloat(getComputedStyle(analog).getPropertyValue("width"))/2),
+    ay: parseFloat(getComputedStyle(analog).getPropertyValue("top")) + (parseFloat(getComputedStyle(analog).getPropertyValue("height"))/2),
     iden: undefined,
   };
   function which(a) {
@@ -76,13 +78,14 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
   }
   analog.addEventListener("touchstart", a => {
     touched.iden = a.targetTouches[0].identifier;
-    touched.x = touched.x1 = a.targetTouches[0].clientX;
-    touched.y = touched.y1 = a.targetTouches[0].clientX;
+    touched.x = a.targetTouches[0].clientX;
+    touched.y = a.targetTouches[0].clientX;
     real.position[0] = ;
     real.position[1] = ;
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
     elPlayers[muid[1]].addEventListener("transitionend", a => {
+      
       fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
       elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
     });
