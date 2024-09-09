@@ -78,7 +78,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid + 'status'), false);
   }
 });
-(function main() {
+function main() {
   const touched = {
     x: 0,
     y: 0,
