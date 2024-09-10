@@ -4,7 +4,8 @@ ConfirmInputName.addEventListener('click', (e) => {
   muid[2] = PickColor.value;
   elPlayers[muid[1]].style.setProperty('--content',muid[0]);
   elPlayers[muid[1]].style.backgroundColor = muid[2];
-  localStorage.setItem("myData",{name:muid[0],uid:muid[1],color:muid[2]});
+  
+  localStorage.setItem("myData",JSON.stringify({name:muid[0],uid:muid[1],color:muid[2]}));
 });
 fullScreenButton.addEventListener('click', () => {
   document.documentElement.requestFullscreen();
@@ -52,7 +53,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       muid[0] = inputName.value;
       muid[1] = user.uid;
       muid[2] = PickColor.value;
-      localStorage.setItem("myData",{name:muid[0],uid:muid[1],color:muid[2]});
+      localStorage.setItem("myData",JSON.stringify({name:muid[0],uid:muid[1],color:muid[2]}));
       const el = document.createElement("div");
       el.id = muid[0];
       el.classList.add("players");
