@@ -1,5 +1,7 @@
-if (!navigator.userAgentData.mobile) {
-  mobileOnly.remove();
+if (!navigator.userAgentData.mobile) mobileOnly.remove();
+if (!document.fullscreenEnabled) {
+  containerFullScreen.remove();
+  main();
 }
 fullScreenButton.addEventListener('click', () => {
   document.documentElement.requestFullscreen();
