@@ -61,27 +61,27 @@ html, document, body, body div {
   width: 40px;
   outline: 1px solid red;
 }
-#intr1{
+#bIntr1{
   left: 140px;
   top: 10px;
 }
-#intr2{
+#bIntr2{
   left: 220px;
   top: 10px;
 }
-#intr3{
+#bIntr3{
   left: 300px;
   top: 10px;
 }
-#intr4{
+#bIntr4{
   left: 135px;
   top: 60px;
 }
-#intr5{
+#bIntr5{
   left: 215px;
   top: 60px;
 }
-#intr6{
+#bIntr6{
   left: 295px;
   top: 60px;
 }
