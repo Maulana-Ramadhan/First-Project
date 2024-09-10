@@ -36,7 +36,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     el.id = muid[0];
     el.classList.add("players");
     el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
-    document.body.appendChild(el);
+    mainGame.appendChild(el);
     elPlayers[user.uid] = el;
     fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
       position: [0,0],
@@ -55,7 +55,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         el.id = i.uid;
         el.classList.add("players");
         el.style.backgroundColor = i.color;
-        document.body.appendChild(el);
+        mainGame.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid), (spm) => {
           const me = spm.val();
           el.style.transform = `translate(${me.position[0]}px, ${me.position[1]}px)`;
@@ -70,7 +70,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         el.id = thid;
         el.classList.add("players");
         el.style.backgroundColor = sp.child(thid).val();
-        document.body.appendChild(el);
+        mainGame.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid), (spm) => {
           const me = spm.val();
           el.style.transform = `translate(${me.position[0]}px, ${me.position[1]}px)`;
