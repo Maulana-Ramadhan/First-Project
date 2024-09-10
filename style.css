@@ -41,6 +41,8 @@ html, document, body, body div {
   transition: transform .5s linear;
 }
 #mobileOnly {
+  bottom: 0;
+  left: 0;
   width: 100vw;
   height: 50px;
 }
