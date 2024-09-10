@@ -1,4 +1,5 @@
-ConfirmInputName.addEventListener('click', () => {
+ConfirmInputName.addEventListener('click', (e) => {
+  e.preventDefault();
   muid[0] = inputName.value;
   muid[2] = PickColor.value;
   elPlayers[muid[1]].style.setProperty('--content',muid[0]);
