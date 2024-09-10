@@ -4,7 +4,6 @@ ConfirmInputName.addEventListener('click', (e) => {
   muid[2] = PickColor.value;
   elPlayers[muid[1]].style.setProperty('--content',muid[0]);
   elPlayers[muid[1]].style.backgroundColor = muid[2];
-  
   localStorage.setItem("myData",JSON.stringify({name:muid[0],uid:muid[1],color:muid[2]}));
 });
 fullScreenButton.addEventListener('click', () => {
