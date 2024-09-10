@@ -19,6 +19,7 @@ html, document, body, body div {
   flex-direction: column;
   align-items: center;
   gap: 5vmin;
+  background-color: aqua;
 }
 #fullScreenButton {
   position: relative;
