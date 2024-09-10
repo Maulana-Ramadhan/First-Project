@@ -8,16 +8,16 @@ ConfirmInputName.addEventListener('click', (e) => {
 });
 fullScreenButton.addEventListener('click', () => {
   document.documentElement.requestFullscreen();
+  if (!document.fullscreenEnabled) {
+    containerFullScreen.remove();
+    main();
+  }
 });
 document.documentElement.addEventListener("fullscreenchange", () => {
   containerFullScreen.remove();
   main();
 });
 if (!navigator.userAgentData.mobile) mobileOnly.remove();
-if (!document.fullscreenEnabled) {
-  containerFullScreen.remove();
-  main();
-}
 const muid = [];
 const real = {
   position: [0,0],
