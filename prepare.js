@@ -1,8 +1,3 @@
-if (!navigator.userAgentData.mobile) mobileOnly.remove();
-if (!document.fullscreenEnabled) {
-  containerFullScreen.remove();
-  main();
-}
 fullScreenButton.addEventListener('click', () => {
   document.documentElement.requestFullscreen();
 });
@@ -10,6 +5,11 @@ document.documentElement.addEventListener("fullscreenchange", () => {
   containerFullScreen.remove();
   main();
 });
+if (!navigator.userAgentData.mobile) mobileOnly.remove();
+if (!document.fullscreenEnabled) {
+  containerFullScreen.remove();
+  main();
+}
 const muid = [];
 console.log("value");
 const real = {
