@@ -52,8 +52,8 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         document.body.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid), (spm) => {
           const me = spm.val();
-          el.style.transform = `translateY(${me.position[1]}px)`;
           el.style.rotate = `${me.direction}deg`;
+          el.style.transform = `translateY(${me.position[1]}px)`;
         });
       }});
     }).catch(console.error);
@@ -67,8 +67,8 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         document.body.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid), (spm) => {
           const me = spm.val();
-          el.style.transform = `translateY(${me.position[1]}px)`;
           el.style.rotate = `${me.direction}deg`;
+          el.style.transform = `translateY(${me.position[1]}px)`;
         });
       }
     });
