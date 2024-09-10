@@ -114,10 +114,10 @@ function main() {
     } else {
       if (touched.y/c > 0) {
         real.position[1] += settings.size;
-        real.direction = 0;
+        real.direction = 90;
       } else {
         real.position[1] -= settings.size;
-        real.direction = 90;
+        real.direction = 0;
       }
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
