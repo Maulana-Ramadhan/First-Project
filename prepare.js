@@ -20,7 +20,7 @@ document.documentElement.addEventListener("fullscreenchange", () => {
   containerFullScreen.remove();
   main();
 });
-if (!navigator.userAgentData.mobile) mobileOnly.remove();
+if (!navigator.userAgentData.mobile) mobileOnly.style.display = "none";
 const muid = [];
 const real = {
   position: [0,0],
