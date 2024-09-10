@@ -95,4 +95,3 @@ function main() {
   bIntr5.addEventListener('touchdown', intr5);
   bIntr6.addEventListener('touchdown', intr6);
 }
-const begun = "dont cry";
