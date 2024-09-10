@@ -19,8 +19,7 @@ const settings = {
   size: 25,
 };
 const elPlayers = {};
-function moveDirection(a,el) { switch (a) {
-  el.style.borderRadius = "0";
+function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
   case 'front': el.style.borderTopLeftRadius = "100px"; el.style.borderTopRightRadius = "100px"; return;
   case 'right': el.style.borderTopRightRadius = "100px"; el.style.borderBottomRightRadius = "100px"; return;
   case 'back': el.style.borderBottomRightRadius = "100px"; el.style.borderBottomLeftRadius = "100px"; return;
