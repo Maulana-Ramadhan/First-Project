@@ -35,7 +35,7 @@ if(localStorage.getItem("myData")) {
   el.id = muid[0];
   el.classList.add("players");
   el.style.backgroundColor = muid[2];
-  mainGame.appendChild(el);
+  MainGame.appendChild(el);
   elPlayers[muid[1]] = el;
 }
 function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
