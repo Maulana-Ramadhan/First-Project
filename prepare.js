@@ -103,7 +103,6 @@ function main() {
   }
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
-    console.log(touched.ax,touched.ay,touched.x,touched.y,c);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
       if (touched.x/c > 0) real.position[0] += settings.size;
       else real.position[0] -= settings.size;
