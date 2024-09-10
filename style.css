@@ -8,6 +8,7 @@ html, document, body, body div {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  outline: 1px black solid;
 }
 #containerFullScreen {
   width: 100vw;
@@ -54,12 +55,12 @@ html, document, body, body div {
   bottom: 0;
   left: 10px;
   border-radius: 50px;
-  outline: black solid 1px;
+  outline: red solid 1px;
 }
 .intr{
   height: 10px;
   width: 15px;
-  outline: 1px solid black;
+  outline: 1px solid red;
 }
 #intr1{
   left: 70px;
