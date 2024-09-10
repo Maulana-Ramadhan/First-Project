@@ -78,8 +78,8 @@ function main() {
   const touched = {
     x: 0,
     y: 0,
-    ax: parseFloat(getComputedStyle(analog).getPropertyValue("left")) + (parseFloat(getComputedStyle(analog).getPropertyValue("width"))/2),
-    ay: parseFloat(getComputedStyle(analog).getPropertyValue("top")) + (parseFloat(getComputedStyle(analog).getPropertyValue("height"))/2),
+    ax: analog.getBoundingClientRect().left + analog.getBoundingClientRect().width,
+    ay: analog.getBoundingClientRect().top + analog.getBoundingClientRect().height,
     iden: undefined,
     key: undefined,
     xc(a) {
