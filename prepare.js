@@ -11,7 +11,6 @@ if (!document.fullscreenEnabled) {
   main();
 }
 const muid = [];
-console.log("value");
 const real = {
   position: [0,0],
   direction: 0,
@@ -20,7 +19,7 @@ const settings = {
   size: 25,
 };
 const elPlayers = {};
-fbg.signInAnonymously(fbg.auth).catch(error => console.error(error.message));
+fbg.signInAnonymously(fbg.auth).catch(console.log);
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
     muid.push(localStorage.getItem("myName") || prompt("isi namamu:"));
@@ -37,19 +36,15 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       position: [0,0],
       direction: 0,
     });
-    console.log(muid[0]);
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), {
       status: true,
       name: muid[0],
       uid: muid[1],
       color: el.style.backgroundColor,
     });
-      console.log("sp");
     fbg.get(fbg.ref(fbg.database, 'data/thatIn')).then((sp) => {
-      console.log(sp);
       window.wkwk = sp;
       sp.forEach( i => { i = i.val(); if (i.status) {
-        console.log("sp");
         const el = document.createElement("div");
         el.id = i.uid;
         el.classList.add("players");
@@ -59,7 +54,6 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
           const me = spm.val();
           el.style.transform = `translate(${me.position[0]}px,${me.position[1]}px) rotate(${me.direction}deg)`;
         });
-        console.log("sp");
       }});
     }).catch(console.error);
     fbg.onValue(fbg.ref(fbg.database, 'data/thatIn'), (sp) => {
