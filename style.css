@@ -43,7 +43,6 @@ html, document, body, body div {
 #mobileOnly {
   width: 100vw;
   height: 50px;
-  
 }
 #analog {
   position: fixed;
