@@ -12,12 +12,12 @@ ConfirmInputName.addEventListener('click', (e) => {
 fullScreenButton.addEventListener('click', () => {
   document.documentElement.requestFullscreen();
   if (!document.fullscreenEnabled) {
-    containerFullScreen.remove();
+    containerFullScreen.style.display = "none";
     main();
   }
 });
 document.documentElement.addEventListener("fullscreenchange", () => {
-  containerFullScreen.remove();
+  containerFullScreen.style.display = "none";
   main();
 });
 if (!navigator.userAgentData.mobile) mobileOnly.style.display = "none";
