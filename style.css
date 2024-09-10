@@ -56,6 +56,7 @@ html, document, body, body div {
 .intr{
   height: 10px;
   width: 15px;
+  outline: 1px solid black;
 }
 #intr1{
   left: 70px;
