@@ -112,7 +112,7 @@ function main() {
       if (touched.y/c > 0) real.direction = 180;
       else real.direction = 0;
     }
-    real.position[1] += settings.size;
+    real.position[1] -= settings.size;
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.rotate = `${real.direction}deg`;
     elPlayers[muid[1]].style.transform = `translateY(${real.position[1]}px)`;
@@ -124,7 +124,7 @@ function main() {
       case 's': real.direction = 180; break;
       case 'a': real.direction = 270; break; 
     }
-    real.position[1] += settings.size;
+    real.position[1] -= settings.size;
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.rotate = `${real.direction}deg`;
     elPlayers[muid[1]].style.transform = `translateY(${real.position[1]}px)`;
