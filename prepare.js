@@ -78,8 +78,8 @@ function main() {
   const touched = {
     x: 0,
     y: 0,
-    ax: analog.getBoundingClientRect().left + analog.getBoundingClientRect().width,
-    ay: analog.getBoundingClientRect().top + analog.getBoundingClientRect().height,
+    ax: analog.getBoundingClientRect().left + (analog.getBoundingClientRect().width/2),
+    ay: analog.getBoundingClientRect().top + (analog.getBoundingClientRect().height/2),
     iden: undefined,
     key: undefined,
     xc(a) {
