@@ -16,7 +16,7 @@ document.documentElement.addEventListener("fullscreenchange", () => {
 if (!navigator.userAgentData.mobile) mobileOnly.remove();
 if (!document.fullscreenEnabled) {
   containerFullScreen.remove();
-  console.log(bagun);
+  console.log(begun);
   console.log(main);
   main();
 }
