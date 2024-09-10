@@ -104,11 +104,21 @@ function main() {
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
-      if (touched.x/c > 0) real.position[0] += settings.size;
-      else real.position[0] -= settings.size;
+      if (touched.x/c > 0) {
+        real.position[0] += settings.size;
+        real.direction = 90;
+      } else {
+        real.position[0] -= settings.size;
+        real.direction = 270;
+      }
     } else {
-      if (touched.y/c > 0) real.position[1] += settings.size;
-      else real.position[1] -= settings.size;
+      if (touched.y/c > 0) {
+        real.position[1] += settings.size;
+        real.direction = 0;
+      } else {
+        real.position[1] -= settings.size;
+        real.direction = 90;
+      }
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px) rotate(${real.direction}deg)`;
