@@ -111,8 +111,9 @@ function main() {
       if (touched.y/c > 0) real.direction = 180;
       else real.direction = 0;
     }
+    
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
-    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
+    elPlayers[muid[1]].style.transform = `translateY(${real.position[1]}px)`;
     elPlayers[muid[1]].style.rotate = `${real.direction}deg`;
   }
   function whoch() {
