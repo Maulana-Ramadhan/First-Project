@@ -57,7 +57,7 @@ function main() {
     console.log("tes");
   }
   document.addEventListener('keydown', (e) => {
-    touched.key = e.key; if (touches.keyT) {
+    touched.key = e.key; if (touched.keyT) {
     elPlayers[muid[1]].addEventListener("transitionend", whoch);
     whoch(); touched.keyT = false;
   }});
