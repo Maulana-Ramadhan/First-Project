@@ -46,10 +46,9 @@ html, document, body, body div {
   left: 0;
   position: absolute;
   width: 100vw;
-  height: 50px;
+  height: 100px;
 }
 #analog {
-  position: fixed;
   width: 100px;
   height: 100px;
   bottom: 0;
@@ -58,31 +57,31 @@ html, document, body, body div {
   outline: red solid 1px;
 }
 .intr{
-  height: 10px;
-  width: 15px;
+  height: 20px;
+  width: 30px;
   outline: 1px solid red;
 }
 #intr1{
-  left: 70px;
-  top: 15px;
+  left: 115px;
+  top: 10px;
 }
 #intr2{
-  left: 90px;
-  top: 15px;
+  left: 130px;
+  top: 10px;
 }
 #intr3{
-  left: 110px;
-  top: 15px;
+  left: 145px;
+  top: 10px;
 }
 #intr4{
-  left: 60px;
-  top: 30px;
+  left: 110px;
+  top: 35px;
 }
 #intr5{
-  left: 80px;
-  top: 30px;
+  left: 125px;
+  top: 35px;
 }
 #intr6{
-  left: 100px;
-  top: 30px;
+  left: 140px;
+  top: 35px;
 }
