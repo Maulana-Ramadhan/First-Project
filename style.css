@@ -11,19 +11,20 @@ html, document, body, body div {
   outline: 1px black solid;
 }
 #containerFullScreen {
+  margin: 10vmin;
   width: 100vw;
   height: 100vh;
   z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10vmin;
+  gap: 5vmin;
 }
 #fullScreenButton {
   position: relative;
   width: 30vmin;
   height: 15vmin;
-  font-size: 15vmin;
+  font-size: 5vmin;
 }
 #inputName {
   position: relative;
