@@ -26,7 +26,6 @@ html, document, body, body div {
 }
 #inputName {
   position: relative;
-  left: 100px;
   size: 2;
 }
 #containerFullScreen {
