@@ -20,10 +20,11 @@ const settings = {
 };
 const elPlayers = {};
 function moveDirection(a,el) { switch (a) {
-  case 'front': el.style.border;return;
-  case 'right': return;
-  case 'back': return;
-  case 'left': return;
+  el.style.borderRadius = "0";
+  case 'front': el.style.borderTopLeftRadius = "100px"; el.style.borderTopRightRadius = "100px"; return;
+  case 'right': el.style.borderTopRightRadius = "100px"; el.style.borderBottomRightRadius = "100px"; return;
+  case 'back': el.style.borderBottomRightRadius = "100px"; el.style.borderBottomLeftRadius = "100px"; return;
+  case 'left': el.style.borderBottomLeftRadius = "100px"; el.style.borderTopLeftRadius = "100px"; return;
 }}
 fbg.signInAnonymously(fbg.auth).catch(console.log);
 fbg.onAuthStateChanged(fbg.auth, (user) => {
@@ -58,8 +59,8 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         document.body.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid), (spm) => {
           const me = spm.val();
-          console.log(me);
           el.style.transform = `translate(${me.position[0]}px, ${me.position[1]}px)`;
+          moveDirection(me.direction,el);
         });
       }});
     }).catch(console.error);
@@ -74,6 +75,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid), (spm) => {
           const me = spm.val();
           el.style.transform = `translate(${me.position[0]}px, ${me.position[1]}px)`;
+          moveDirection(me.direction,el);
         });
       }
     });
@@ -115,16 +117,17 @@ function main() {
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
-      if (touched.x/c > 0) real.position[0] += settings.size;
-      else real.position[0] -= settings.size;
+      if (touched.x/c > 0) { real.position[0] += settings.size; real.direction = "right"; }
+      else { real.position[0] -= settings.size; real.direction = "left"; }
     } else {
-      if (touched.y/c > 0) real.position[1] += settings.size;
-      else real.position[1] -= settings.size;
+      if (touched.y/c > 0) { real.position[1] += settings.size; real.direction = "front"; }
+      else { real.position[1] -= settings.size; real.direction = "back"; }
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     console.log(real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     elPlayers[muid[1]].style.rotate = `${real.direction}deg`;
+    moveDirection(real.direction,el);
   }
   function whoch() {
     switch(touched.key) {
