@@ -125,7 +125,7 @@ function main() {
     }
     real.position[1] += settings.size;
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
-    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
+    elPlayers[muid[1]].style.transform = `translateY(${real.position[1]}px)`;
     elPlayers[muid[1]].style.rotate = `${real.direction}deg`;
   }
   document.addEventListener('keydown', (e) => { 
