@@ -105,23 +105,11 @@ function main() {
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
-      if (touched.x/c > 0) {
-        real.position[0] += settings.size;
-        real.direction = 90;
-      } else {
-        real.position[0] -= settings.size;
-        real.direction = 270;
-      }
-      console.log("width");
+      if (touched.x/c > 0) real.position[0] += settings.size;
+      else real.position[0] -= settings.size;
     } else {
-      if (touched.y/c > 0) {
-        real.position[1] += settings.size;
-        real.direction = 180;
-      } else {
-        real.position[1] -= settings.size;
-        real.direction = 0;
-      }
-      console.log("height");
+      if (touched.y/c > 0) real.position[1] += settings.size;
+      else real.position[1] -= settings.size;
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     console.log(real);
