@@ -66,7 +66,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         document.body.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid), (spm) => {
           const me = spm.val();
-          el.style.transform = `translate(${me.position[0]}px,${me.position[1]}px) rotate(${me.direction}deg)`;
+          el.style.transform = `translate(${me.position[0]}px, ${me.position[1]}px)`;
         });
       }
     });
@@ -132,7 +132,7 @@ function main() {
       case 'a': real.position[0] -= settings.size; real.direction = 270; break; 
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
-    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px)`;
+    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     elPlayers[muid[1]].style.rotate = `${real.direction}deg`;
   }
   document.addEventListener('keydown', (e) => { 
