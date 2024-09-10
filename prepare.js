@@ -113,6 +113,7 @@ function main() {
       else real.direction = 0;
     }
     real.position += settings.size;
+    console.log(real);
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.rotate = `${real.direction}deg`;
     elPlayers[muid[1]].style.transform = `translateY(${real.position[1]}px)`;
