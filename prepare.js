@@ -83,9 +83,11 @@ function main() {
     iden: undefined,
     key: undefined,
     xc(a) {
+      console.log(a);
       this.x = a - this.ax;
     },
     yc(a) {
+      console.log(a);
       this.y = a - this.ay;
     }
   };
