@@ -164,11 +164,11 @@ function main() {
       case 'k': intr6(); return;
     }
   });
-  bIntr1.addEventListener('touchdown', intr1);
-  bIntr2.addEventListener('touchdown', intr2);
-  bIntr3.addEventListener('touchdown', intr3);
-  bIntr4.addEventListener('touchdown', intr4);
-  bIntr5.addEventListener('touchdown', intr5);
-  bIntr6.addEventListener('touchdown', intr6);
+  Intr1.addEventListener('touchdown', intr1);
+  Intr2.addEventListener('touchdown', intr2);
+  Intr3.addEventListener('touchdown', intr3);
+  Intr4.addEventListener('touchdown', intr4);
+  Intr5.addEventListener('touchdown', intr5);
+  Intr6.addEventListener('touchdown', intr6);
 }
 
