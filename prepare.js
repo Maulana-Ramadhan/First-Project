@@ -111,6 +111,7 @@ function main() {
         real.position[0] -= settings.size;
         real.direction = 270;
       }
+      console.log("width");
     } else {
       if (touched.y/c > 0) {
         real.position[1] += settings.size;
@@ -119,6 +120,7 @@ function main() {
         real.position[1] -= settings.size;
         real.direction = 0;
       }
+      console.log("height");
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px,${real.position[1]}px)`;
