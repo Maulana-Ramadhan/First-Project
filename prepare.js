@@ -44,7 +44,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
     });
     fbg.get(fbg.ref(fbg.database, 'data/thatIn')).then((sp) => {
       window.wkwk = sp;
-      sp.forEach( i => { i = i.val(); if (i.status && i.uid !== muid[q]) {
+      sp.forEach( i => { i = i.val(); if (i.status && i.uid !== muid[0]) {
         const el = document.createElement("div");
         el.id = i.uid;
         el.classList.add("players");
