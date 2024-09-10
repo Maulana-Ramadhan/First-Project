@@ -64,6 +64,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       position: [0,0],
       direction: 0,
     });
+    console.log(muid);
     fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), {
       status: true,
       name: muid[0],
