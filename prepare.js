@@ -19,6 +19,12 @@ const settings = {
   size: 25,
 };
 const elPlayers = {};
+function moveDirection(a,el) { switch (a) {
+  case 'front': el.style.border;return;
+  case 'right': return;
+  case 'back': return;
+  case 'left': return;
+}}
 fbg.signInAnonymously(fbg.auth).catch(console.log);
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
@@ -90,6 +96,10 @@ function main() {
       this.y = a - this.ay;
     }
   };
+  function moveup(argument) {
+    real.position[0] += settings.size;
+    
+  }
   function intr1() {
   }
   function intr2() {
