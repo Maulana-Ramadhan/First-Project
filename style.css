@@ -20,15 +20,18 @@ html, document, body, body div {
   gap: 10vmin;
 }
 #fullScreenButton {
+  position: relative;
   width: 25vmin;
   height: 25vmin;
 }
 #inputName {
+  position: relative;
   top: 50px;
   left: 100px;
   size: 2;
 }
 #PickColor {
+  position: relative;
   width: 25px;
   height: 25px;
 }
