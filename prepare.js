@@ -48,7 +48,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         const el = document.createElement("div");
         el.id = i.uid;
         el.classList.add("players");
-        el.style.backgroundColor = i.color;
+        el.style.backgroundColor = "black";
         document.body.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid), (spm) => {
           const me = spm.val();
