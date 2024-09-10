@@ -49,7 +49,7 @@ fbg.signInAnonymously(fbg.auth).catch(console.log);
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
     if (!localStorage.getItem("myData")) {
-      muid[0] = prompt("input your username: ");
+      muid[0] = inputName.value;
       muid[1] = user.uid;
       muid[2] = PickColor.value;
       localStorage.setItem("myData",{name:muid[0],uid:muid[1],color:muid[2]});
