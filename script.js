@@ -18,6 +18,7 @@ function main() {
     real.position[0] += settings.size;
   }
   function intr1() {
+    
   }
   function intr2() {
   }
