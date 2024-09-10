@@ -35,6 +35,8 @@ if(localStorage.getItem("myData")) {
   muid[0] = myData.name;
   muid[1] = myData.uid;
   muid[2] = myData.color;
+  containerFullScreen.value = muid[0];
+  PickColor.value = muid[2];
   const el = document.createElement("div");
   el.id = muid[0];
   el.classList.add("players");
