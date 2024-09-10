@@ -52,6 +52,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         document.body.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid), (spm) => {
           const me = spm.val();
+          console.log(me);
           el.style.transform = `translate(${me.position[0]}px, ${me.position[1]}px)`;
         });
       }});
