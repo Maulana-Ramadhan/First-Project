@@ -29,7 +29,7 @@ const settings = {
 };
 const elPlayers = {};
 if(localStorage.getItem("myData")) {
-  const myData = localStorage.getItem("myData");
+  const myData = JSON.parse(localStorage.getItem("myData"));
   muid[0] = myData.name;
   muid[1] = myData.uid;
   muid[2] = myData.color;
