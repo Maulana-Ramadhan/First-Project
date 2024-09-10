@@ -114,7 +114,7 @@ function main() {
     } else {
       if (touched.y/c > 0) {
         real.position[1] += settings.size;
-        real.direction = 90;
+        real.direction = 180;
       } else {
         real.position[1] -= settings.size;
         real.direction = 0;
