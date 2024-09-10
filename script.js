@@ -6,6 +6,7 @@ function main() {
     ay: analog.getBoundingClientRect().top + (analog.getBoundingClientRect().height/2),
     iden: undefined,
     key: undefined,
+    keyT: true,
     xc(a) {
       this.x = a - this.ax;
     },
@@ -56,12 +57,12 @@ function main() {
     console.log("tes");
   }
   document.addEventListener('keydown', (e) => {
+    touched.key = e.key; if (touches.keyT) {
     elPlayers[muid[1]].addEventListener("transitionend", whoch);
-    touched.key = e.key; 
-    whoch();
-  });
+    whoch(); touched.keyT = false;
+  }});
   document.addEventListener('keyup', (e) => {
-    touched.key = undefined;
+    touched.key = undefined; touched.keyT = false;
     elPlayers[muid[1]].removeEventListener("transitionend", whoch);
   });
   analog.addEventListener("touchstart", a => {
