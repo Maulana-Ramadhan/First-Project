@@ -16,8 +16,6 @@ document.documentElement.addEventListener("fullscreenchange", () => {
 if (!navigator.userAgentData.mobile) mobileOnly.remove();
 if (!document.fullscreenEnabled) {
   containerFullScreen.remove();
-  console.log(begun);
-  console.log(main);
   main();
 }
 const muid = [];
