@@ -55,10 +55,10 @@ function main() {
     elPlayers[muid[1]].style.rotate = `${real.direction}deg`;
     console.log("tes");
   }
-  document.addEventListener('keydown', (e) => { if (!touched.key) {
+  document.addEventListener('keydown', (e) => {
     elPlayers[muid[1]].addEventListener("transitionend", whoch);
-    whoch(); }
     touched.key = e.key; 
+    whoch();
   });
   document.addEventListener('keyup', (e) => {
     touched.key = undefined;
