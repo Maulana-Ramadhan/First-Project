@@ -28,10 +28,9 @@ html, document, body, body div {
   left: 100px;
   size: 2;
 }
-#connectButton {
-  size: 3;
-  top: 100px;
-  left: 50px;
+#PickColor {
+  width: 25px;
+  height: 25px;
 }
 .players{
   width: var(--size);
@@ -40,6 +39,11 @@ html, document, body, body div {
   border-top-right-radius: calc(var(--size) / 2);
   transform: translate(0,0);
   transition: transform .25s linear;
+}
+.players::before {
+  position: relative;
+  content: var(--content);
+  top: calc(var(--size) / 2);
 }
 #mobileOnly {
   bottom: 0;

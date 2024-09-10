@@ -1,3 +1,10 @@
+ConfirmInputName.addEventListener('click', () => {
+  muid[0] = inputName.value;
+  muid[2] = PickColor.value;
+  elPlayers[muid[1]].style.setProperty('--content',muid[0]);
+  elPlayers[muid[1]].style.backgroundColor = muid[2];
+  localStorage.setItem("myData",{name:muid[0],uid:muid[1],color:muid[2]});
+});
 fullScreenButton.addEventListener('click', () => {
   document.documentElement.requestFullscreen();
 });
@@ -19,6 +26,18 @@ const settings = {
   size: 25,
 };
 const elPlayers = {};
+if(localStorage.getItem("myData")) {
+  const myData = localStorage.getItem("myData");
+  muid[0] = myData.name;
+  muid[1] = myData.uid;
+  muid[2] = myData.color;
+  const el = document.createElement("div");
+  el.id = muid[0];
+  el.classList.add("players");
+  el.style.backgroundColor = muid[2];
+  mainGame.appendChild(el);
+  elPlayers[muid[1]] = el;
+}
 function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
   case 'front': el.style.borderTopLeftRadius = "100px"; el.style.borderTopRightRadius = "100px"; return;
   case 'right': el.style.borderTopRightRadius = "100px"; el.style.borderBottomRightRadius = "100px"; return;
@@ -28,16 +47,18 @@ function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
 fbg.signInAnonymously(fbg.auth).catch(console.log);
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
-    muid.push(localStorage.getItem("myName") || prompt("isi namamu:"));
-    muid.push(user.uid);
-    if (!(localStorage.getItem("myName"))) localStorage.setItem("myName",muid[0]);
-    const rName = ["red","green","blue","ivory","pink","olive","black","coral","fuchsia","teal","saddlebrown","tan"];
-    const el = document.createElement("div");
-    el.id = muid[0];
-    el.classList.add("players");
-    el.style.backgroundColor = rName[Math.floor(Math.random()*12)];
-    mainGame.appendChild(el);
-    elPlayers[user.uid] = el;
+    if (!localStorage.getItem("myData")) {
+      muid[0] = prompt("input your username: ");
+      muid[1] = user.uid;
+      muid[2] = PickColor.value;
+      localStorage.setItem("myData",{name:muid[0],uid:muid[1],color:muid[2]});
+      const el = document.createElement("div");
+      el.id = muid[0];
+      el.classList.add("players");
+      el.style.backgroundColor = muid[2];
+      mainGame.appendChild(el);
+      elPlayers[muid[1]] = el;
+    }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
       position: [0,0],
       direction: 0,
