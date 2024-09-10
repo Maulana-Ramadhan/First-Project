@@ -43,6 +43,7 @@ html, document, body, body div {
 #mobileOnly {
   bottom: 0;
   left: 0;
+  position: absolute;
   width: 100vw;
   height: 50px;
 }
