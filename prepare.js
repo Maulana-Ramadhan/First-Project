@@ -1,5 +1,5 @@
 window.addEventListener("visibilitychange", e => { if (window.closed) {
-  fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid + 'status'), false);
+  fbg?.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid + 'status'), false);
 }});
 ConfirmInputName.addEventListener('click', (e) => {
   e.preventDefault();
