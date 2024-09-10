@@ -39,7 +39,7 @@ html, document, body, body div {
   border-top-left-radius: calc(var(--size) / 2);
   border-top-right-radius: calc(var(--size) / 2);
   transform: translate(0,0);
-  transition: transform .5s linear;
+  transition: transform .25s linear;
 }
 #mobileOnly {
   bottom: 0;
