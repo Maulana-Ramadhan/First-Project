@@ -66,10 +66,12 @@ function main() {
     touched.yc(a.targetTouches[0].clientY); which();
     elPlayers[muid[1]].addEventListener("transitionend", which);
   });
-  analog.addEventListener("touchmove", a => { if (a.touches[0].identifier == touched.iden) {
-    touched.xc(a.touches[0].clientX);
-    touched.yc(a.touches[0].clientY);
-  }});
+  analog.addEventListener("touchmove", a => { 
+  for (const i of a.changedTouches) {
+    if (a.changedTouches[0].identifier == touched.iden) {
+    touched.xc(a.changedTouches[0].clientX);
+    touched.yc(a.changedTouches[0].clientY);
+  }}});
   window.addEventListener("touchend", a => { console.log(a); if (a.touches[0].identifier == touched.iden) {
     touched.iden = undefined;
     elPlayers[muid[1]].removeEventListener("transitionend", which);
