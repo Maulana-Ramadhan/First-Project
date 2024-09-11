@@ -30,7 +30,6 @@ function main() {
   }
   
   function which() {
-    if (touched.idenT) touched.idenF == true;
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
       if (touched.x/c > 0) { real.position[0] += settings.size; real.direction = "right"; }
@@ -42,7 +41,7 @@ function main() {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
-  }
+  }}
   function whoch() {
     switch(touched.key) {
       case 'w': real.position[1] -= settings.size; real.direction = "front"; break;
