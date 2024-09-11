@@ -44,12 +44,6 @@ if(localStorage.getItem("myData")) {
   MainGame.appendChild(el);
   elPlayers[muid[1]] = el;
 }
-function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
-  case 'front': el.style.borderTopLeftRadius = "100px"; el.style.borderTopRightRadius = "100px"; return;
-  case 'right': el.style.borderTopRightRadius = "100px"; el.style.borderBottomRightRadius = "100px"; return;
-  case 'back': el.style.borderBottomRightRadius = "100px"; el.style.borderBottomLeftRadius = "100px"; return;
-  case 'left': el.style.borderBottomLeftRadius = "100px"; el.style.borderTopLeftRadius = "100px"; return;
-}}
 fbg.signInAnonymously(fbg.auth).catch(console.log);
 fbg.onAuthStateChanged(fbg.auth, (user) => {
   if (user) {
