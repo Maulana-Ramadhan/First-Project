@@ -41,7 +41,7 @@ function main() {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
-  }}
+  }
   function whoch() {
     switch(touched.key) {
       case 'w': real.position[1] -= settings.size; real.direction = "front"; break;
