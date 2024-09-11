@@ -26,12 +26,7 @@ function main() {
   }
   function intr6() {
   }
-  function moveDirection() { elPlayers[muid[1]].style.borderRadius = "0"; switch (real.direction) {
-    case 'front': elPlayers[muid[1]].style.borderTopLeftRadius = "100px"; elPlayers[muid[1]].style.borderTopRightRadius = "100px"; return;
-    case 'right': elPlayers[muid[1]].style.borderTopRightRadius = "100px"; elPlayers[muid[1]].style.borderBottomRightRadius = "100px"; return;
-    case 'back': elPlayers[muid[1]].style.borderBottomRightRadius = "100px"; elPlayers[muid[1]].style.borderBottomLeftRadius = "100px"; return;
-    case 'left': elPlayers[muid[1]].style.borderBottomLeftRadius = "100px"; elPlayers[muid[1]].style.borderTopLeftRadius = "100px"; return;
-  }}
+  
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
@@ -41,7 +36,8 @@ function main() {
       if (touched.y/c > 0) { real.position[1] += settings.size; real.direction = "front"; }
       else { real.position[1] -= settings.size; real.direction = "back"; }
     }
-    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); moveDirection();
+    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
+    moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
   }
   function whoch() {
@@ -51,7 +47,8 @@ function main() {
       case 's': real.position[1] += settings.size; real.direction = "back"; break;
       case 'a': real.position[0] -= settings.size; real.direction = "left"; break; 
     }
-    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); moveDirection();
+    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
+    moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
   }
   document.addEventListener('keydown', (e) => {
