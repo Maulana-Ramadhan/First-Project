@@ -11,7 +11,7 @@ html, document, body, body div {
   outline: 1px black solid;
 }
 #containerFullScreen {
-  margin: 10vmin;
+  padding: 10vmin;
   width: 100vw;
   height: 100vh;
   z-index: 100;
