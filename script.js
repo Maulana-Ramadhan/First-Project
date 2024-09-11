@@ -30,6 +30,7 @@ function main() {
   }
   
   function which() {
+    if (touched.idenT) touched.idenF == true;
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
       if (touched.x/c > 0) { real.position[0] += settings.size; real.direction = "right"; }
