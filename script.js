@@ -6,7 +6,6 @@ function main() {
     ay: analog.getBoundingClientRect().top + (analog.getBoundingClientRect().height/2),
     iden: undefined,
     idenT: false,
-    idenF: true,
     key: undefined,
     keyT: true,
     xc(a) {
@@ -30,6 +29,10 @@ function main() {
   }
   
   function which() {
+    if (touched.idenT) { 
+      elPlayers[muid[1]].removeEventListener("transitionend", which);
+      touched.idenT = false;
+    }
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
       if (touched.x/c > 0) { real.position[0] += settings.size; real.direction = "right"; }
@@ -60,7 +63,7 @@ function main() {
   }});
   document.addEventListener('keyup', (e) => {
     touched.key = undefined; touched.keyT = false;
-    elPlayers[muid[1]].removeEventListener("transitionend", whoch);
+    touched.idenT = true;
   });
   analog.addEventListener("touchstart", a => {
     touched.iden = a.targetTouches[0].identifier;
@@ -78,7 +81,7 @@ function main() {
   }}});
   window.addEventListener("touchend", a => { if (a.changedTouches[0].identifier == touched.iden) {
     touched.iden = undefined;
-    elPlayers[muid[1]].removeEventListener("transitionend", which);
+    
     console.log(real.direction);
   }});
   document.addEventListener('keydown', (e) => { 
