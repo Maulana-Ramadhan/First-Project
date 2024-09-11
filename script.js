@@ -45,6 +45,7 @@ function main() {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
+    console.log(real.position[0],real.position[1]);
   }
   function whoch() {
     switch(touched.key) {
@@ -71,19 +72,16 @@ function main() {
     touched.xc(a.targetTouches[0].clientX);
     touched.yc(a.targetTouches[0].clientY); which();
     elPlayers[muid[1]].addEventListener("transitionend", which);
-    console.log(real.direction);
   });
   analog.addEventListener("touchmove", a => { 
   for (const i of a.changedTouches) {
     if (i.identifier == touched.iden) {
     touched.xc(i.clientX);
     touched.yc(i.clientY);
-    console.log(real.direction);
   }}});
   window.addEventListener("touchend", a => { if (a.changedTouches[0].identifier == touched.iden) {
     touched.iden = undefined;
     touched.idenT = true;
-    console.log(real.direction);
   }});
   document.addEventListener('keydown', (e) => { 
     switch (e.key) {
