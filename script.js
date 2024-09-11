@@ -68,9 +68,9 @@ function main() {
   });
   analog.addEventListener("touchmove", a => { 
   for (const i of a.changedTouches) {
-    if (a.changedTouches[0].identifier == touched.iden) {
-    touched.xc(a.changedTouches[0].clientX);
-    touched.yc(a.changedTouches[0].clientY);
+    if (i.identifier == touched.iden) {
+    touched.xc(i.clientX);
+    touched.yc(i.clientY);
   }}});
   window.addEventListener("touchend", a => { console.log(a); if (a.touches[0].identifier == touched.iden) {
     touched.iden = undefined;
