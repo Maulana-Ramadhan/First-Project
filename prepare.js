@@ -30,6 +30,12 @@ const settings = {
   size: 25,
 };
 const elPlayers = {};
+function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
+    case 'front': el.style.borderTopLeftRadius = "100px"; el.style.borderTopRightRadius = "100px"; return;
+    case 'right': el.style.borderTopRightRadius = "100px"; el.style.borderBottomRightRadius = "100px"; return;
+    case 'back': el.style.borderBottomRightRadius = "100px"; el.style.borderBottomLeftRadius = "100px"; return;
+    case 'left': el.style.borderBottomLeftRadius = "100px"; el.style.borderTopLeftRadius = "100px"; return;
+  }}
 if(localStorage.getItem("myData")) {
   const myData = JSON.parse(localStorage.getItem("myData"));
   muid[0] = myData.name;
