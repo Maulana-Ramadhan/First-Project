@@ -78,7 +78,7 @@ function main() {
   }}});
   window.addEventListener("touchend", a => { if (a.changedTouches[0].identifier == touched.iden) {
     touched.iden = undefined;
-    
+    touched.idenT = true;
     console.log(real.direction);
   }});
   document.addEventListener('keydown', (e) => { 
