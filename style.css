@@ -23,7 +23,7 @@ html, document, body, body div {
 }
 #fullScreenButton {
   position: relative;
-  width: 30vmin;
+  width: 50vmin;
   height: 15vmin;
   font-size: 5vmin;
 }
