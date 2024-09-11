@@ -43,7 +43,6 @@ function main() {
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); moveDirection();
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
-    console.log(real);
   }
   function whoch() {
     switch(touched.key) {
@@ -54,7 +53,6 @@ function main() {
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); moveDirection();
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
-    console.log("tes");
   }
   document.addEventListener('keydown', (e) => {
     touched.key = e.key; if (touched.keyT) {
@@ -68,8 +66,7 @@ function main() {
   analog.addEventListener("touchstart", a => {
     touched.iden = a.targetTouches[0].identifier;
     touched.xc(a.targetTouches[0].clientX);
-    touched.yc(a.targetTouches[0].clientY);
-    which();
+    touched.yc(a.targetTouches[0].clientY); which();
     elPlayers[muid[1]].addEventListener("transitionend", which);
   });
   analog.addEventListener("touchmove", a => { if (a.touches[0].identifier == touched.iden) {
