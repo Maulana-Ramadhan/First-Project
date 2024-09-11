@@ -42,9 +42,9 @@ function main() {
       else { real.position[1] -= settings.size; real.direction = "back"; }
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
-    console.log(real);
-    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     moveDirection(real.direction,elPlayers[muid[1]]);
+    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
+    console.log(real);
   }
   function whoch() {
     switch(touched.key) {
@@ -54,6 +54,7 @@ function main() {
       case 'a': real.position[0] -= settings.size; real.direction = "left"; break; 
     }
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
+    moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     console.log("tes");
   }
