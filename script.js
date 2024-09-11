@@ -14,11 +14,7 @@ function main() {
       this.y = a - this.ay;
     }
   };
-  function moveup(argument) {
-    real.position[0] += settings.size;
-  }
   function intr1() {
-    
   }
   function intr2() {
   }
