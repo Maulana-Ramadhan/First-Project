@@ -59,7 +59,7 @@ function main() {
   document.addEventListener('keydown', (e) => {
     touched.key = e.key; if (touched.keyT) {
     elPlayers[muid[1]].addEventListener("transitionend", whoch);
-    whoch(); touched.idenT = true;
+    whoch(); touched.keyT = true;
   }});
   document.addEventListener('keyup', (e) => {
     touched.key = undefined; touched.keyT = false;
@@ -81,7 +81,7 @@ function main() {
   }}});
   window.addEventListener("touchend", a => { if (a.changedTouches[0].identifier == touched.iden) {
     touched.iden = undefined;
-    
+    touched.idenT = true;
     console.log(real.direction);
   }});
   document.addEventListener('keydown', (e) => { 
