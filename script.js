@@ -26,11 +26,11 @@ function main() {
   }
   function intr6() {
   }
-  function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
-    case 'front': el.style.borderTopLeftRadius = "100px"; el.style.borderTopRightRadius = "100px"; return;
-    case 'right': el.style.borderTopRightRadius = "100px"; el.style.borderBottomRightRadius = "100px"; return;
-    case 'back': el.style.borderBottomRightRadius = "100px"; el.style.borderBottomLeftRadius = "100px"; return;
-    case 'left': el.style.borderBottomLeftRadius = "100px"; el.style.borderTopLeftRadius = "100px"; return;
+  function moveDirection() { elPlayers[muid[1]].style.borderRadius = "0"; switch (real.direction) {
+    case 'front': elPlayers[muid[1]].style.borderTopLeftRadius = "100px"; elPlayers[muid[1]].style.borderTopRightRadius = "100px"; return;
+    case 'right': elPlayers[muid[1]].style.borderTopRightRadius = "100px"; elPlayers[muid[1]].style.borderBottomRightRadius = "100px"; return;
+    case 'back': elPlayers[muid[1]].style.borderBottomRightRadius = "100px"; elPlayers[muid[1]].style.borderBottomLeftRadius = "100px"; return;
+    case 'left': elPlayers[muid[1]].style.borderBottomLeftRadius = "100px"; elPlayers[muid[1]].style.borderTopLeftRadius = "100px"; return;
   }}
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
