@@ -44,6 +44,7 @@ function main() {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real);
     console.log(real);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
+    moveDirection(real.direction,elPlayers[muid[1]]);
   }
   function whoch() {
     switch(touched.key) {
