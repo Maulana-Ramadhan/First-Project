@@ -5,6 +5,8 @@ function main() {
     ax: analog.getBoundingClientRect().left + (analog.getBoundingClientRect().width/2),
     ay: analog.getBoundingClientRect().top + (analog.getBoundingClientRect().height/2),
     iden: undefined,
+    idenT: false,
+    idenF: true,
     key: undefined,
     keyT: true,
     xc(a) {
