@@ -73,10 +73,10 @@ function main() {
     touched.xc(a.touches[0].clientX);
     touched.yc(a.touches[0].clientY);
   }});
-  analog.addEventListener("touchend", a => {
+  window.addEventListener("touchend", a => { if (touches[0].identifier == touched.iden) {
     touched.iden = undefined;
     elPlayers[muid[1]].removeEventListener("transitionend", which);
-  });
+  }});
   document.addEventListener('keydown', (e) => { 
     switch (e.key) {
       case 'u': intr1(e); return;
