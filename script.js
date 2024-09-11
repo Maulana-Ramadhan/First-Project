@@ -70,7 +70,7 @@ function main() {
     touched.xc(a.touches[0].clientX);
     touched.yc(a.touches[0].clientY);
   }});
-  window.addEventListener("touchend", a => { if (a.touches[0].identifier == touched.iden) {
+  window.addEventListener("touchend", a => { console.log(e); if (a.touches[0].identifier == touched.iden) {
     touched.iden = undefined;
     elPlayers[muid[1]].removeEventListener("transitionend", which);
   }});
