@@ -5,14 +5,12 @@ ConfirmInputName.addEventListener('click', (e) => {
   e.preventDefault();
   muid[0] = inputName.value;
   muid[2] = PickColor.value;
-  elPlayers[muid[1]].style.setProperty('--content',muid[0]);
   elPlayers[muid[1]].style.backgroundColor = muid[2];
   localStorage.setItem("myData",JSON.stringify({name:muid[0],uid:muid[1],color:muid[2]}));
 });
 fullScreenButton.addEventListener('click', () => {
   if (!document.fullscreenEnabled) {
-    containerFullScreen.style.display = "none";
-    main();
+    containerFullScreen.style.display = "none"; main();
   } else document.documentElement.requestFullscreen();
 });
 document.documentElement.addEventListener("fullscreenchange", () => {
@@ -62,7 +60,6 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       el.id = muid[0];
       el.classList.add("players");
       el.style.backgroundColor = muid[2];
-      el[muid[1]].style.setProperty('--content',muid[0]);
       MainGame.appendChild(el);
       elPlayers[muid[1]] = el;
     }
@@ -84,7 +81,6 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         el.id = i.uid;
         el.classList.add("players");
         el.style.backgroundColor = i.color;
-        el.style.setProperty('--content',muid[0]);
         MainGame.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid), (spm) => {
           const me = spm.val();
