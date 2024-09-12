@@ -39,8 +39,8 @@ function main() {
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     console.log(varM.x,varM.mapL[3],varM.mapL[2]);
     if (varM.x < varM.mapL[3]) MainGame.style.transform = `translateX(${varM.mapL[0]+=50}px)`;
-    else if (varM.x > varM.mapL[2]) MainGame.style.transform = `translateX(${varM.mapL[0]-=50}px)`;
-    if (varM.y < varM.mapL[1]) MainGame.style.transform = `translateX(${varM.mapL[0]+=50}px)`;
+    else if (varM.x > varM.mapL[1]) MainGame.style.transform = `translateX(${varM.mapL[0]-=50}px)`;
+    if (varM.y < varM.mapL[2]) MainGame.style.transform = `translateX(${varM.mapL[0]+=50}px)`;
     else if (varM.y > varM.mapL[0]) MainGame.style.transform = `translateX(${varM.mapL[0]-=50}px)`;
   }
   function which() {
