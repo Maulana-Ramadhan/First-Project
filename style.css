@@ -42,6 +42,8 @@ html, document, body, body div {
 }
 #MainGame{
   overflow: visible;
+  transform: translate(0,0);
+  transition: transform .25s linear;
 }
 .players{
   width: var(--size);
