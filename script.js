@@ -43,16 +43,16 @@ function main() {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
-    if (varM.x < varM.mapL[3]) {
+    if (varM.x < varM.mapLi[3]) {
       MainGame.style.transform = `translateX(${varM.mapLP(0,3,+1)}px)`;
       console.log("<");
     }
-    else if (varM.x > varM.mapL[1]) {
+    else if (varM.x > varM.mapLi[1]) {
       MainGame.style.transform = `translateX(${varM.mapLP(0,1,-1)}px)`;
       console.log(">");
     }
-    if (varM.y < varM.mapL[2]) MainGame.style.transform = `translateY(${varM.mapLP(1,2,-1)}px)`;
-    else if (varM.y > varM.mapL[3]) MainGame.style.transform = `translateY(${mapLP(1,0,+1)}px)`;
+    if (varM.y < varM.mapLi[2]) MainGame.style.transform = `translateY(${varM.mapLP(1,2,-1)}px)`;
+    else if (varM.y > varM.mapLi[3]) MainGame.style.transform = `translateY(${mapLP(1,0,+1)}px)`;
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
