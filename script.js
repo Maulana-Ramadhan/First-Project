@@ -10,8 +10,9 @@ function main() {
     idenT: false,
     key: undefined,
     keyT: true,
-    mapLP(a,b,c) {
-      this.maPos[a] += c, this.mapLi[b] -= c;
+    mapLP(a,b) {
+      this.maPos[a] += settings.size,
+      this.mapLi[b] -= settings.size;
       return this.maPos[a];
     },
     xc(a) {
