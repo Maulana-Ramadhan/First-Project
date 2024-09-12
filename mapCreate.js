@@ -48,6 +48,11 @@ const structur = {
     ],
   }
 };
+(function() {
+  for (const i in structur) {
+    Things[prop]
+  }
+}());
 function createMAp() {
   
 }
