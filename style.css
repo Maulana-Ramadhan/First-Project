@@ -57,7 +57,9 @@ html, document, body, body div {
   transition: transform .25s linear;
 }
 .players::before {
-  position: relative;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
   content: "var(--content)";
   top: calc(var(--size) / 2);
 }
