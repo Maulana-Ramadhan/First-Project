@@ -49,8 +49,14 @@ const structur = {
   }
 };
 (function() {
-  for (const i in structur) {
-    Things[prop]
+  for (const i of structur) {
+    const dummy = [];
+    [y][x] = [x][y];
+    for (const j of i.enCodetoObject) {
+      for (const k of j) {
+        
+      }
+    }
   }
 }());
 function createMAp() {
