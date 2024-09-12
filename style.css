@@ -46,7 +46,7 @@ html, document, body, body div {
   transition: transform .25s linear;
 }
 #MainGame div{
-  
+  content: var(--inSize);
 }
 .players{
   width: var(--size);
