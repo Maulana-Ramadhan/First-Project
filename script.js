@@ -1,6 +1,6 @@
 function main() {
   const varM = {
-    mapL: [0,MainGame.innerWidth,MainGame.innerHeight,0],
+    mapL: [0,MainGame.offsetWidth,MainGame.offsetHeight,0],
     x: 0,
     y: 0,
     ax: analog.getBoundingClientRect().left + (analog.getBoundingClientRect().width/2),
