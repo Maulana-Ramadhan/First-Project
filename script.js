@@ -10,12 +10,6 @@ function main() {
     idenT: false,
     key: undefined,
     keyT: true,
-    mapL(a) { switch(a) {
-      case 'front' : return this.y + this.MainGame[1]/2;
-      case 'right' : return this.x + this.MainGame[0]/2;
-      case 'back' : return this.y - this.MainGame[1]/2;
-      case 'left' : return this.x - this.MainGame[0]/2;
-    }},
     xc(a) {
       this.x = a - this.ax;
     },
