@@ -10,11 +10,10 @@ ConfirmInputName.addEventListener('click', (e) => {
   localStorage.setItem("myData",JSON.stringify({name:muid[0],uid:muid[1],color:muid[2]}));
 });
 fullScreenButton.addEventListener('click', () => {
-  document.documentElement.requestFullscreen();
   if (!document.fullscreenEnabled) {
     containerFullScreen.style.display = "none";
     main();
-  }
+  } else document.documentElement.requestFullscreen();
 });
 document.documentElement.addEventListener("fullscreenchange", () => {
   containerFullScreen.style.display = "none";
