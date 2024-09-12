@@ -12,7 +12,7 @@ function main() {
     idenT: false,
     key: undefined,
     keyT: true,
-    mapLP(a,b,c) {
+    moveMS(a,b,c) {
       this.maPos[a] += settings.size*c, 
       this.mapLi[b] -= settings.size*c;
       return this.maPos[a];
@@ -47,16 +47,22 @@ function main() {
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     console.log("x",real.position[0],varM.maPos[0]-varM.MG[0],varM.maPos[0]+varM.MG[0]);
     console.log("y",real.position[1],varM.maPos[1]-varM.MG[1],varM.maPos[1]+varM.MG[1]);
-    if (real.position[0] < varM.maPos[0]-varM.MG[0]) {
-      MainGame.style.transform = `translateX(${varM.maPos[0]+=settings.size}px)`;
-      console.log("<");
+    if (real.position[0] < varM.scrPo[0]-varM.MG[0]) {
+      //MainGame.style.transform = `translateX(${varM.maPos[0]+=settings.size}px)`;
+      MainGame.style.transform = `translate(${moveMS(0,+1)}px)`;
     }
-    if (real.position[0] > varM.maPos[0]+varM.MG[0]) {
-      MainGame.style.transform = `translateX(${varM.maPos[0]-=settings.size}px)`;
-      console.log(">");
+    if (real.position[0] > varM.scrPo[0]+varM.MG[0]) {
+      //MainGame.style.transform = `translateX(${varM.maPos[0]-=settings.size}px)`;
+      MainGame.style.transform = `translate(${moveMS(0,-1)}px)`;
     }
-    if (real.position[1] < varM.maPos[1]-varM.MG[1]) MainGame.style.transform = `translateY(${varM.maPos[1]-=settings.size}px)`;
-    if (real.position[1] > varM.maPos[1]+varM.MG[1]) MainGame.style.transform = `translateY(${varM.maPos[1]+=settings.size}px)`;
+    if (real.position[1] < varM.scrPo[1]-varM.MG[1]) {
+      //MainGame.style.transform = `translateY(${varM.maPos[1]-=settings.size}px)`;
+      MainGame.style.transform = `translate(${moveMS(1,-1)}px)`;
+    }
+    if (real.position[1] > varM.scrPo[1]+varM.MG[1]) {
+      MainGame.style.transform = `translate(${moveMS(1,+1)}px)`;
+      //MainGame.style.transform = `translateY(${varM.maPos[1]+=settings.size}px)`;
+    }
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
