@@ -45,6 +45,9 @@ html, document, body, body div {
   transform: translate(0,0);
   transition: transform .25s linear;
 }
+/* #MainGame div{
+  top: calc((100% - attr(height)) / 2);
+} */
 .players{
   width: var(--size);
   height: var(--size);
