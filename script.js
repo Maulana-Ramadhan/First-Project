@@ -70,7 +70,6 @@ function main() {
     varM.xc(a.targetTouches[0].clientX);
     varM.yc(a.targetTouches[0].clientY); which();
     elPlayers[muid[1]].addEventListener("transitionend", which);
-    console.log("touchdown");
   });
   analog.addEventListener("touchmove", a => { 
   for (const i of a.changedTouches) {
@@ -81,7 +80,6 @@ function main() {
   window.addEventListener("touchend", a => { if (a.changedTouches[0].identifier == varM.iden) {
     varM.iden = undefined;
     elPlayers[muid[1]].removeEventListener("transitionend", which);
-    console.log("touchup");
   }});
   document.addEventListener('keydown', (e) => { 
     switch (e.key) {
@@ -93,10 +91,10 @@ function main() {
       case 'k': intr6(e); return;
     }
   });
-  bIntr1.addEventListener('touchdown', intr1);
-  bIntr2.addEventListener('touchdown', intr2);
-  bIntr3.addEventListener('touchdown', intr3);
-  bIntr4.addEventListener('touchdown', intr4);
-  bIntr5.addEventListener('touchdown', intr5);
-  bIntr6.addEventListener('touchdown', intr6);
+  bIntr1.addEventListener('touchstart', intr1);
+  bIntr2.addEventListener('touchstart', intr2);
+  bIntr3.addEventListener('touchstart', intr3);
+  bIntr4.addEventListener('touchstart', intr4);
+  bIntr5.addEventListener('touchstart', intr5);
+  bIntr6.addEventListener('touchstart', intr6);
 }
