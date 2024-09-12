@@ -49,8 +49,8 @@ const structur = {
   }
 };
 (function() {
+  const dummy = Array(structur.length).fill(Array(structur.length));
   for (const i of structur) {
-    const dummy = [];
     [y][x] = [x][y];
     for (const j of i.enCodetoObject) {
       for (const k of j) {
