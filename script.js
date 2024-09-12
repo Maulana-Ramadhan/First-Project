@@ -15,7 +15,7 @@ function main() {
     moveMS(a,b) {
       this.maPos[a] += settings.size*c, 
       this.scrPo[a] -= settings.size*c;
-      return `${this.maPos[0]}px,${this.maPos[1]}px`;
+      return `translate(${this.maPos[0]}px,${this.maPos[1]}px)`;
     },
     xc(a) {
       this.x = a - this.ax;
@@ -49,18 +49,18 @@ function main() {
     console.log("y",real.position[1],varM.maPos[1]-varM.MG[1],varM.maPos[1]+varM.MG[1]);
     if (real.position[0] < varM.scrPo[0]-varM.MG[0]) {
       //MainGame.style.transform = `translateX(${varM.maPos[0]+=settings.size}px)`;
-      MainGame.style.transform = `translate(${varM.moveMS(0,+1)}px)`;
+      MainGame.style.transform = varM.moveMS(0,+1);
     }
     if (real.position[0] > varM.scrPo[0]+varM.MG[0]) {
       //MainGame.style.transform = `translateX(${varM.maPos[0]-=settings.size}px)`;
-      MainGame.style.transform = `translate(${varM.moveMS(0,-1)}px)`;
+      MainGame.style.transform = varM.moveMS(0,-1);
     }
     if (real.position[1] < varM.scrPo[1]-varM.MG[1]) {
       //MainGame.style.transform = `translateY(${varM.maPos[1]-=settings.size}px)`;
-      MainGame.style.transform = `translate(${varM.moveMS(1,-1)}px)`;
+      MainGame.style.transform = varM.moveMS(1,-1);
     }
     if (real.position[1] > varM.scrPo[1]+varM.MG[1]) {
-      MainGame.style.transform = `translate(${varM.moveMS(1,+1)}px)`;
+      MainGame.style.transform = varM.moveMS(1,+1);
       //MainGame.style.transform = `translateY(${varM.maPos[1]+=settings.size}px)`;
     }
   }
