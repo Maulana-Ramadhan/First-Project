@@ -26,12 +26,8 @@ function main() {
   };
   window.precent = varM;
   function intr1() {
-    MainGame.style.transform = "translateX(50px)";
-    console.log(MainGame.style.transform);
   }
   function intr2() {
-    MainGame.style.left = "50px";
-    console.log(MainGame.style.left);
   }
   function intr3() {
   }
