@@ -55,8 +55,9 @@ html, document, body, body div {
   border-top-right-radius: calc(var(--size) / 2);
   transform: translate(0,0);
   transition: transform .25s linear;
+  overflow: visible;
 }
-.players:before {
+.players::before {
   position: relative;
   width: 100px;
   height: 100px;
