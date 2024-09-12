@@ -36,7 +36,7 @@ function main() {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
-    if (h) j;
+    //if (h) j;
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
