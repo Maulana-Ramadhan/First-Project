@@ -67,6 +67,7 @@ function main() {
     touched.xc(a.targetTouches[0].clientX);
     touched.yc(a.targetTouches[0].clientY); which();
     elPlayers[muid[1]].addEventListener("transitionend", which);
+    console.log("touchdown");
   });
   analog.addEventListener("touchmove", a => { 
   for (const i of a.changedTouches) {
@@ -77,6 +78,7 @@ function main() {
   window.addEventListener("touchend", a => { if (a.changedTouches[0].identifier == touched.iden) {
     touched.iden = undefined;
     elPlayers[muid[1]].removeEventListener("transitionend", which);
+    console.log("touchup");
   }});
   document.addEventListener('keydown', (e) => { 
     switch (e.key) {
