@@ -62,6 +62,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
       el.id = muid[0];
       el.classList.add("players");
       el.style.backgroundColor = muid[2];
+      el[muid[1]].style.setProperty('--content',muid[0]);
       MainGame.appendChild(el);
       elPlayers[muid[1]] = el;
     }
@@ -83,6 +84,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         el.id = i.uid;
         el.classList.add("players");
         el.style.backgroundColor = i.color;
+        i.style.setProperty('--content',muid[0]);
         MainGame.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid), (spm) => {
           const me = spm.val();
