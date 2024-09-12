@@ -54,7 +54,7 @@ html, document, body, body div {
   top: calc(var(--size) / 2);
 }
 #mobileOnly {
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   position: absolute;
   width: 100vw;
