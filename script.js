@@ -12,10 +12,10 @@ function main() {
     idenT: false,
     key: undefined,
     keyT: true,
-    moveMS(a,b,c) {
+    moveMS(a,b) {
       this.maPos[a] += settings.size*c, 
-      this.mapLi[b] -= settings.size*c;
-      return this.maPos[a];
+      this.scrPo[a] -= settings.size*c;
+      return `${this.maPos[0]}px,${this.maPos[1]}px`;
     },
     xc(a) {
       this.x = a - this.ax;
