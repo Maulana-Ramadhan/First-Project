@@ -52,6 +52,7 @@ if(localStorage.getItem("myData")) {
 }
 fbg.signInAnonymously(fbg.auth).catch(console.log);
 fbg.onAuthStateChanged(fbg.auth, (user) => {
+  console.log(user);
   if (user) {
     if (!localStorage.getItem("myData")) {
       muid[0] = inputName.value;
