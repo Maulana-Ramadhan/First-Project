@@ -43,7 +43,6 @@ function main() {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
-    console.log(varM.x,varM.mapL[3],varM.mapL[2]);
     if (varM.x < varM.mapL("left")) {
       MainGame.style.transform = `translateX(${varM.mapLP(0,3,+1)}px)`;
       console.log("<");
