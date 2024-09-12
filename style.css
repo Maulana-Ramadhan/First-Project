@@ -62,7 +62,7 @@ html, document, body, body div {
   width: 100px;
   height: 100px;
   overflow: visible;
-  content: "var(--content)";
+  content: var(--content);
   top: 100px;
 }
 #mobileOnly {
