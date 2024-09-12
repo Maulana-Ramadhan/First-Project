@@ -49,12 +49,12 @@ function main() {
       MainGame.style.transform = `translateX(${varM.maPos+=50}px)`;
       console.log("<");
     }
-    else if (varM.x > varM.mapL[1]) {
+    else if (varM.x > varM.mapL("right")) {
       MainGame.style.transform = `translateX(${varM.maPos[0]-=50}px)`;
       console.log(">");
     }
-    if (varM.y < varM.mapL[2]) MainGame.style.transform = `translateY(${varM.mapL[0]+=50}px)`;
-    else if (varM.y > varM.mapL[0]) MainGame.style.transform = `translateY(${varM.mapL[0]-=50}px)`;
+    if (varM.y < varM.mapL("back")) MainGame.style.transform = `translateY(${varM.mapL[0]+=50}px)`;
+    else if (varM.y > varM.mapL("front")) MainGame.style.transform = `translateY(${varM.mapL[0]-=50}px)`;
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
