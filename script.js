@@ -1,6 +1,6 @@
 function main() {
   const varM = {
-    mapL: [0,parseInt(MainGame.offsetWidth),parseInt(MainGame.offsetHeight),0],
+    [0,parseInt(MainGame.offsetWidth),parseInt(MainGame.offsetHeight),0],
     mapOs: [0,0],
     x: 0,
     y: 0,
@@ -10,6 +10,12 @@ function main() {
     idenT: false,
     key: undefined,
     keyT: true,
+    mapL(a) { switch(a) {
+      case 'front' : this.y -= settings.size; break;
+      case 'right' : this.x -= settings.size; break;
+      case 'back' : this.y += settings.size; break;
+      case 'left' : this.x += settings.size; break;
+    }},
     xc(a) {
       this.x = a - this.ax;
     },
