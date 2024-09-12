@@ -40,9 +40,11 @@ function main() {
     console.log(varM.x,varM.mapL[3],varM.mapL[2]);
     if (varM.x < varM.mapL[3]) {
       MainGame.style.transform = `translateX(${varM.mapL[0]+=50}px)`;
+      console.log("<");
     }
     else if (varM.x > varM.mapL[1]) {
       MainGame.style.transform = `translateX(${varM.mapL[0]-=50}px)`;
+      console.log(">");
     }
     if (varM.y < varM.mapL[2]) MainGame.style.transform = `translateX(${varM.mapL[0]+=50}px)`;
     else if (varM.y > varM.mapL[0]) MainGame.style.transform = `translateX(${varM.mapL[0]-=50}px)`;
