@@ -10,9 +10,9 @@ function main() {
     idenT: false,
     key: undefined,
     keyT: true,
-    mapLP(a,b) {
-      this.maPos[a] += settings.size, 
-      this.mapLi[b] -= settings.size;
+    mapLP(a,b,c) {
+      this.maPos[a] += settings.size*c, 
+      this.mapLi[b] -= settings.size*c;
       return this.maPos[a];
     },
     xc(a) {
@@ -47,12 +47,12 @@ function main() {
       MainGame.style.transform = `translateX(${varM.mapLP(0,3,+1)}px)`;
       console.log("<");
     }
-    else if (varM.x > varM.mapLi[1]) {
+    if (varM.x > varM.mapLi[1]) {
       MainGame.style.transform = `translateX(${varM.mapLP(0,1,-1)}px)`;
       console.log(">");
     }
     if (varM.y < varM.mapLi[2]) MainGame.style.transform = `translateY(${varM.mapLP(1,2,-1)}px)`;
-    else if (varM.y > varM.mapLi[3]) MainGame.style.transform = `translateY(${mapLP(1,0,+1)}px)`;
+    if (varM.y > varM.mapLi[3]) MainGame.style.transform = `translateY(${varM.mapLP(1,0,+1)}px)`;
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
