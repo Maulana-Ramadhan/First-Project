@@ -84,7 +84,7 @@ fbg.onAuthStateChanged(fbg.auth, (user) => {
         el.id = i.uid;
         el.classList.add("players");
         el.style.backgroundColor = i.color;
-        i.style.setProperty('--content',muid[0]);
+        el.style.setProperty('--content',muid[0]);
         MainGame.appendChild(el);
         fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid), (spm) => {
           const me = spm.val();
