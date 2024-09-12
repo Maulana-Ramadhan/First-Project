@@ -57,10 +57,10 @@ function main() {
     }
     if (real.position[1] < varM.scrPo[1]-varM.MG[1]) {
       //MainGame.style.transform = `translateY(${varM.maPos[1]-=settings.size}px)`;
-      MainGame.style.transform = varM.moveMS(1,-1);
+      MainGame.style.transform = varM.moveMS(1,+1);
     }
     if (real.position[1] > varM.scrPo[1]+varM.MG[1]) {
-      MainGame.style.transform = varM.moveMS(1,+1);
+      MainGame.style.transform = varM.moveMS(1,-1);
       //MainGame.style.transform = `translateY(${varM.maPos[1]+=settings.size}px)`;
     }
   }
