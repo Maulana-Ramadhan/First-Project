@@ -1,5 +1,5 @@
 function main() {
-  const touched = {
+  const varM = {
     x: 0,
     y: 0,
     ax: analog.getBoundingClientRect().left + (analog.getBoundingClientRect().width/2),
@@ -34,17 +34,17 @@ function main() {
     if (h) j;
   }
   function which() {
-    const c = (touched.x**2+touched.y**2)**(1/2);
-    if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
-      if (touched.x/c > 0) { real.position[0] += settings.size; real.direction = "right"; }
+    const c = (varM.x**2+varM.y**2)**(1/2);
+    if (Math.abs(varM.x/c) > Math.abs(varM.y/c)) {
+      if (varM.x/c > 0) { real.position[0] += settings.size; real.direction = "right"; }
       else { real.position[0] -= settings.size; real.direction = "left"; }
     } else {
-      if (touched.y/c > 0) { real.position[1] += settings.size; real.direction = "front"; }
+      if (varM.y/c > 0) { real.position[1] += settings.size; real.direction = "front"; }
       else { real.position[1] -= settings.size; real.direction = "back"; }
     } whach();
   }
   function whoch() {
-    switch(touched.key) {
+    switch(varM.key) {
       case 'w': real.position[1] -= settings.size; real.direction = "front"; break;
       case 'd': real.position[0] += settings.size; real.direction = "right"; break;
       case 's': real.position[1] += settings.size; real.direction = "back"; break;
@@ -52,29 +52,29 @@ function main() {
     } whach();
   }
   document.addEventListener('keydown', (e) => {
-    touched.key = e.key; if (touched.keyT) {
+    varM.key = e.key; if (varM.keyT) {
     elPlayers[muid[1]].addEventListener("transitionend", whoch);
-    whoch(); touched.keyT = true;
+    whoch(); varM.keyT = true;
   }});
   document.addEventListener('keyup', (e) => {
-    touched.key = undefined; touched.keyT = false;
+    varM.key = undefined; varM.keyT = false;
     elPlayers[muid[1]].removeEventListener("transitionend", whoch);
   });
   analog.addEventListener("touchstart", a => {
-    touched.iden = a.targetTouches[0].identifier;
-    touched.xc(a.targetTouches[0].clientX);
-    touched.yc(a.targetTouches[0].clientY); which();
+    varM.iden = a.targetTouches[0].identifier;
+    varM.xc(a.targetTouches[0].clientX);
+    varM.yc(a.targetTouches[0].clientY); which();
     elPlayers[muid[1]].addEventListener("transitionend", which);
     console.log("touchdown");
   });
   analog.addEventListener("touchmove", a => { 
   for (const i of a.changedTouches) {
-    if (i.identifier == touched.iden) {
-    touched.xc(i.clientX);
-    touched.yc(i.clientY);
+    if (i.identifier == varM.iden) {
+    varM.xc(i.clientX);
+    varM.yc(i.clientY);
   }}});
-  window.addEventListener("touchend", a => { if (a.changedTouches[0].identifier == touched.iden) {
-    touched.iden = undefined;
+  window.addEventListener("touchend", a => { if (a.changedTouches[0].identifier == varM.iden) {
+    varM.iden = undefined;
     elPlayers[muid[1]].removeEventListener("transitionend", which);
     console.log("touchup");
   }});
