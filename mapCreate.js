@@ -3,9 +3,9 @@ const configuration = ["choosedPlace","allowRotate"];
 const structur = {
   basicSquare: {
     enCodetoObject: [
-      [1, 1, 2, 1, 1],
+      [1, 1, 1, 1, 1],
       [1, 0, 0, 0, 1],
-      [2, 0, 0, 0, 2],
+      [1, 0, 0, 0, 1],
       [1, 0, 0, 0, 1],
       [1, 1, 2, 1, 1],
     ],
@@ -26,6 +26,7 @@ const structur = {
       [1, 1, 1, 1, 2, 1, 1, 1, 1],
     ],
     configuration: [
+      [0,[4,36,44,76],[4],[1]] //[configuration,[semua tiles yang diganti],[minimal yang harus diganti],[dengan tiles apa jika tidak diganti],[[tiles yang diacak],[bobot setiap tiles]]]
       [1],
     ],
   },
@@ -48,17 +49,7 @@ const structur = {
     ],
   }
 };
-(function() {
-  const dummy = Array(structur.length).fill(Array(structur.length));
-  for (const i of structur) {
-    [y][x] = [x][y];
-    for (const j of i.enCodetoObject) {
-      for (const k of j) {
-        
-      }
-    }
-  }
-}());
+const specialArrayMap = (a,x,y) => structur[a][y][x];
 function createMAp() {
   
 }
