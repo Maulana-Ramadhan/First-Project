@@ -57,7 +57,7 @@ html, document, body, body div {
   transition: transform .25s linear;
 }
 .players::before {
-  position: absolute;
+  position: relative;
   width: fit-content;
   height: fit-content;
   overflow: visible;
