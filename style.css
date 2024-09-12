@@ -62,7 +62,7 @@ html, document, body, body div {
   height: fit-content;
   overflow: visible;
   content: "var(--content)";
-  top: calc(var(--size) / 2);
+  top: 100px;
 }
 #mobileOnly {
   bottom: 40vh;
