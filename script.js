@@ -29,11 +29,6 @@ function main() {
   }
   
   function which() {
-    if (touched.idenT) {
-      elPlayers[muid[1]].removeEventListener("transitionend", which);
-      touched.idenT = false;
-      return;
-    }
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
       if (touched.x/c > 0) { real.position[0] += settings.size; real.direction = "right"; }
@@ -81,7 +76,7 @@ function main() {
   }}});
   window.addEventListener("touchend", a => { if (a.changedTouches[0].identifier == touched.iden) {
     touched.iden = undefined;
-    touched.idenT = true;
+    elPlayers[muid[1]].removeEventListener("transitionend", which);
   }});
   document.addEventListener('keydown', (e) => { 
     switch (e.key) {
