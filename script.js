@@ -27,7 +27,11 @@ function main() {
   }
   function intr6() {
   }
-  
+  function whach() {
+    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
+    moveDirection(real.direction,elPlayers[muid[1]]);
+    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
+  }
   function which() {
     const c = (touched.x**2+touched.y**2)**(1/2);
     if (Math.abs(touched.x/c) > Math.abs(touched.y/c)) {
@@ -36,11 +40,7 @@ function main() {
     } else {
       if (touched.y/c > 0) { real.position[1] += settings.size; real.direction = "front"; }
       else { real.position[1] -= settings.size; real.direction = "back"; }
-    }
-    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
-    moveDirection(real.direction,elPlayers[muid[1]]);
-    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
-    console.log(real.position[0],real.position[1]);
+    } whach();
   }
   function whoch() {
     switch(touched.key) {
@@ -48,10 +48,7 @@ function main() {
       case 'd': real.position[0] += settings.size; real.direction = "right"; break;
       case 's': real.position[1] += settings.size; real.direction = "back"; break;
       case 'a': real.position[0] -= settings.size; real.direction = "left"; break; 
-    }
-    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
-    moveDirection(real.direction,elPlayers[muid[1]]);
-    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
+    } whach();
   }
   document.addEventListener('keydown', (e) => {
     touched.key = e.key; if (touched.keyT) {
