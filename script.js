@@ -16,6 +16,7 @@ function main() {
       this.y = a - this.ay;
     }
   };
+  window.precent = varM;
   function intr1() {
     MainGame.style.transform = "translateX(50px)";
     console.log(MainGame.style.transform);
