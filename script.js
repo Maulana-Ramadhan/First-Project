@@ -1,5 +1,6 @@
 function main() {
   const varM = {
+    mapL: [],
     x: 0,
     y: 0,
     ax: analog.getBoundingClientRect().left + (analog.getBoundingClientRect().width/2),
