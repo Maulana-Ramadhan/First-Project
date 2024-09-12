@@ -60,6 +60,7 @@ html, document, body, body div {
   position: absolute;
   width: fit-content;
   height: fit-content;
+  overflow: visible;
   content: "var(--content)";
   top: calc(var(--size) / 2);
 }
