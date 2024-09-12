@@ -44,7 +44,7 @@ function main() {
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     console.log("x",varM.x,varM.mapLi[3],varM.mapLi[1]);
-    console.log("x",varM.y,varM.mapLi[0],varM.mapLi[2]);
+    console.log("y",varM.y,varM.mapLi[0],varM.mapLi[2]);
     if (varM.x < varM.mapLi[3]) {
       MainGame.style.transform = `translateX(${varM.mapLP(0,3,+1)}px)`;
       console.log("<");
