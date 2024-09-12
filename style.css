@@ -45,9 +45,9 @@ html, document, body, body div {
   transform: translate(0,0);
   transition: transform .25s linear;
 }
-/* #MainGame div{
-  top: calc((100% - attr(height)) / 2);
-} */
+#MainGame div{
+  content: var(--inSize);
+}
 .players{
   width: var(--size);
   height: var(--size);
@@ -55,6 +55,7 @@ html, document, body, body div {
   border-top-right-radius: calc(var(--size) / 2);
   transform: translate(0,0);
   transition: transform .25s linear;
+  --inSize: width;
 }
 .players::before {
   position: relative;
