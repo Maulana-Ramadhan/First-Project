@@ -46,7 +46,6 @@ if(localStorage.getItem("myData")) {
   el.id = muid[0];
   el.classList.add("players");
   el.style.backgroundColor = muid[2];
-  el.style.setProperty('--content',muid[0]);
   MainGame.appendChild(el);
   elPlayers[muid[1]] = el;
 }
