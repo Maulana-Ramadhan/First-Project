@@ -1,7 +1,7 @@
 function main() {
   const varM = {
     mapL: [0,parseInt(MainGame.offsetWidth),parseInt(MainGame.offsetHeight),0],
-    mapOs: [0,0]
+    mapOs: [0,0],
     x: 0,
     y: 0,
     ax: analog.getBoundingClientRect().left + (analog.getBoundingClientRect().width/2),
