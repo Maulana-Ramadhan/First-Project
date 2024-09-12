@@ -58,14 +58,6 @@ html, document, body, body div {
   transition: transform .25s linear;
   overflow: visible;
 }
-.players::before {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  overflow: visible;
-  content: var(--content);
-  top: 100px;
-}
 #mobileOnly {
   bottom: 40vh;
   left: 0;
