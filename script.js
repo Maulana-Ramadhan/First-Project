@@ -44,15 +44,15 @@ function main() {
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     console.log(varM.x,varM.mapL[3],varM.mapL[2]);
     if (varM.x < varM.mapL("left")) {
-      MainGame.style.transform = `translateX(${(varM.mapLi-=settings.size)&&(varM.maPos+=settings.size)}px)`;
+      MainGame.style.transform = `translateX(${varM.mapLP(0,3,+50)}px)`;
       console.log("<");
     }
     else if (varM.x > varM.mapL("right")) {
-      MainGame.style.transform = `translateX(${(varM.mapLi+=settings.size)&&(varM.maPos-=settings.size)}px)`;
+      MainGame.style.transform = `translateX(${varM.mapLP(0,1,-50)}px)`;
       console.log(">");
     }
-    if (varM.y < varM.mapL("back")) MainGame.style.transform = `translateY(${(varM.mapLi-=settings.size)&&(varM.maPos+=settings.size)}px)`;
-    else if (varM.y > varM.mapL("front")) MainGame.style.transform = `translateY(${varM.mapL[0]-=50}px)`;
+    if (varM.y < varM.mapL("back")) MainGame.style.transform = `translateY(${varM.mapLP(1,2,+50)}px)`;
+    else if (varM.y > varM.mapL("front")) MainGame.style.transform = `translateY(${mapLP(1,0,-50)}px)`;
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
