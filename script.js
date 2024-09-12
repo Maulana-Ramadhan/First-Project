@@ -12,6 +12,7 @@ function main() {
     keyT: true,
     mapLP(a,b,c) {
       this.maPos[a] += c, this.mapLi[b] += c;
+      return this.maPos[a];
     },
     xc(a) {
       this.x = a - this.ax;
