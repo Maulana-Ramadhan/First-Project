@@ -46,16 +46,16 @@ function main() {
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     console.log("x",real.position[0],varM.mapLi[3],varM.mapLi[1]);
     console.log("y",real.position[1],varM.mapLi[0],varM.mapLi[2]);
-    if (real.position[0] < varM.maPos[0]-varM.MG) {
+    if (real.position[0] < varM.maPos[0]-varM.MG[0]) {
       MainGame.style.transform = `translateX(${varM.maPos[0]+=settings.size}px)`;
       console.log("<");
     }
-    if (real.position[0] > varM.maPos[0]+varM.MG) {
+    if (real.position[0] > varM.maPos[0]+varM.MG[0]) {
       MainGame.style.transform = `translateX(${varM.maPos[0]-=settings.size}px)`;
       console.log(">");
     }
-    if (real.position[1] < varM.maPos[1]-varM.MG) MainGame.style.transform = `translateY(${varM.maPos[1]-=settings.size}px)`;
-    if (real.position[1] > varM.maPos[1]+varM.MG) MainGame.style.transform = `translateY(${varM.maPos[1]+=settings.size}px)`;
+    if (real.position[1] < varM.maPos[1]-varM.MG[1]) MainGame.style.transform = `translateY(${varM.maPos[1]-=settings.size}px)`;
+    if (real.position[1] > varM.maPos[1]+varM.MG[1]) MainGame.style.transform = `translateY(${varM.maPos[1]+=settings.size}px)`;
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
