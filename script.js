@@ -13,8 +13,8 @@ function main() {
     key: undefined,
     keyT: true,
     moveMS(a,b) {
-      this.maPos[a] += settings.size*c, 
-      this.scrPo[a] -= settings.size*c;
+      this.maPos[a] += settings.size*b, 
+      this.scrPo[a] -= settings.size*b;
       return `translate(${this.maPos[0]}px,${this.maPos[1]}px)`;
     },
     xc(a) {
