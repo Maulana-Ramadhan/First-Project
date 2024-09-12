@@ -58,7 +58,7 @@ html, document, body, body div {
 }
 .players::before {
   position: relative;
-  content: var(--content);
+  content: "var(--content)";
   top: calc(var(--size) / 2);
 }
 #mobileOnly {
