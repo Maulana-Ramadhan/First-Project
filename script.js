@@ -1,7 +1,7 @@
 function main() {
   const varM = {
     maPos: [0,0],
-    mapL: [parseInt(MainGame.offsetHeight)/2,parseInt(MainGame.offsetWidth)/2,-parseInt(MainGame.offsetHeight)/2,-parseInt(MainGame.offsetWidth)/2],
+    mapLi: [parseInt(MainGame.offsetHeight)/2,parseInt(MainGame.offsetWidth)/2,-parseInt(MainGame.offsetHeight)/2,-parseInt(MainGame.offsetWidth)/2],
     x: 0,
     y: 0,
     ax: analog.getBoundingClientRect().left + (analog.getBoundingClientRect().width/2),
@@ -10,6 +10,9 @@ function main() {
     idenT: false,
     key: undefined,
     keyT: true,
+    mapLP(a,b,c) {
+      this.maPos[a] += c, this.mapLi[b] += c;
+    },
     xc(a) {
       this.x = a - this.ax;
     },
@@ -40,14 +43,14 @@ function main() {
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     console.log(varM.x,varM.mapL[3],varM.mapL[2]);
     if (varM.x < varM.mapL("left")) {
-      MainGame.style.transform = `translateX(${varM.maPos+=50}px)`;
+      MainGame.style.transform = `translateX(${(varM.mapLi-=settings.size)&&(varM.maPos+=settings.size)}px)`;
       console.log("<");
     }
     else if (varM.x > varM.mapL("right")) {
-      MainGame.style.transform = `translateX(${varM.maPos[0]-=50}px)`;
+      MainGame.style.transform = `translateX(${(varM.mapLi+=settings.size)&&(varM.maPos-=settings.size)}px)`;
       console.log(">");
     }
-    if (varM.y < varM.mapL("back")) MainGame.style.transform = `translateY(${varM.mapL[0]+=50}px)`;
+    if (varM.y < varM.mapL("back")) MainGame.style.transform = `translateY(${(varM.mapLi-=settings.size)&&(varM.maPos+=settings.size)}px)`;
     else if (varM.y > varM.mapL("front")) MainGame.style.transform = `translateY(${varM.mapL[0]-=50}px)`;
   }
   function which() {
