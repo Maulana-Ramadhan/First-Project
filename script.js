@@ -39,6 +39,7 @@ function main() {
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     if (varM.x < varM.mapL[0]) {
       MainGame.style.transform = `translateX(${varM.mapL[0]-=50}px)`;
+    }
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
