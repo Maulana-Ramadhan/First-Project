@@ -11,7 +11,7 @@ function main() {
     key: undefined,
     keyT: true,
     mapLP(a,b,c) {
-      this.maPos[a] += c, this.mapLi[b] += c;
+      this.maPos[a] += c, this.mapLi[b] -= c;
       return this.maPos[a];
     },
     xc(a) {
@@ -51,8 +51,8 @@ function main() {
       MainGame.style.transform = `translateX(${varM.mapLP(0,1,-50)}px)`;
       console.log(">");
     }
-    if (varM.y < varM.mapL("back")) MainGame.style.transform = `translateY(${varM.mapLP(1,2,+50)}px)`;
-    else if (varM.y > varM.mapL("front")) MainGame.style.transform = `translateY(${mapLP(1,0,-50)}px)`;
+    if (varM.y < varM.mapL("back")) MainGame.style.transform = `translateY(${varM.mapLP(1,2,-50)}px)`;
+    else if (varM.y > varM.mapL("front")) MainGame.style.transform = `translateY(${mapLP(1,0,+50)}px)`;
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
