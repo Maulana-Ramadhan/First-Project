@@ -1,6 +1,7 @@
 function main() {
   const varM = {
     maPos: [0,0],
+    scrPo: [0,0],
     mapLi: [parseInt(MainGame.offsetHeight)/2,parseInt(MainGame.offsetWidth)/2,-parseInt(MainGame.offsetHeight)/2,-parseInt(MainGame.offsetWidth)/2],
     MG: [parseInt(MainGame.offsetWidth)/2,parseInt(MainGame.offsetHeight)/2],
     x: 0,
