@@ -40,6 +40,9 @@ html, document, body, body div {
   width: 25px;
   height: 25px;
 }
+#MainGame{
+  overflow: visible;
+}
 .players{
   width: var(--size);
   height: var(--size);
