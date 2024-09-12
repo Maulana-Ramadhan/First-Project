@@ -1,7 +1,7 @@
 function main() {
   const varM = {
-    [0,parseInt(MainGame.offsetWidth),parseInt(MainGame.offsetHeight),0],
-    mapOs: [0,0],
+    MainGame : [parseInt(MainGame.offsetWidth),parseInt(MainGame.offsetHeight)],
+    maPos: [0,0],
     x: 0,
     y: 0,
     ax: analog.getBoundingClientRect().left + (analog.getBoundingClientRect().width/2),
@@ -11,10 +11,10 @@ function main() {
     key: undefined,
     keyT: true,
     mapL(a) { switch(a) {
-      case 'front' : this.y -= settings.size; break;
-      case 'right' : this.x -= settings.size; break;
-      case 'back' : this.y += settings.size; break;
-      case 'left' : this.x += settings.size; break;
+      case 'front' : return this.y + this.MainGame[1]/2;
+      case 'right' : return this.x + this.MainGame[0]/2;
+      case 'back' : return this.y - this.MainGame[1]/2;
+      case 'left' : return this.x - this.MainGame[0]/2;
     }},
     xc(a) {
       this.x = a - this.ax;
@@ -45,12 +45,12 @@ function main() {
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     console.log(varM.x,varM.mapL[3],varM.mapL[2]);
-    if (varM.x < varM.mapL[3]) {
-      MainGame.style.transform = `translateX(${varM.mapL[]+=50}px)`;
+    if (varM.x < varM.mapL("left")) {
+      MainGame.style.transform = `translateX(${varM.maPos+=50}px)`;
       console.log("<");
     }
     else if (varM.x > varM.mapL[1]) {
-      MainGame.style.transform = `translateX(${varM.mapL[0]-=50}px)`;
+      MainGame.style.transform = `translateX(${varM.maPos[0]-=50}px)`;
       console.log(">");
     }
     if (varM.y < varM.mapL[2]) MainGame.style.transform = `translateY(${varM.mapL[0]+=50}px)`;
