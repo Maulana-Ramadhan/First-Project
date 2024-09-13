@@ -52,13 +52,13 @@ const structur = {
     ],
   },
   metStructor: {
-    reverseC(){return t.map((k,i)=>k.map((l,j)=>t[j][i]))},
-    reverseR(){},
-    tranportI(){},
-    tranportU(){},
-    rotate90(){},
-    rotate180(){},
-    rotate270(){},
+    reverseC(){return this.enCodetoObject.map((k,i)=>k.map((l,j)=>this.enCodetoObject[j][i]))},
+    reverseR(){return this.enCodetoObject.map((k,i)=>k.map((l,j)=>this.enCodetoObject[j][i]))},
+    tranportI(){return this.enCodetoObject.map((k,i)=>k.map((l,j)=>this.enCodetoObject[j][i]))},
+    tranportU(){return this.enCodetoObject.map((k,i)=>k.map((l,j)=>this.enCodetoObject[j][i]))},
+    rotate90(){return this.enCodetoObject.map((k,i)=>k.map((l,j)=>this.enCodetoObject[j][i]))},
+    rotate180(){return this.enCodetoObject.map((k,i)=>k.map((l,j)=>this.enCodetoObject[j][i]))},
+    rotate270(){return this.enCodetoObject.map((k,i)=>k.map((l,j)=>this.enCodetoObject[j][i]))},
   },
   conStructor(name,enCodetoObject,configuration) {
     this.name = {
