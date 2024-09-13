@@ -64,7 +64,7 @@ const structur = {
     this.name = {
       enCodetoObject,
       configuration,
-      
+      Change: this.metStructor,
     };
   }
 };
