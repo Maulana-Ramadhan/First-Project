@@ -61,11 +61,11 @@ const structur = {
     rotate270(){return this.enCodetoObject.map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[j][i]))},
   },
   conStructor(name,enCodetoObject,configuration) {
-    this.name = {
+    this[name] = {
       enCodetoObject,
       configuration,
-      Change: this.metStructor,
     };
+    Object.assign(this[name], this.metStructor);
   }
 };
 const specialArrayMap = (a,x,y) => structur[a][y][x];
