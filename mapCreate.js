@@ -1,5 +1,8 @@
 const enCodetoObject = ["air","solid","door","chest"];
 const configuration = ["choosedPlace","allowRotate"];
+function conStructor(name,enCodetoObject,configuration) {
+  
+}
 const structur = {
   basicSquare: {
     enCodetoObject: [
@@ -10,7 +13,7 @@ const structur = {
       [1, 1, 2, 1, 1],
     ],
     configuration: [
-      [1]
+      [1], 
     ],
   },
   treasureRoom: {
@@ -47,6 +50,22 @@ const structur = {
     configuration: [
       [1]
     ],
+  },
+  metStructor: {
+    reverseC(){return t.map((k,i)=>k.map((l,j)=>t[j][i]))},
+    reverseR(){},
+    tranportI(){},
+    tranportU(){},
+    rotate90(){},
+    rotate180(){},
+    rotate270(){},
+  },
+  conStructor(name,enCodetoObject,configuration) {
+    this.name = {
+      enCodetoObject,
+      configuration,
+      
+    };
   }
 };
 const specialArrayMap = (a,x,y) => structur[a][y][x];
