@@ -1,53 +1,6 @@
 const enCodetoObject = ["air","solid","door","chest"];
 const configuration = ["choosedPlace","allowRotate"];
 const structure = {
-  // basicSquare: {
-  //   enCodetoObject: [
-  //     [1, 1, 1, 1, 1],
-  //     [1, 0, 0, 0, 1],
-  //     [1, 0, 0, 0, 1],
-  //     [1, 0, 0, 0, 1],
-  //     [1, 1, 2, 1, 1],
-  //   ],
-  //   configuration: [
-  //     [1], 
-  //   ],
-  // },
-  // treasureRoom: {
-  //   enCodetoObject: [
-  //     [1, 1, 1, 1, 2, 1, 1, 1, 1],
-  //     [1, 0, 0, 0, 0, 0, 0, 0, 1],
-  //     [1, 0, 1, 1, 0, 1, 1, 0, 1],
-  //     [1, 0, 1, 0, 0, 0, 1, 0, 1],
-  //     [2, 0, 0, 0, 3, 0, 0, 0, 2],
-  //     [1, 0, 1, 0, 0, 0, 1, 0, 1],
-  //     [1, 0, 1, 1, 0, 1, 1, 0, 1],
-  //     [1, 0, 0, 0, 0, 0, 0, 0, 1],
-  //     [1, 1, 1, 1, 2, 1, 1, 1, 1],
-  //   ],
-  //   configuration: [
-  //     [0,[4,36,44,76],[4],[1]] //[configuration,[semua tiles yang diganti],[minimal yang harus diganti],[dengan tiles apa jika tidak diganti],[[tiles yang diacak],[bobot setiap tiles]]]
-  //     [1],
-  //   ],
-  // },
-  // prison: {
-  //   enCodetoObject: [
-  //     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  //     [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-  //     [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-  //     [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-  //     [1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1],
-  //     [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
-  //     [1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1],
-  //     [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-  //     [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-  //     [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-  //     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  //   ],
-  //   configuration: [
-  //     [1]
-  //   ],
-  // },
   metStructor: {
     reverseC(){return this.enCodetoObject.toReversed().map((k,i)=>k.map((l,j)=>this.enCodetoObject[i][j]))},
     reverseR(){return this.enCodetoObject.map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[i][j]))},
@@ -67,12 +20,13 @@ const structure = {
   }
 };
 structure.conStructor("basicSquare",[
-  [1, 1, 1, 1, 1],
+  [1, 1, 2, 1, 1],
   [1, 0, 0, 0, 1],
-  [1, 0, 0, 0, 1],
+  [2, 0, 0, 0, 2],
   [1, 0, 0, 0, 1],
   [1, 1, 2, 1, 1],],
-  [[1],]
+  [[0,[2,10,14,22],[1,4],[1]],
+  [1,[true,true,true,true]],]
 );
 structure.conStructor("treasureRoom",[
   [1, 1, 1, 1, 2, 1, 1, 1, 1],
@@ -84,7 +38,7 @@ structure.conStructor("treasureRoom",[
   [1, 0, 1, 1, 0, 1, 1, 0, 1],
   [1, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 1, 1, 1, 2, 1, 1, 1, 1],],
-  [[0,[4,36,44,76],[4],[1]] //[configuration,[semua tiles yang diganti],[minimal yang harus diganti],[dengan tiles apa jika tidak diganti],[[tiles yang diacak],[bobot setiap tiles]]]
+  [[0,[4,36,44,76],[1,4],[1]] //[configuration,[semua tiles yang diganti],[minimal, maksimal | yang harus diganti],[dengan tiles apa jika tidak diganti],[[tiles yang diacak],[bobot setiap tiles]]]
   [1],],
 );
 structure.conStructor("prison",[
@@ -101,6 +55,7 @@ structure.conStructor("prison",[
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],],
   [[1]]
 );
+
 const specialArrayMap = (a,x,y) => structure[a][y][x];
 function createMAp() {
   
