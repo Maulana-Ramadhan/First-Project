@@ -1,6 +1,6 @@
 const enCodetoObject = ["air","solid","door","chest"];
 const configuration = ["choosedPlace","allowRotate"];
-const structur = {
+const structure = {
   // basicSquare: {
   //   enCodetoObject: [
   //     [1, 1, 1, 1, 1],
@@ -66,7 +66,7 @@ const structur = {
     Object.assign(this[name], this.metStructor);
   }
 };
-structur.conStructor("basicSquare",[
+structure.conStructor("basicSquare",[
   [1, 1, 1, 1, 1],
   [1, 0, 0, 0, 1],
   [1, 0, 0, 0, 1],
@@ -74,7 +74,7 @@ structur.conStructor("basicSquare",[
   [1, 1, 2, 1, 1],],
   [[1],]
 );
-structur.conStructor("treasureRoom",[
+structure.conStructor("treasureRoom",[
   [1, 1, 1, 1, 2, 1, 1, 1, 1],
   [1, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 1, 1, 0, 1, 1, 0, 1],
@@ -87,7 +87,7 @@ structur.conStructor("treasureRoom",[
   [[0,[4,36,44,76],[4],[1]] //[configuration,[semua tiles yang diganti],[minimal yang harus diganti],[dengan tiles apa jika tidak diganti],[[tiles yang diacak],[bobot setiap tiles]]]
   [1],],
 );
-structur.conStructor("prison",[
+structure.conStructor("prison",[
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
   [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -101,7 +101,7 @@ structur.conStructor("prison",[
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],],
   [[1]]
 );
-const specialArrayMap = (a,x,y) => structur[a][y][x];
+const specialArrayMap = (a,x,y) => structure[a][y][x];
 function createMAp() {
   
 }
