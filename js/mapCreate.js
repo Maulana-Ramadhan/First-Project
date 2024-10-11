@@ -170,7 +170,6 @@ branchRoad.mins = function (a) {
 branchRoad.get = function () {
   return [this[0], this[0] + this[1], this[0] + this[1] + this[2]];
 };
-console.log(branchRoad);
 rng.branchRoad = function (a) {
   //console.log(a);
   const ranD = this.inRange(1, 100+(100*(Cmap.length-1))), indeks = branchRoad.get();
