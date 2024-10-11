@@ -77,7 +77,7 @@ structure.conStructorR(("smallRoad"),[[
 structure.conStructorR(("mediumRoad"),[[
   [0],[0],
   [0],[0],]
-  [1,[true,true,true,true]]
+  [1,[true,true,true,true]],
 ]);
 structure.conStructorR(("largeRoad"),[[
   [1],
