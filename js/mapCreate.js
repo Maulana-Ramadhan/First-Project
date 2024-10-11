@@ -67,9 +67,7 @@ const structure = {
   }
 };
 structure.conStructorR(("smallRoad"),[[
-  [1],
-  [0],
-  [1]],
+  [0],]
   [1,[true,true,true,true]]
 ]);
 structure.conStructorR(("mediumRoad"),[[
