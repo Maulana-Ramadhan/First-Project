@@ -67,7 +67,7 @@ NFSTR.prototype.conStructorR = function(name,proto) {
 };*/
 const structure = new NFSTR();
 structure.conStructorR(("smallRoad"),[[
-  [0],]
+  [0],],
   [1,[true,true,true,true]],
   [-2,2],
   [[0,-1],[1,-1],[1,0],[1,1],[0,1]],
@@ -79,7 +79,7 @@ structure.conStructorR(("mediumRoad"),[[
   [1],[1],[1],[1]
   [1],[0],[0],[1]
   [1],[0],[0],[1]
-  [1],[1],[1],[1]]
+  [1],[1],[1],[1]],
   [1,[true,true,true,true]],
 ]);
 structure.conStructorR(("largeRoad"),[[
