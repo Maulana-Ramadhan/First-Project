@@ -91,12 +91,13 @@ structure.conStructorR(("largeRoad"),[[
   [1,[true,true,true,true]]
 ]);
 structure.conStructorR(("megaRoad"),[[
-  [1],
-  [0],
-  [0],
-  [0],
-  [0],
-  [1]],
+  [1],[1],[1],[1],[1],[1],
+  [1],[0],[0],[0],[0],[1],
+  [1],[0],[0],[0],[0],[1],
+  [1],[0],[0],[0],[0],[1],
+  [1],[0],[0],[0],[0],[1],
+  [1],[1],[1],[1],[1],[1],
+  ],
   [1,[true,true,true,true]]
 ]);
 structure.conStructorB(("basicSquare"),[[
