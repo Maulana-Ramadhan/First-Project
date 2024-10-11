@@ -1,3 +1,4 @@
+function NFSTR() {}
 const enCodetoObject = ["air","solid","walk","door","chest"];
 const configuration = ["choosedPlace","allowRotate","start"];
 const ECTObc = ["","black","skyblue","brown","gray"];
