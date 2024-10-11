@@ -184,32 +184,6 @@ function createMAp(a) {
     if (!map?.[v[0] + i]) map[v[0] + i] = {};
     const whichMany = [];
     for (let j = 0, i = whichPath[j]; j < 4; j++, i = whichPath[j]) {
-     // let bool = false;
-      /*if (map[v[0] + i[0]][v[1] + i[1]] != 2) {
-        if (map[v[0] + i[0]][v[1] + i[1] + 1] == 2) {
-          if (map[v[0] + i[0]][v[1] + i[1] - 1] == 2) {
-            if ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))) {
-              bool = true;
-              //console.log("nilai",i[2],true,true);
-            }
-          } else {
-            if ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2)) {
-              bool = true;
-              //console.log("nilai",i[2],true,false);
-            }
-          }
-        } else {
-          if (map[v[0] + i[0]][v[1] + i[1] - 1] == 2) {
-            if ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2)) {
-              bool = true;
-              //console.log("nilai",i[2],false,true);
-            }
-          } else {
-            //console.log("nilai",i[2],false);
-            bool = true;
-          }
-        }
-      }*/
       const bool = 
       //(map[v[0] + i[0]][v[1] + i[1]] != 2)&&(
         (map[v[0] + i[0]][v[1] + i[1] + 1] == 2)? (
