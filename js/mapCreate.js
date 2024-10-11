@@ -52,10 +52,16 @@ const structure = {
     };
     Object.assign(this[name], this.metStructor);
   },
-  conStructorR(name,enCodetoObject,configuration) {
+  conStructorR(name,proto) {
     this[name] = {
-      enCodetoObject,
-      configuration,
+      enCodetoObject: proto[0],
+      configuration: proto[1],
+      wall: {
+        front: proto[2],
+        right: proto[3],
+        back: proto[4],
+        left: proto[5],
+      }
     };
     Object.assign(this[name], this.metStructor);
   }
