@@ -2,7 +2,37 @@ const enCodetoObject = ["air","solid","walk","door","chest"];
 const configuration = ["choosedPlace","allowRotate","start"];
 const ECTObc = ["","black","skyblue","brown","gray"];
 const ECTOel = (a,x,y) => `<div class="thus" style="background-color:${a};transform:translate(${x}px,${y}px)"></div>`;
-const structure = {
+NFSTR.prototype.metStructor = {
+  reverseC(){return this.enCodetoObject.toReversed().map((ki)=>k.map((l,j)=>this.enCodetoObject[i][j]))},
+  reverseR(){return this.enCodetoObject.map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[i][j]))},
+  tranportI(){return this.enCodetoObject.map((k,i)=>k.map((l,j)=>this.enCodetoObject[j][i]))},
+  tranportU(){return this.enCodetoObject.toReversed().map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[j][i]))},
+  rotate90(){return this.enCodetoObject.toReversed().map((k,i)=>k.map((l,j)=>this.enCodetoObject[j][i]))},
+  rotate180(){return this.enCodetoObject.toReversed().map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[i][j]))},
+  rotate270(){return this.enCodetoObject.map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[j][i]))},
+};
+NFSTR.prototype.conStructorB = function(name,enCodetoObject,configuration) {
+    this[name] = {
+      enCodetoObject,
+      configuration,
+    };
+    Object.assign(this[name], this.metStructor);
+  },
+NFSTR.prototype.conStructorR = function(name,proto) {
+    this[name] = {
+      enCodetoObject: proto[0],
+      configuration: proto[1],
+      limit: proto[2]||undefined,
+      wall: {
+        front: proto[3]||undefined,
+        right: proto[4]||undefined,
+        back: proto[5]||undefined,
+        left: proto[6]||undefined,
+      },
+    };
+    Object.assign(this[name], this.metStructor);
+  };
+/*const structure = {
   metStructor: {
     reverseC(){return this.enCodetoObject.toReversed().map((k,i)=>k.map((l,j)=>this.enCodetoObject[i][j]))},
     reverseR(){return this.enCodetoObject.map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[i][j]))},
@@ -33,7 +63,8 @@ const structure = {
     };
     Object.assign(this[name], this.metStructor);
   }
-};
+};*/
+const structure = new NFSTR();
 structure.conStructorR(("smallRoad"),[[
   [0],]
   [1,[true,true,true,true]],
