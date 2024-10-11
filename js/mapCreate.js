@@ -147,7 +147,7 @@ function createMAp(a) {
   console.clear();
   const plusing = [];
   for (const [k, v] of Cmap.entries()) {
-    for (let i = -2; i < structure[current].enCodetoObject.length + 2; i++) 
+    for (let i = structure[current].limit[0]; i < structure[current].limit[1]; i++) 
     if (!map?.[v[0] + i]) map[v[0] + i] = {};
     const whichMany = [];
     for (let j = 0, i = whichPath[j]; j < 4; j++, i = whichPath[j]) {
