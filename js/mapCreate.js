@@ -66,12 +66,12 @@ const structure = {
     Object.assign(this[name], this.metStructor);
   }
 };
-structure.conStructorR(("smallRoad"),[
+structure.conStructorR(("smallRoad"),[[
   [1],
   [0],
   [1]],
   [1,[true,true,true,true]]
-);
+]);
 structure.conStructor("mediumRoad",[
   [1],
   [0],
