@@ -147,16 +147,6 @@ const whichPath = [
   [0, 1, "right"],
   [0, -1, "left"],
 ];
-const EightWall = [
-  [-1, 0],
-  [-1, 1],
-  [0, 1],
-  [1, 1],
-  [1, 0],
-  [1, -1],
-  [0, -1],
-  [-1, -1],
-];
 branchRoad.plus = function (a) {
   for (let i = this.length - 1, j = a; i > 0; i--, j+=a) {
     this[i] += j;
