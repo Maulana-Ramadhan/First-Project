@@ -215,18 +215,14 @@ function createMAp(a) {
     const meH = rng.sample(whichMany, hmany);
     console.log(hmany, ...meH);
     //console.log(branchRoad[0],branchRoad[1],branchRoad[2],"value");
-    for (const x of meH) {
-      //console.log(78,x);
+    for (const [i,x] of meH.entries()) {
       map[x[0]][x[1]] = 2;
       for (const i of structure[current].wall[x[2]]) {
         if (!map[v[0] + i[0]][v[1] + i[1]]) map[v[0] + i[0]][v[1] + i[1]] = 1;
       }
+      if (i == 0) Cmap[k] = x;
+      else plusing.push(x);
     }
-    for (const [i, j] of meH.entries()) {
-      if (i == 0) Cmap[k] = j;
-      else plusing.push(j);
-    }
-    //restartMap();
   }
   console.log(branchRoad[2],"you can");
   Cmap.push(...plusing);
