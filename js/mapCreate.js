@@ -21,7 +21,7 @@ const structure = {
     this[name] = {
       enCodetoObject: proto[0],
       configuration: proto[1],
-      limit: proto[2],
+      limit: proto[2]||undefined,
       wall: {
         front: proto[3]||undefined,
         right: proto[4]||undefined,
