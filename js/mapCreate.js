@@ -1,5 +1,5 @@
 const enCodetoObject = ["air","solid","walk","door","chest"];
-const configuration = ["choosedPlace","allowRotate"];
+const configuration = ["choosedPlace","allowRotate","start"];
 const ECTObc = ["","black","skyblue","brown","gray"];
 const ECTOel = (a,x,y) => `<div class="thus" style="background-color:${a};transform:translate(${x}px,${y}px)"></div>`;
 const structure = {
