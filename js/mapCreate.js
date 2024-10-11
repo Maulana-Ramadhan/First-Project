@@ -45,7 +45,14 @@ const structure = {
     rotate180(){return this.enCodetoObject.toReversed().map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[i][j]))},
     rotate270(){return this.enCodetoObject.map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[j][i]))},
   },
-  conStructor(name,enCodetoObject,configuration) {
+  conStructorB(name,enCodetoObject,configuration) {
+    this[name] = {
+      enCodetoObject,
+      configuration,
+    };
+    Object.assign(this[name], this.metStructor);
+  },
+  conStructorR(name,enCodetoObject,configuration) {
     this[name] = {
       enCodetoObject,
       configuration,
