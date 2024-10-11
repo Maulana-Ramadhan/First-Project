@@ -174,17 +174,15 @@ function createMAp(a) {
     //console.log("Cmap",...Cmap);
     //console.log("lanjut",Cmap[k]);
     //console.log(branchRoad[0],branchRoad[1],branchRoad[2],"value");
-    console.log(whichMany, "kuuuk");
-    const hmany = rng.branchRoad(whichMany.length);
-    console.log(hmany, "kqk");
-    const meH = rng.sample(whichMany, hmany);
-    console.log(hmany, ...meH);
+    //console.log(whichMany, "kuuuk");
+    //const hmany = ;
+    //console.log(hmany, "kqk");
+    //const meH = rng.sample(whichMany, rng.branchRoad(whichMany.length));
+    //console.log(hmany, ...meH);
     //console.log(branchRoad[0],branchRoad[1],branchRoad[2],"value");
-    for (const [i,x] of meH.entries()) {
+    for (const [i,x] of Object.entries(rng.sample(whichMany, rng.branchRoad(whichMany.length)))) {
       map[x[0]][x[1]] = 2;
-      for (const i of structure[current].wall[x[2]]) {
-        if (!map[v[0] + i[0]][v[1] + i[1]]) map[v[0] + i[0]][v[1] + i[1]] = 1;
-      }
+      for (const i of structure[current].wall[x[2]]) if (!map[v[0] + i[0]][v[1] + i[1]]) map[v[0] + i[0]][v[1] + i[1]] = 1;
       if (i == 0) Cmap[k] = x;
       else plusing.push(x);
     }
