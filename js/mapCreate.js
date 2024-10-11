@@ -149,8 +149,11 @@ function createMAp(a) {
     if (!map?.[v[0] + i]) map[v[0] + i] = {};
     const whichMany = [];
     for (let j = 0, i = whichPath[j]; j < 4; j++, i = whichPath[j]) {
-      const bool = 
+      //const bool = 
       //(map[v[0] + i[0]][v[1] + i[1]] != 2)&&(
+      //);
+      //bool
+      if (
         (map[v[0] + i[0]][v[1] + i[1] + 1] == 2)? (
           (map[v[0] + i[0]][v[1] + i[1] - 1] == 2)? (
             ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2)))
@@ -161,9 +164,8 @@ function createMAp(a) {
           (map[v[0] + i[0]][v[1] + i[1] - 1] != 2)|| (
             ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
           )
-        );
-      //);
-      if (bool) whichMany.push([v[0] + i[0], v[1] + i[1], i[2]]);
+        )
+      ) whichMany.push([v[0] + i[0], v[1] + i[1], i[2]]);
     }
     //console.log(Cmap[k]);
     if (whichMany.length == 0) {
