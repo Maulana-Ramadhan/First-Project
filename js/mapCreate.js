@@ -57,10 +57,10 @@ const structure = {
       enCodetoObject: proto[0],
       configuration: proto[1],
       wall: {
-        front: proto[2],
-        right: proto[3],
-        back: proto[4],
-        left: proto[5],
+        front: proto[2]||undefined,
+        right: proto[3]||undefined,
+        back: proto[4]||undefined,
+        left: proto[5]||undefined,
       }
     };
     Object.assign(this[name], this.metStructor);
