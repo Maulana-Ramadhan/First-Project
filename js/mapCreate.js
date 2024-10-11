@@ -1,5 +1,7 @@
 const enCodetoObject = ["air","solid","walk","door","chest"];
 const configuration = ["choosedPlace","allowRotate"];
+const ECTObc = ["","black","skyblue","brown","gray"];
+const ECTOel = (a,x,y) => `<div class="thus" style="background-color:${a};transform:translate(${x}px,${y}px)"></div>`;
 const structure = {
   metStructor: {
     reverseC(){return this.enCodetoObject.toReversed().map((k,i)=>k.map((l,j)=>this.enCodetoObject[i][j]))},
