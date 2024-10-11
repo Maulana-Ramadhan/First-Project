@@ -194,6 +194,6 @@ function createMAp(a) {
   //console.log(branchRoad[2],"you can");
   Cmap.push(...plusing);
   //console.log(Cmap);
-  branchRoad.plus(1/(Cmap.length||0));
+  branchRoad.plus(1/(Cmap.length||1));
 }
 
