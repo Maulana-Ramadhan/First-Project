@@ -72,22 +72,22 @@ structure.conStructorR(("smallRoad"),[[
   [1]],
   [1,[true,true,true,true]]
 ]);
-structure.conStructor("mediumRoad",[
+structure.conStructorR(("mediumRoad"),[[
   [1],
   [0],
   [0],
   [1]],
   [1,[true,true,true,true]]
-);
-structure.conStructor("largeRoad",[
+]);
+structure.conStructorR(("largeRoad"),[[
   [1],
   [0],
   [0],
   [0],
   [1]],
   [1,[true,true,true,true]]
-);
-structure.conStructor("megaRoad",[
+]);
+structure.conStructorR(("megaRoad"),[[
   [1],
   [0],
   [0],
@@ -95,8 +95,8 @@ structure.conStructor("megaRoad",[
   [0],
   [1]],
   [1,[true,true,true,true]]
-);
-structure.conStructor("basicSquare",[
+]);
+structure.conStructorB(("basicSquare"),[[
   [1, 1, 1, 1, 1],
   [1, 0, 0, 0, 1],
   [1, 0, 0, 0, 1],
@@ -104,8 +104,8 @@ structure.conStructor("basicSquare",[
   [1, 1, 2, 1, 1],],
   [[0,[[2,0],[0,3],[4,3]],[50,50,50],[2]],
   [1,[true,true,true,true]],]
-);
-structure.conStructor("treasureRoom",[
+]);
+structure.conStructorB(("treasureRoom"),[[
   [1, 1, 1, 1, 1, 1, 1, 1, 1],
   [1, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 1, 1, 0, 1, 1, 0, 1],
@@ -117,8 +117,8 @@ structure.conStructor("treasureRoom",[
   [1, 1, 1, 1, 2, 1, 1, 1, 1],],
   [[0,[[4,0],[0,5],[8,5]],[50,50,50],[2]], //[configuration,[semua tiles yang diganti],[minimal, maksimal | yang harus diganti],[dengan tiles apa jika tidak diganti],[[tiles yang diacak],[bobot setiap tiles]]]
   [1,[true,true,true,true]],],
-);
-structure.conStructor("prison",[
+]);
+structure.conStructor(("prison"),[[
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
   [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
@@ -132,7 +132,7 @@ structure.conStructor("prison",[
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],],
   [[0,[[16,5]],[50],[2]],
   [1,[true,true,true,true]],]
-);
+]);
 
 const map = { 0: { 0: 2 } };
 const Cmap = [[0, 0]];
