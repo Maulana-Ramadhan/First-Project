@@ -191,9 +191,9 @@ function createMAp(a) {
       else plusing.push(x);
     }
   }
-  console.log(branchRoad[2],"you can");
+  //console.log(branchRoad[2],"you can");
   Cmap.push(...plusing);
-  console.log(Cmap);
+  //console.log(Cmap);
   branchRoad.plus(1/(Cmap.length||0));
 }
 
