@@ -1,4 +1,4 @@
-const enCodetoObject = ["air","solid","door","chest"];
+const enCodetoObject = ["air","solid","walk","door","chest"];
 const configuration = ["choosedPlace","allowRotate"];
 const structure = {
   metStructor: {
@@ -141,7 +141,7 @@ rng.branchRoad = function (a) {
   return 1;
 };
 
-restartMap();
+//restartMap();
 function createMAp(a) {
   const current = "smallRoad";
   console.clear();
