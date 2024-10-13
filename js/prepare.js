@@ -33,7 +33,7 @@ const real = {
 const settings = {
   size: 25,
   status: false,
-  fullScreen: false;
+  fullScreen: false,
 };
 const elPlayers = {};
 function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
