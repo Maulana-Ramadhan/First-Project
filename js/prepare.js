@@ -119,7 +119,7 @@ function online() {
       fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
         position: {
           x: 0,
-          y: 0,
+          y: 0 + '/position/',
           direction: 0,
         },
         status: true,
@@ -144,7 +144,7 @@ function online() {
             el.classList.add("players");
             el.style.backgroundColor = i.color;
             MainGame.appendChild(el);
-            fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid), (spm) => {
+            fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid + '/position/'), (spm) => {
               const me = spm.val();
               el.style.transform = `translate(${me.position[0]}px, ${me.position[1]}px)`;
               moveDirection(me.direction,el);
