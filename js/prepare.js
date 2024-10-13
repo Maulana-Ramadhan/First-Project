@@ -74,8 +74,8 @@ function online() {
       });
       
       console.log(muid);
-
-
+      
+      
       fbg.get(fbg.ref(fbg.database, 'data/users')).then((sp) => {
         window.wkwk = sp;
         sp.forEach( i => { 
