@@ -139,7 +139,7 @@ class NewMap {
     };
   }
   createMAp() {
-  console.clear();
+    console.clear();
     for (const [k, v] of this.Cmap.entries()) {
       for (let i = structure[this.current].limit[0]; i <= structure[this.current].limit[1]; i++) 
       if (!this.map?.[v[0] + i]) this.map[v[0] + i] = {};
@@ -186,7 +186,7 @@ class NewMap {
   }
 }
 
-const map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
+/*const map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
 const Cmap = [[0, 0]];
 const branchRoad = [1, 10, 30];
 branchRoad.plus = function (a) {
@@ -249,3 +249,4 @@ function createMAp(rng) {
   whichMany.plusing = [];
   branchRoad.plus(1/(Cmap.length||1));
 }
+*/
