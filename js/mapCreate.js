@@ -113,6 +113,79 @@ const whichPath = [
   [0, -1, "left"],
 ];
 
+
+class NewMap {
+  constructor(name,seed){
+    this.name = name;
+    this.rng = Srand(seed);
+    this.map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
+    this.Cmap = [[0, 0]];
+    this.branchRoad = [1, 10, 30];
+    this.branchRoad.plus = function (a) { for (let i = this.length - 1, j = a; i > 0; i--, j+=a) this[i] += j; };
+    this.branchRoad.mins = function (a) { this[a] = 10; };
+    this.branchRoad.get = function () { return [this[0], this[0] + this[1], this[0] + this[1] + this[2]]; };
+    this.whichMany = [[],[]];
+    this.whichMany.plusing = [];
+    this.current = "smallRoad";
+  }
+  createMAp() {
+  rng.branchRoad = function (a) {
+    const ranD = this.inRange(1, 100+(100*(Cmap.length-1))), indeks = branchRoad.get();
+    for (let i = 4-a; i < 3; i++) {
+      if (indeks[i] > ranD) {
+        branchRoad.mins(i);
+        return 4 - i;
+      }
+    }
+    return 1;
+  };
+  console.clear();
+  for (const [k, v] of Cmap.entries()) {
+    for (let i = structure[current].limit[0]; i <= structure[current].limit[1]; i++) 
+    if (!map?.[v[0] + i]) map[v[0] + i] = {};
+    for (let j = 0, i = whichPath[j]; j < 4; j++, i = whichPath[j]) {
+      if (map[v[0] + i[0]][v[1] + i[1]] != 2) {
+        if (
+        (map[v[0] + i[0]][v[1] + i[1] + 1] == 2)? (
+          (map[v[0] + i[0]][v[1] + i[1] - 1] == 2)? (
+            (map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+          ): (
+            ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2)) &&
+            ((map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+          )
+        ): (
+          (map[v[0] + i[0]][v[1] + i[1] - 1] == 2)? (
+            ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2)) &&
+            ((map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2))
+          ): (
+            (map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || (map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || (map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+          )
+        )) whichMany[0].push([v[0] + i[0], v[1] + i[1], i[2]]);
+      } else whichMany[1].push([v[0] + i[0], v[1] + i[1], i[2]]);
+    }
+    if (whichMany[0].length == 0) {
+      if (Cmap.length > 2) {
+        Cmap.splice(k, 1);
+        continue;
+      } else {
+        whichMany.shift();
+      }
+    }
+    for (const [i,x] of Object.entries(rng.sample(whichMany[0], rng.branchRoad(whichMany[0].length)))) {
+      map[x[0]][x[1]] = 2;
+      for (const i of structure[current].walls) if (!map[x[0] + i[0]][x[1] + i[1]]) map[x[0] + i[0]][x[1] + i[1]] = 1;
+      if (i == 0) Cmap[k] = x;
+      else whichMany.plusing.push(x);
+    }
+    whichMany[0] = [];
+    whichMany[1] = [];
+  }
+  Cmap.push(...whichMany.plusing);
+  whichMany.plusing = [];
+  branchRoad.plus(1/(Cmap.length||1));
+}
+}
+
 const map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
 const Cmap = [[0, 0]];
 const branchRoad = [1, 10, 30];
@@ -130,7 +203,6 @@ branchRoad.get = function () {
 const whichMany = [[],[]];
 whichMany.plusing = [];
 const current = "smallRoad";
-//for (const i of structure[current].walls) map[i[0]][i[1]] = 1;
 function createMAp(rng) {
   rng.branchRoad = function (a) {
     const ranD = this.inRange(1, 100+(100*(Cmap.length-1))), indeks = branchRoad.get();
