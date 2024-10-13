@@ -3,7 +3,7 @@ function r() {
   r._mz = 4294967295&36969*(65535&r._mz)+(r._mz>>16),
   r._mw = 4294967295&18e3*(65535&r._mw)+(r._mw>>16);
   return 0.5 + (4294967295&(r._mz<<16)+r._mw)/4294967296; 
-} 
+}
 r._mz = 123456789, this._mw = this._seed = a || 1+Math.floor(4294967295*Math.random());
 r.seed = function(a) { return a == null ? this._seed : (this._mz = 123456789, this._mw = this._seed = a); }; 
 r.randomize = function() { 
