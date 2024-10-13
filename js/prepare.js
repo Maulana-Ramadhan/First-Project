@@ -113,8 +113,8 @@ function online() {
     if (user) {
       if (!localStorage.getItem("myData")) {
         muid[0] = inputName.value;
-        muid[1] = user.uid;
-        muid[2] = PickColor.value;
+        muid[1] = PickColor.value;
+        muid[2] = user.uid;
         localStorage.setItem("myData",JSON.stringify({name:muid[0],uid:muid[1],color:muid[2]}));
         const el = document.createElement("div");
         el.id = muid[0];
