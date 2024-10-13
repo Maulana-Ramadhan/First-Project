@@ -131,7 +131,7 @@ function online() {
         uid: muid[1],
         color: muid[2],
       });*/
-      fbg.get(fbg.ref(fbg.database, 'data/thatIn')).then((sp) => {
+      fbg.get(fbg.ref(fbg.database, 'data/users')).then((sp) => {
         window.wkwk = sp;
         sp.forEach( i => { i = i.val(); if (i.status && i.uid != muid[1]) {
           const el = document.createElement("div");
