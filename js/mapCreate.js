@@ -113,6 +113,7 @@ const whichPath = [
   [0, -1, "left"],
 ];
 
+const AllMap = {};
 
 class NewMap {
   constructor(name,seed){
