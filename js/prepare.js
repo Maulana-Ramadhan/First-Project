@@ -50,7 +50,7 @@ if(localStorage.getItem("myData")) {
   el.id = muid[1];
   el.classList.add("players");
   el.style.backgroundColor = muid[0];
-  MainGame.appendChild(el);
+  canvasMap.appendChild(el);
   elPlayers[muid[1]] = el;
 }
 function online() {
@@ -85,7 +85,7 @@ function online() {
             el.id = i.uid;
             el.classList.add("players");
             el.style.backgroundColor = i.color;
-            MainGame.appendChild(el);
+            canvasMap.appendChild(el);
             fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid + '/position/'), (spm) => {
               const me = spm.val();
               el.style.transform = `translate(${me.x}px, ${me.y}px)`;
@@ -102,7 +102,7 @@ function online() {
           el.classList.add("players");
           el.style.backgroundColor = sp.child(thid).val().color;
           console.log(el.style.backgroundColor);
-          MainGame.appendChild(el);
+          canvasMap.appendChild(el);
           fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/position/'), (spm) => {
             const me = spm.val();
             el.style.transform = `translate(${me.x}px, ${me.y}px)`;
