@@ -73,6 +73,13 @@ html, document, body, body div {
   width: 100vw;
   height: 100px;
 }
+#containerInputName {
+  position: absolute;
+  z-index: 1;
+  background: #4e4e4e;
+  width: 375px;
+  height: 100px;
+}
 #analog {
   width: 100px;
   height: 100px;
