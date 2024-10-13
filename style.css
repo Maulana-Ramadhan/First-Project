@@ -77,17 +77,17 @@ html, document, body, body div {
   /*right: -300px;*/
 }
 #inputName {
-  grid-area: 1 / 1 / 2 / 4;
+  grid-area: 1 / 1 / span 1 / span 3;
 }
 #ConfirmInputName {
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: 2 / 2 / span 2 / span 2;
 }
 #PickColor {
-  grid-area: 1 / 4 / 3 / 6;
+  grid-area: 1 / 4 / span 2 / span 5;
   background-color: green;
 }
 #opclCIN {
-  grid-area: 1 / 6 / 3 / 7;
+  grid-area: 1 / 6 / span 2 / span 6;
   background-color: #878787;
 }
 #analog {
