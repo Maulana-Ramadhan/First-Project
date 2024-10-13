@@ -111,18 +111,15 @@ function online() {
   fbg.onAuthStateChanged(fbg.auth, (user) => {
     console.log(user);
     if (user) {
-      if (!localStorage.getItem("myData")) {
-        muid[0] = inputName.value;
-        muid[1] = PickColor.value;
-        muid[2] = user.uid;
-        localStorage.setItem("myData",JSON.stringify({name:muid[0],uid:muid[1],color:muid[2]}));
-        const el = document.createElement("div");
-        el.id = muid[0];
-        el.classList.add("players");
-        el.style.backgroundColor = muid[2];
-        MainGame.appendChild(el);
-        elPlayers[muid[1]] = el;
-      }
+      muid[2] = user.uid;
+      localStorage.setItem("myData",JSON.stringify({name:muid[0],uid:muid[1],color:muid[2]}));
+      const el = document.createElement("div");
+      el.id = muid[0];
+      el.classList.add("players");
+      el.style.backgroundColor = muid[2];
+      MainGame.appendChild(el);
+      elPlayers[muid[1]] = el;
+      
       fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
         position: [0,0],
         direction: 0,
