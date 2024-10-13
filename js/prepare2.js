@@ -1,4 +1,4 @@
-fbg.get(fbg.ref(fbg.database, 'data/thatIn')).then((sp) => {
+/*fbg.get(fbg.ref(fbg.database, 'data/thatIn')).then((sp) => {
   window.wkwk = sp;
   sp.forEach( i => { i = i.val(); if (i.status && i.uid != muid[1]) {
     const el = document.createElement("div");
@@ -12,4 +12,4 @@ fbg.get(fbg.ref(fbg.database, 'data/thatIn')).then((sp) => {
         moveDirection(me.direction,el);
     });
   }});
-}).catch(console.error);
+}).catch(console.error);*/
