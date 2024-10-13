@@ -14,9 +14,10 @@ ConfirmInputName.addEventListener('click', (e) => {
   }
 });
 fullScreenButton.addEventListener('click', () => {
-  if (!document.fullscreenEnabled) {
-    containerFullScreen.style.display = "none"; main();
-  } else document.documentElement.requestFullscreen();
+  if (document.fullscreenEnabled) {
+    if (document.fullscreenElement) document.documentElement.requestFullscreen();
+    
+  } 
 });
 document.documentElement.addEventListener("fullscreenchange", () => {
   if (settings.fullScreen) {
