@@ -116,7 +116,6 @@ html, document, body, body div {
   background: #4e4e4e;
   width: 90vw;
   transform: translateX(5vw);
-  height: 50px;
 }
 #inputName {
   position: relative;
