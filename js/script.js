@@ -2,8 +2,8 @@ function mainX() {
   const varM = {
     maPos: [0,0],
     scrPo: [0,0],
-    mapLi: [parseInt(MainGame.offsetHeight)/2,parseInt(MainGame.offsetWidth)/2,-parseInt(MainGame.offsetHeight)/2,-parseInt(MainGame.offsetWidth)/2],
-    MG: [parseInt(MainGame.offsetWidth)/2,parseInt(MainGame.offsetHeight)/2],
+    mapLi: [parseInt(canvasMap.offsetHeight)/2,parseInt(canvasMap.offsetWidth)/2,-parseInt(canvasMap.offsetHeight)/2,-parseInt(canvasMap.offsetWidth)/2],
+    MG: [parseInt(canvasMap.offsetWidth)/2,parseInt(canvasMap.offsetHeight)/2],
     x: 0,
     y: 0,
     ax: analog.getBoundingClientRect().left + (analog.getBoundingClientRect().width/2),
@@ -41,10 +41,10 @@ function mainX() {
     if (settings.status) fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1] + '/position/'), real); 
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.x}px, ${real.y}px)`;
-    if (real.x < varM.scrPo[0]-varM.MG[0]) MainGame.style.transform = varM.moveMS(0,+1);
-    if (real.x > varM.scrPo[0]+varM.MG[0]) MainGame.style.transform = varM.moveMS(0,-1);
-    if (real.y < varM.scrPo[1]-varM.MG[1]) MainGame.style.transform = varM.moveMS(1,+1);
-    if (real.y > varM.scrPo[1]+varM.MG[1]) MainGame.style.transform = varM.moveMS(1,-1);
+    if (real.x < varM.scrPo[0]-varM.MG[0]) canvasMap.style.transform = varM.moveMS(0,+1);
+    if (real.x > varM.scrPo[0]+varM.MG[0]) canvasMap.style.transform = varM.moveMS(0,-1);
+    if (real.y < varM.scrPo[1]-varM.MG[1]) canvasMap.style.transform = varM.moveMS(1,+1);
+    if (real.y > varM.scrPo[1]+varM.MG[1]) canvasMap.style.transform = varM.moveMS(1,-1);
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
