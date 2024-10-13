@@ -28,7 +28,6 @@ document.documentElement.addEventListener("fullscreenchange", () => {
     fullScreenButton.innerText = "toggle to fullscreen";
     fullScreenButton.style.backgroundColor = "green";
   }
-  main();
 });
 if (!navigator.userAgentData.mobile) mobileOnly.style.display = "none"; 
 else MainGame.style.setProperty('--minus', '100px');
