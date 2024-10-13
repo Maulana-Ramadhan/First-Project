@@ -23,6 +23,7 @@ const real = {
   x: 0,
   y:0,
   direction: 0,
+  status: "offline",
 };
 const settings = {
   size: 25,
