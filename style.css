@@ -95,7 +95,6 @@ html, document, body, body div {
   width: 100vw;
   height: 100vh;
   z-index: 10;
-  gap: 5vmin;
   background-color: aqua;
 }
 #MainMenu > div {
