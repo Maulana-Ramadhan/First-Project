@@ -21,6 +21,9 @@ fullScreenButton.addEventListener('click', () => {
 document.documentElement.addEventListener("fullscreenchange", () => {
   if (settings.fullScreen) {
     settings.fullScreen = false;
+    fullScreenButton.innerText = "toggle to unfullscreen";
+  } else {
+    settings.fullScreen = true;
     fullScreenButton.innerText = "toggle to fullscreen";
   }
   main();
