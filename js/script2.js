@@ -48,7 +48,7 @@ OPCLjoinWorld.addEventListener("click", a => {
     if (newWorldName.value != "" && Object.keys(All.map).every(a => a != newWorldName.value)) All.map[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
     else warningCreateWorldMenu.className = "fadeOut";
   });
-  warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorldMenu.className = "");
+  //warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorldMenu.className = "");
 });
   
 }());
