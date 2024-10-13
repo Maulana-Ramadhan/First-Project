@@ -139,6 +139,10 @@ html, document, body, body div {
   width: 100%;
   display: none;
 }
+#createWorld {
+  position: relative;
+  width: 100%;
+}
 
 #OPCLjoinWorld {
   position: relative;
