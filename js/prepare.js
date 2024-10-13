@@ -3,10 +3,10 @@ window.addEventListener("visibilitychange", e => { if (window.closed) {
 }});
 ConfirmInputName.addEventListener('click', (e) => {
   e.preventDefault();
-  muid[0] = inputName.value;
-  muid[1] = PickColor.value;
-  (elPlayers.mySelf||elPlayers[muid[1]]).style.backgroundColor = muid[1];
-  localStorage.setItem("myData",JSON.stringify({name:muid[0],color:muid[1]}));
+  muid[1] = inputName.value;
+  muid[0] = PickColor.value;
+  (elPlayers.mySelf||elPlayers[muid[1]]).style.backgroundColor = muid[0];
+  localStorage.setItem("myData",JSON.stringify({name:muid[1],color:muid[0]}));
 });
 fullScreenButton.addEventListener('click', () => {
   if (!document.fullscreenEnabled) {
@@ -39,12 +39,12 @@ if(localStorage.getItem("myData")) {
   const myData = JSON.parse(localStorage.getItem("myData"));
   muid[0] = myData.color;
   muid[1] = myData.name;
-  inputName.value = muid[0];
-  PickColor.value = muid[1];
+  PickColor.value = muid[0];
+  inputName.value = muid[1];
   const el = document.createElement("div");
   el.id = "mySelf";
   el.classList.add("players");
-  el.style.backgroundColor = muid[1];
+  el.style.backgroundColor = muid[0];
   MainGame.appendChild(el);
   elPlayers.mySelf = el;
 }
@@ -113,7 +113,8 @@ function online() {
   fbg.onAuthStateChanged(fbg.auth, (user) => {
     console.log(user);
     if (user) {
-      muid[2] = user.uid;
+      muid[2] = muid[1];
+      muid[1] = user.uid;
       elPlayers[muid[2]] = elPlayers.mySelf;
       elPlayers[muid[2]] = muid[2];
       delete elPlayers.mySelf;
@@ -125,8 +126,8 @@ function online() {
           direction: 0,
         },
         status: true,
-        name: muid[0],
-        color: muid[1],
+        color: muid[0],
+        name: muid[1],
         uid: muid[2],
       });
       
