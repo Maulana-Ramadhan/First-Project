@@ -65,17 +65,21 @@ html, document, body, body div {
   height: 100px;
 }
 #inputName {
+  position: relative;
   size: 2;
   grid-area: name;
 }
 #ConfirmInputName {
+  position: relative;
   grid-area: input;
 }
 #PickColor {
+  position: relative;
   grid-area: color;
   background-color: green;
 }
 #opclCIN {
+  position: relative;
   grid-area: opcl;
   background-color: #878787;
 }
