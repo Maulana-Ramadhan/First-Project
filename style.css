@@ -103,11 +103,8 @@ html, document, body, body div {
 }
 #MainMenu > details {
   position: relative;
-  width: 100vw;
-  height: 10vh;
   background-color: #505050;
   border: solid black 1px;
-  font-size: 10vh;
 }
 
 #containerInputName {
