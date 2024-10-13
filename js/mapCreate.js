@@ -106,15 +106,16 @@ structure.conStructorB(("prison"),[[
   [[0,[[16,5]],[50],[2]],
   [1,[true,true,true,true]],]
 ]);
-const map = {"-1": {}, "0": { "0": 2 }, "1": {}, };
-const Cmap = [[0, 0]];
-const branchRoad = [1, 10, 30];
 const whichPath = [
   [-1, 0, "front"],
   [1, 0, "back"],
   [0, 1, "right"],
   [0, -1, "left"],
 ];
+
+const map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
+const Cmap = [[0, 0]];
+const branchRoad = [1, 10, 30];
 branchRoad.plus = function (a) {
   for (let i = this.length - 1, j = a; i > 0; i--, j+=a) {
     this[i] += j;
@@ -126,22 +127,21 @@ branchRoad.mins = function (a) {
 branchRoad.get = function () {
   return [this[0], this[0] + this[1], this[0] + this[1] + this[2]];
 };
-rng.branchRoad = function (a) {
-  const ranD = this.inRange(1, 100+(100*(Cmap.length-1))), indeks = branchRoad.get();
-  for (let i = 4-a; i < 3; i++) {
-    if (indeks[i] > ranD) {
-      branchRoad.mins(i);
-      return 4 - i;
-    }
-  }
-  return 1;
-};
 const whichMany = [[],[]];
 whichMany.plusing = [];
 const current = "smallRoad";
-for (const i of structure[current].walls) map[i[0]][i[1]] = 1;
-//restartMap();
-function createMAp() {
+//for (const i of structure[current].walls) map[i[0]][i[1]] = 1;
+function createMAp(rng) {
+  rng.branchRoad = function (a) {
+    const ranD = this.inRange(1, 100+(100*(Cmap.length-1))), indeks = branchRoad.get();
+    for (let i = 4-a; i < 3; i++) {
+      if (indeks[i] > ranD) {
+        branchRoad.mins(i);
+        return 4 - i;
+      }
+    }
+    return 1;
+  };
   console.clear();
   for (const [k, v] of Cmap.entries()) {
     for (let i = structure[current].limit[0]; i <= structure[current].limit[1]; i++) 
