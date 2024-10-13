@@ -154,7 +154,7 @@ function online() {
       }).catch(console.error);
       fbg.onValue(fbg.ref(fbg.database, 'data/users'), (sp) => {
         const thid = sp._node.children_.root_.key;
-        if (muid[1] != thid) {
+        if (muid[2] != thid) {
           const el = document.createElement("div");
           el.id = thid;
           el.classList.add("players");
