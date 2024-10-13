@@ -19,7 +19,10 @@ fullScreenButton.addEventListener('click', () => {
   } else document.documentElement.requestFullscreen();
 });
 document.documentElement.addEventListener("fullscreenchange", () => {
-  
+  if (settings.fullScreen) {
+    settings.fullScreen = false;
+    fullScreenButton.innerText = "toggle to fullscreen";
+  }
   main();
 });
 if (!navigator.userAgentData.mobile) mobileOnly.style.display = "none"; 
