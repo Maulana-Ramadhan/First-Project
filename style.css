@@ -94,7 +94,8 @@ html, document, body, body div {
   position: relative;
   box-sizing: border-box;
   width: 95vw;
-  transform: translateX(2.5vw,);
+  transform: translateX(2.5vw);
+  margin-top: 5vw;
   z-index: 10;
   background-color: aqua;
 }
