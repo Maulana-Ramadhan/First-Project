@@ -117,6 +117,7 @@ const AllMap = {};
 
 class NewMap {
   constructor(name,seed){
+    this.datas = {};
     this.name = name;
     this.rng = Srand(seed);
     this.map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
