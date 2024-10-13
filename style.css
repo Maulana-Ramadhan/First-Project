@@ -101,6 +101,11 @@ html, document, body, body div {
   gap: 5vmin;
   background-color: aqua;
 }
+#MainMenu > div {
+  position: relative;
+  background-color: #505050;
+  border: solid black 1px;
+}
 
 #containerInputName {
   z-index: 1;
