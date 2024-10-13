@@ -42,8 +42,6 @@ html, document, body, body div {
 }
 #MainGame{
   overflow: hidden;
-  transform: translate(0,0);
-  transition: transform .25s linear;
   display: flex;
   align-items: center;
   justify-content: center;
