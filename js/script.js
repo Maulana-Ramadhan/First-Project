@@ -38,7 +38,7 @@ function main() {
   function intr6() {
   }
   function whach() {
-    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1]), real); 
+    fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1] + '/position/'), real); 
     moveDirection(real.direction,elPlayers[muid[1]]);
     elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
     if (real.position[0] < varM.scrPo[0]-varM.MG[0]) MainGame.style.transform = varM.moveMS(0,+1);
