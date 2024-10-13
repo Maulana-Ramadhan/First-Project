@@ -47,7 +47,7 @@ if(localStorage.getItem("myData")) {
   PickColor.value = muid[0];
   inputName.value = muid[1];
   const el = document.createElement("div");
-  el.id = "mySelf";
+  el.id = muid[1];
   el.classList.add("players");
   el.style.backgroundColor = muid[0];
   MainGame.appendChild(el);
