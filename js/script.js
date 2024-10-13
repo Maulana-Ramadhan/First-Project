@@ -1,4 +1,4 @@
-function main() {
+function mainX() {
   const varM = {
     maPos: [0,0],
     scrPo: [0,0],
