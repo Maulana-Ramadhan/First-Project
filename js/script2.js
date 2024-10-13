@@ -4,6 +4,7 @@ const opcl = {
   cin: false,
   mw: false,
   jw: false,
+  
 };
 
 OPCLcontainerInputName.addEventListener("click", a => {
@@ -35,11 +36,19 @@ OPCLjoinWorld.addEventListener("click", a => {
     joinWorld.style.display = "block";
     opcl.jw = true;
   }
+  createWorld.addEventListener("click", a => {
+    createWorldMenu.style.display = "block";
+  });
+  cancelNewWorld.addEventListener("click", a => {
+    createWorldMenu.style.display = "none";
+    newWorldName.value = "";
+    newWorldNumber.value = "";
+  });
+  createNewWorld.addEventListener("click", a => {
+    
+  });
 });
   
 }());
 (function() {
-  createWorld.addEventListener("click", a => {
-    
-  });
 }());
