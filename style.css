@@ -76,6 +76,7 @@ html, document, body, body div {
   /*right: -300px;*/
 }
 #inputName {
+  size: 2;
   grid-area: "name";
 }
 #ConfirmInputName {
