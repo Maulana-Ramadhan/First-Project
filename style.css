@@ -80,11 +80,11 @@ html, document, body, body div {
   size: 2;
   grid-area: 1 / 1 / 2 / 4;
 }
-#PickColor {
-  grid-area: 1 / 4 / 3 / 6;
-}
 #ConfirmInputName {
   grid-area: 2 / 2 / 3 / 3;
+}
+#PickColor {
+  grid-area: 1 / 4 / 3 / 6;
 }
 #opclCIN {
   grid-area: 1 / 6 / 3 / 7;
