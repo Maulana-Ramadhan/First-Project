@@ -71,8 +71,7 @@ html, document, body, body div {
   width: 250px;
   height: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 3fr) repeat(2, 2fr) 1fr;
-  grid-template-rows: repeat(2, 2fr);
+  grid-template-areas: "name name name color color opcl" "0 input 0 color color opcl";
 
   /*right: -300px;*/
 }
@@ -83,7 +82,7 @@ html, document, body, body div {
   grid-area: 2 / 2 / span 2 / span 2;
 }
 #PickColor {
-  grid-area: 1 / 4 / span 2 / span 4;
+  grid-area: 1 / 4 / span 2 / span 5;
   background-color: green;
 }
 #opclCIN {
