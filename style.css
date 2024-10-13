@@ -1,6 +1,10 @@
 :root {
   --size: 25px;
 }
+body {
+  width: 100vw;
+  height: 100vh;
+}
 html, document, body, body div {
   position: absolute;
   padding: 0;
