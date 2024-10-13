@@ -12,7 +12,7 @@ OPCLcontainerInputName.addEventListener("click", a => {
     opcl.cin = false;
   }
   else {
-    containerInputName.style.display = "block";
+    containerInputName.style.display = "flex";
     opcl.cin = true;
   }
 });
