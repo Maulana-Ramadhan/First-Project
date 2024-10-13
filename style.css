@@ -108,6 +108,6 @@ html, document, body, body div {
   z-index: 1000;
   width: 80vmin;
   height: 80vmin;
-  top: 0;
-  left: 0;
+  top: calc(100vh - 20vmin);
+  left: calc(100vw - 20vmin);
 }
