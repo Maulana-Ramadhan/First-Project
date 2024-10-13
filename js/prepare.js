@@ -115,6 +115,7 @@ function online() {
       elPlayers[muid[2]] = elPlayers.mySelf;
       elPlayers[muid[2]] = muid[2];
       delete elPlayers.mySelf;
+      
       fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
         position: [0,0],
         direction: 0,
