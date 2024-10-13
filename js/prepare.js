@@ -112,9 +112,8 @@ function online() {
     console.log(user);
     if (user) {
       muid[2] = user.uid;
-      el.id = muid[2];
-      el.style.backgroundColor = muid[2];
-      elPlayers[muid[1]] = el;
+      elPlayers[muid[2]] = elPlayers.mySelf;
+      elPlayers.mySelf.id = muid[2];
       
       fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
         position: [0,0],
