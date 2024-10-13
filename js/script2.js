@@ -13,7 +13,7 @@ OPCLcontainerInputName.addEventListener("click", a => {
   }
   else {
     containerInputName.style.display = "block";
-    opcl.cin = true
+    opcl.cin = true;
   }
 });
 OPCLmyWorld.addEventListener("click", a => {
