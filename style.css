@@ -120,6 +120,7 @@ html, document, body, body div {
   gap: 5px;
 }
 #inputName {
+  background-color: pink;
   position: relative;
   size: 2;
 }
