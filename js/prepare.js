@@ -119,7 +119,7 @@ function online() {
       fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
         position: {
           x: 0,
-          y: 0 + '/position/',
+          y: 0,
           direction: 0,
         },
         status: true,
