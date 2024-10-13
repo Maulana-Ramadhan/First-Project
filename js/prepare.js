@@ -125,12 +125,12 @@ function online() {
         uid: muid[2],
       });
       console.log(muid);
-      fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), {
+      /*fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), {
         status: true,
         name: muid[0],
         uid: muid[1],
         color: muid[2],
-      });
+      });*/
       fbg.get(fbg.ref(fbg.database, 'data/thatIn')).then((sp) => {
         window.wkwk = sp;
         sp.forEach( i => { i = i.val(); if (i.status && i.uid != muid[1]) {
