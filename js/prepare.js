@@ -22,9 +22,11 @@ document.documentElement.addEventListener("fullscreenchange", () => {
   if (settings.fullScreen) {
     settings.fullScreen = false;
     fullScreenButton.innerText = "toggle to unfullscreen";
+    fullScreenButton.style.backgroundColor = "red";
   } else {
     settings.fullScreen = true;
     fullScreenButton.innerText = "toggle to fullscreen";
+    fullScreenButton.style.backgroundColor = "green";
   }
   main();
 });
