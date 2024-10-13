@@ -97,7 +97,7 @@ html, document, body, body div {
   background-color: aqua;
 }
 
-#MainMenu > div {
+#MainMenu  div {
   position: relative;
   width: 100%;
 }
