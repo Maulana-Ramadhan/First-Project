@@ -103,6 +103,7 @@ html, document, body, body div {
 MainMenu > details {
   position: relative;
   width: 100vw;
+  height: 10vw;
 }
 
 #containerInputName {
