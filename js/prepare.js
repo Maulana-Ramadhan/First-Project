@@ -135,7 +135,7 @@ function online() {
         window.wkwk = sp;
         sp.forEach( i => { 
           i = i.val(); 
-          if (i.status && i.uid != muid[1]) {
+          if (i.status && i.uid != muid[2]) {
             const el = document.createElement("div");
             el.id = i.uid;
             el.classList.add("players");
