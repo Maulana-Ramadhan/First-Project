@@ -89,6 +89,7 @@ html, document, body, body div {
 }
 
 #MainMenu {
+  overflow-x: scroll;
   position: relative;
   box-sizing: border-box;
   width: 100vw;
