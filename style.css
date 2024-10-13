@@ -105,7 +105,6 @@ html, document, body, body div {
 }
 
 #containerInputName {
-  position: relative;
   overflow-x: scroll;
   display: none;
   z-index: 1;
@@ -117,14 +116,7 @@ html, document, body, body div {
   gap: 5px;
 }
 #inputName {
-  position: relative;
   size: 2;
-}
-#ConfirmInputName {
-  position: relative;
-}
-#PickColor {
-  position: relative;
 }
 
 
