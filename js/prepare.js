@@ -7,7 +7,7 @@ ConfirmInputName.addEventListener('click', (e) => {
   elPlayers[muid[1]].style.backgroundColor = muid[0];
   if (settings.status) {
     muid[2] = inputName.value;
-    localStorage.setItem("myData",JSON.stringify({name:muid[2],color:muid[0],id:muid[1]}));
+    localStorage.setItem("myData",JSON.stringify({name:muid[2],color:muid[0]}));
   } else {
     muid[1] = inputName.value;
     localStorage.setItem("myData",JSON.stringify({name:muid[1],color:muid[0]}));
