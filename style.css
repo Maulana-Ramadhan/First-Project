@@ -49,7 +49,6 @@ html, document, body, body div {
   justify-content: center;
 }
 .players{
-  --content: "smile";
   width: var(--size);
   height: var(--size);
   border-top-left-radius: calc(var(--size) / 2);
