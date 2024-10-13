@@ -93,18 +93,17 @@ html, document, body, body div {
   overflow-x: scroll;
   position: relative;
   box-sizing: border-box;
-  max-width: 90vw;
+  max-width: 95vw;
   transform: translateX(2.5vw);
   margin-top: 2.5vw;
   z-index: 10;
   background-color: aqua;
 }
-#MainMenu > div {
+/*#MainMenu > div {
   position: relative;
 }
 #MainMenu > div:nth-child(odd) {
   background-color: #505050;
- /* margin: 2px;*/
   border: solid black 1px;
   height: 10vh;
   box-sizing: border-box;
@@ -137,5 +136,5 @@ html, document, body, body div {
 #joinWorld {
   display: none;
 }
-
+*/
 
