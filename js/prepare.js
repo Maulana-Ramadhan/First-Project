@@ -114,7 +114,7 @@ function online() {
       muid[2] = user.uid;
       localStorage.setItem("myData",JSON.stringify({name:muid[0],uid:muid[1],color:muid[2]}));
       const el = document.createElement("div");
-      el.id = muid[0];
+      el.id = muid[2];
       el.classList.add("players");
       el.style.backgroundColor = muid[2];
       MainGame.appendChild(el);
