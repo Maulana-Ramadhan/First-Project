@@ -71,8 +71,8 @@ html, document, body, body div {
   width: 250px;
   height: 50px;
   display: grid;
-  grid-template-areas: 'name name name color color opcl' 
-                       't input t color color opcl';
+  grid-template-areas: 'name name name color color' 
+                       't input t color color';
 
   /*right: -300px;*/
 }
