@@ -50,5 +50,3 @@ OPCLjoinWorld.addEventListener("click", a => {
 });
   
 }());
-(function() {
-}());
