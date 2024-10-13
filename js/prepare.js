@@ -121,8 +121,8 @@ function online() {
         direction: 0,
         status: true,
         name: muid[0],
-        uid: muid[1],
-        color: muid[2],
+        color: muid[1],
+        uid: muid[2],
       });
       console.log(muid);
       fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), {
