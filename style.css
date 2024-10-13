@@ -109,6 +109,7 @@ html, document, body, body div {
 }
 
 #containerInputName {
+  overflow-x: scroll;
   display: none;
   z-index: 1;
   background: #4e4e4e;
