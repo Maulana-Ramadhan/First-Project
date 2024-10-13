@@ -37,8 +37,8 @@ function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
   }}
 if(localStorage.getItem("myData")) {
   const myData = JSON.parse(localStorage.getItem("myData"));
-  muid[0] = myData.name;
-  muid[1] = myData.color;
+  muid[0] = myData.color;
+  muid[1] = myData.name;
   inputName.value = muid[0];
   PickColor.value = muid[1];
   const el = document.createElement("div");
