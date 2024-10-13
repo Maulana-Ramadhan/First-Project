@@ -51,7 +51,7 @@ if(localStorage.getItem("myData")) {
   el.classList.add("players");
   el.style.backgroundColor = muid[0];
   MainGame.appendChild(el);
-  elPlayers.mySelf = el;
+  elPlayers[muid[1]] = el;
 }
 function online() {
   fbg.signInAnonymously(fbg.auth).catch(console.log);
