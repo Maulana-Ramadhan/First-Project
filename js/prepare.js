@@ -19,7 +19,7 @@ fullScreenButton.addEventListener('click', () => {
   } else document.documentElement.requestFullscreen();
 });
 document.documentElement.addEventListener("fullscreenchange", () => {
-  containerFullScreen.style.display = "none";
+  
   main();
 });
 if (!navigator.userAgentData.mobile) mobileOnly.style.display = "none"; 
@@ -33,6 +33,7 @@ const real = {
 const settings = {
   size: 25,
   status: false,
+  fullScreen: false;
 };
 const elPlayers = {};
 function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
