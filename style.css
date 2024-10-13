@@ -90,6 +90,7 @@ html, document, body, body div {
 
 #MainMenu {
   overflow-y: scroll;
+  overflow-x: scroll;
   position: relative;
   box-sizing: border-box;
   width: 100vw;
