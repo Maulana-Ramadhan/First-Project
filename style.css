@@ -106,6 +106,7 @@ html, document, body, body div {
   margin: 2px;
   border: solid black 1px;
   height: 10vh;
+  box-sizing: border-box;
 }
 
 #containerInputName {
