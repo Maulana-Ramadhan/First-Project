@@ -10,6 +10,7 @@ ConfirmInputName.addEventListener('click', (e) => {
     localStorage.setItem("myData",JSON.stringify({name:muid[2],color:muid[0],id:muid[1]}));
   } else {
     muid[1] = inputName.value;
+    localStorage.setItem("myData",JSON.stringify({name:muid[1],color:muid[0]}));
   }
 });
 fullScreenButton.addEventListener('click', () => {
