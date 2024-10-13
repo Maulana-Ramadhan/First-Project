@@ -28,22 +28,28 @@
       </div>
     </div>
     <div id="MainMenu">
-      <details id="containerInputName">
+      <details>
         <summary>Your Iformation</summary>
-        <input type="text" value="happu" id="inputName"/>
-        <input type="color" id="PickColor" value="#000000">
-        <button type="submit" id="ConfirmInputName">input</button>
-        <div id="opclCIN"></div>
-      </details>
-      <details id="myWorld">
-        <summary>My World</summary>
-        <div id="createWorld">
-          Create World
+        <div id="containerInputName">
+          <input type="text" value="happu" id="inputName"/>
+          <input type="color" id="PickColor" value="#000000">
+          <button type="submit" id="ConfirmInputName">input</button>
+          <div id="opclCIN"></div>
         </div>
       </details>
-      <details id="joinWorld">
+      <details>
+        <summary>My World</summary>
+        <div id="myWorld">
+          <div id="createWorld">
+            Create World
+          </div>
+        </div>
+      </details>
+      <details>
         <summary>Join World</summary>
-        <input type="button" onclick="online()" value="online">
+        <div id="joinWorld">
+          <input type="button" onclick="online()" value="online">
+        </div>
       </details>
     </div>
     <div id="settingGame">
