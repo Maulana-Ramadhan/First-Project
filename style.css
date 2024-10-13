@@ -83,12 +83,9 @@ html, document, body, body div {
 }
 #PickColor {
   position: relative;
-  width: 25px;
-  height: 25px;
   grid-area: 1 / 4 / 3 / 6;
 }
 #ConfirmInputName {
-  position: relative;
   grid-area: 2 / 2 / 3 / 3;
 }
 #opclCIN {
