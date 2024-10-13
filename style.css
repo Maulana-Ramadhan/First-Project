@@ -11,19 +11,6 @@ html, document, body, body div {
   outline: 1px black solid;
   box-sizing: border-box;
 }
-#MainMenu {
-  position: relative;
-  padding: 10vmin;
-  box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5vmin;
-  background-color: aqua;
-}
 #fullScreenButton {
   position: relative;
   width: 50vmin;
@@ -101,7 +88,20 @@ html, document, body, body div {
   top: 60px;
 }
 
-MainMenu > details {
+#MainMenu {
+  position: relative;
+  padding: 10vmin;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vmin;
+  background-color: aqua;
+}
+#MainMenu > details {
   position: relative;
   width: 100vw;
   height: 10vh;
