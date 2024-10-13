@@ -15,7 +15,7 @@ ConfirmInputName.addEventListener('click', (e) => {
 });
 fullScreenButton.addEventListener('click', () => {
   if (document.fullscreenEnabled) {
-    if (document.fullscreenElement) document.documentElement.exitFullscreen()();
+    if (document.fullscreenElement) document.documentElement.exitFullscreen();
     else document.documentElement.requestFullscreen();
   } 
 });
