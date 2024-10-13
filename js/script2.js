@@ -17,24 +17,10 @@ OPCLcontainerInputName.addEventListener("click", a => {
   }
 });
 OPCLmyWorld.addEventListener("click", a => {
-  if (opcl.cin) {
-    containerInputName.style.display = "none";
-  }
-  else {
-    containerInputName.style.display = "block";
-  }
-  if (opcl.mw) myWorld.style.display = "none";
-  else myWorld.style.display = "block";
+  opcl.mw;
 });
 OPCLjoinWorld.addEventListener("click", a => {
-  if (opcl.cin) {
-    containerInputName.style.display = "none";
-  }
-  else {
-    containerInputName.style.display = "block";
-  }
-  if (opcl.jw) joinWorld.style.display = "none";
-  else joinWorld.style.display = "block";
+  opcl.jw;
 });
   
 }());
