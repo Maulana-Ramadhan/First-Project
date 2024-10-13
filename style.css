@@ -107,20 +107,23 @@ html, document, body, body div {
   height: 10vh;
   box-sizing: border-box;
 }
-
+#OPCLcontainerInputName {
+  position: relative;
+  width: 100%;
+}
 #containerInputName {
+  position: relative;
   overflow-x: scroll;
   display: none;
   z-index: 1;
   background: #4e4e4e;
-  width: 10vw;
-  /*transform: translateX(1.25vw);*/
+  width: 90vw;
+  transform: translateX(1.25vw);
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
 #inputName {
-  background-color: pink;
   position: relative;
   size: 2;
 }
@@ -131,11 +134,23 @@ html, document, body, body div {
   position: relative;
 }
 
+#OPCLmyWorld {
+  position: relative;
+  width: 100%;
+}
 #myWorld {
+  position: relative;
+  width: 100%;
   display: none;
 }
 
+#OPCLjoinWorld {
+  position: relative;
+  width: 100%;
+}
 #joinWorld {
+  position: relative;
+  width: 100%;
   display: none;
 }
 
