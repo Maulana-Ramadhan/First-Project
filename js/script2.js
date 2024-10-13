@@ -38,3 +38,8 @@ OPCLjoinWorld.addEventListener("click", a => {
 });
   
 }());
+(function() {
+  createWorld.addEventListener("click", a => {
+    
+  });
+}());
