@@ -115,7 +115,7 @@ html, document, body, body div {
   display: none;
   z-index: 1;
   background: #4e4e4e;
-  width: 80vw;
+  width: 90vw;
   transform: translateX(2.5vw);
   flex-direction: column;
   gap: 5px;
