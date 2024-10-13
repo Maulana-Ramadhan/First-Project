@@ -48,6 +48,14 @@ html, document, body, body div {
   align-items: center;
   justify-content: center;
 }
+#canvasMap{
+  overflow: visible;
+  transform: translate(0,0);
+  transition: transform .25s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .players{
   --content: "smile";
   width: var(--size);
