@@ -127,63 +127,63 @@ class NewMap {
     this.whichMany = [[],[]];
     this.whichMany.plusing = [];
     this.current = "smallRoad";
+    this.rng.branchRoad = (a) => {
+      const ranD = this.rng.inRange(1, 100+(100*(this.Cmap.length-1))), indeks = this.branchRoad.get();
+      for (let i = 4-a; i < 3; i++) {
+        if (indeks[i] > ranD) {
+          this.branchRoad.mins(i);
+          return 4 - i;
+        }
+      }
+      return 1;
+    };
   }
   createMAp() {
-  rng.branchRoad = function (a) {
-    const ranD = this.inRange(1, 100+(100*(Cmap.length-1))), indeks = branchRoad.get();
-    for (let i = 4-a; i < 3; i++) {
-      if (indeks[i] > ranD) {
-        branchRoad.mins(i);
-        return 4 - i;
-      }
-    }
-    return 1;
-  };
   console.clear();
-  for (const [k, v] of Cmap.entries()) {
-    for (let i = structure[current].limit[0]; i <= structure[current].limit[1]; i++) 
-    if (!map?.[v[0] + i]) map[v[0] + i] = {};
-    for (let j = 0, i = whichPath[j]; j < 4; j++, i = whichPath[j]) {
-      if (map[v[0] + i[0]][v[1] + i[1]] != 2) {
-        if (
-        (map[v[0] + i[0]][v[1] + i[1] + 1] == 2)? (
-          (map[v[0] + i[0]][v[1] + i[1] - 1] == 2)? (
-            (map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+    for (const [k, v] of this.Cmap.entries()) {
+      for (let i = structure[this.current].limit[0]; i <= structure[this.current].limit[1]; i++) 
+      if (!this.map?.[v[0] + i]) this.map[v[0] + i] = {};
+      for (let j = 0, i = whichPath[j]; j < 4; j++, i = whichPath[j]) {
+        if (this.map[v[0] + i[0]][v[1] + i[1]] != 2) {
+          if (
+          (this.map[v[0] + i[0]][v[1] + i[1] + 1] == 2)? (
+            (this.map[v[0] + i[0]][v[1] + i[1] - 1] == 2)? (
+              (this.map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || (this.map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && this.map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (this.map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || (this.map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && this.map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+            ): (
+              ((this.map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || this.map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2) && (this.map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || this.map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2)) &&
+              ((this.map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || this.map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (this.map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || this.map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+            )
           ): (
-            ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2)) &&
-            ((map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
-          )
-        ): (
-          (map[v[0] + i[0]][v[1] + i[1] - 1] == 2)? (
-            ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2)) &&
-            ((map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2))
-          ): (
-            (map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || (map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || (map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
-          )
-        )) whichMany[0].push([v[0] + i[0], v[1] + i[1], i[2]]);
-      } else whichMany[1].push([v[0] + i[0], v[1] + i[1], i[2]]);
-    }
-    if (whichMany[0].length == 0) {
-      if (Cmap.length > 2) {
-        Cmap.splice(k, 1);
-        continue;
-      } else {
-        whichMany.shift();
+            (this.map[v[0] + i[0]][v[1] + i[1] - 1] == 2)? (
+              ((this.map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || this.map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (this.map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || this.map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2)) &&
+              ((this.map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || this.map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2) && (this.map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || this.map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2))
+            ): (
+              (this.map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || (this.map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && this.map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (this.map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || (this.map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && this.map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+            )
+          )) this.whichMany[0].push([v[0] + i[0], v[1] + i[1], i[2]]);
+        } else this.whichMany[1].push([v[0] + i[0], v[1] + i[1], i[2]]);
       }
+      if (this.whichMany[0].length == 0) {
+        if (this.Cmap.length > 2) {
+          this.Cmap.splice(k, 1);
+          continue;
+        } else {
+          this.whichMany.shift();
+        }
+      }
+      for (const [i,x] of Object.entries(this.rng.sample(this.whichMany[0], this.rng.branchRoad(this.whichMany[0].length)))) {
+        this.map[x[0]][x[1]] = 2;
+        for (const i of structure[this.current].walls) if (!this.map[x[0] + i[0]][x[1] + i[1]]) this.map[x[0] + i[0]][x[1] + i[1]] = 1;
+        if (i == 0) this.Cmap[k] = x;
+        else this.whichMany.plusing.push(x);
+      }
+      this.whichMany[0] = [];
+      this.whichMany[1] = [];
     }
-    for (const [i,x] of Object.entries(rng.sample(whichMany[0], rng.branchRoad(whichMany[0].length)))) {
-      map[x[0]][x[1]] = 2;
-      for (const i of structure[current].walls) if (!map[x[0] + i[0]][x[1] + i[1]]) map[x[0] + i[0]][x[1] + i[1]] = 1;
-      if (i == 0) Cmap[k] = x;
-      else whichMany.plusing.push(x);
-    }
-    whichMany[0] = [];
-    whichMany[1] = [];
+    this.Cmap.push(...this.whichMany.plusing);
+    this.whichMany.plusing = [];
+    this.branchRoad.plus(1/(this.Cmap.length||1));
   }
-  Cmap.push(...whichMany.plusing);
-  whichMany.plusing = [];
-  branchRoad.plus(1/(Cmap.length||1));
-}
 }
 
 const map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
@@ -204,16 +204,6 @@ const whichMany = [[],[]];
 whichMany.plusing = [];
 const current = "smallRoad";
 function createMAp(rng) {
-  rng.branchRoad = function (a) {
-    const ranD = this.inRange(1, 100+(100*(Cmap.length-1))), indeks = branchRoad.get();
-    for (let i = 4-a; i < 3; i++) {
-      if (indeks[i] > ranD) {
-        branchRoad.mins(i);
-        return 4 - i;
-      }
-    }
-    return 1;
-  };
   console.clear();
   for (const [k, v] of Cmap.entries()) {
     for (let i = structure[current].limit[0]; i <= structure[current].limit[1]; i++) 
