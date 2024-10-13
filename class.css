@@ -7,6 +7,10 @@
   }
 } 
 
+.fadeOut {
+  animation: 3s ease-out fadeOut;
+}
+
 .flexMiddle {
   display: flex;
   justify-content: center;
