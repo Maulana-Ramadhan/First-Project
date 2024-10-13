@@ -134,7 +134,6 @@ class NewMap {
         this.branchRoad.mins(i);
         return 4 - i;
       }
-      
       return 1;
     };
   }
