@@ -97,10 +97,6 @@ html, document, body, body div {
   background-color: aqua;
 }
 
-#MainMenu div {
-  position: relative;
-  width: 100%;
-}
 #MainMenu > div:nth-child(odd) {
   background-color: #505050;
   border: solid black 1px;
