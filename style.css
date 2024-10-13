@@ -102,6 +102,7 @@ html, document, body, body div {
   position: relative;
   background-color: #505050;
   border: solid black 1px;
+  height: 10vh;
 }
 
 #containerInputName {
