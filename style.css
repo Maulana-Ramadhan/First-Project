@@ -128,11 +128,6 @@ html, document, body, body div {
 }
 #PickColor {
   position: relative;
-  background-color: green;
-}
-#opclCIN {
-  position: relative;
-  background-color: red;
 }
 
 #myWorld {
