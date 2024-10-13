@@ -23,10 +23,10 @@ const real = {
   x: 0,
   y:0,
   direction: 0,
-  status: "offline",
 };
 const settings = {
   size: 25,
+  status: false,
 };
 const elPlayers = {};
 function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
