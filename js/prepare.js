@@ -49,7 +49,7 @@ if(localStorage.getItem("myData")) {
 }
 function online() {
   fbg.signInAnonymously(fbg.auth).catch(console.log);
-  fbg.onAuthStateChanged(fbg.auth, (user) => {
+  /*fbg.onAuthStateChanged(fbg.auth, (user) => {
     console.log(user);
     if (user) {
       if (!localStorage.getItem("myData")) {
@@ -108,7 +108,7 @@ function online() {
     } else {
       fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid + 'status'), false);
     }
-  });
+  });*/
 }
 
 
