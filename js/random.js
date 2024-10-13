@@ -45,4 +45,4 @@ r.shuffle = function(a) {
   return a; 
 };
 return r; };
-rng = Srand(7);
+//rng = Srand(7);
