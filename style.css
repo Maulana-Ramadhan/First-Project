@@ -98,8 +98,10 @@ html, document, body, body div {
   gap: 5vmin;
   background-color: aqua;
 }
-#MainMenu > div:nth-child(odd) {
+#MainMenu > div {
   position: relative;
+}
+#MainMenu > div:nth-child(odd) {
   background-color: #505050;
   border: solid black 5px;
   height: 10vh;
