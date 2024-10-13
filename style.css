@@ -64,6 +64,17 @@ html, document, body, body div {
   width: 100vw;
   height: 100px;
 }
+#containerInputName {
+  position: absolute;
+  z-index: 1;
+  background: #4e4e4e;
+  width: 250px;
+  height: 50px;
+  display: grid;
+  grid-template-areas: 'name name name color color opcl' 't input t color color opcl';
+
+  /*right: -300px;*/
+}
 #inputName {
   position: relative;
   size: 2;
@@ -82,17 +93,6 @@ html, document, body, body div {
   position: relative;
   grid-area: opcl;
   background-color: #878787;
-}
-#containerInputName {
-  position: absolute;
-  z-index: 1;
-  background: #4e4e4e;
-  width: 250px;
-  height: 50px;
-  display: grid;
-  grid-template-areas: 'name name name color color opcl' 't input t color color opcl';
-
-  /*right: -300px;*/
 }
 #analog {
   width: 100px;
