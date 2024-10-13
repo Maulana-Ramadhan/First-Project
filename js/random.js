@@ -43,5 +43,6 @@ r.shuffle = function(a) {
     c = a[d]; a[d] = a[b]; a[b] = c; 
   }
   return a; 
-};return r; }
+};
+return r; };
 rng = Srand(7);
