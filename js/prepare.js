@@ -22,7 +22,9 @@ document.documentElement.addEventListener("fullscreenchange", () => {
   containerFullScreen.style.display = "none";
   main();
 });
-if (!navigator.userAgentData.mobile) mobileOnly.style.display = "none";
+if (!navigator.userAgentData.mobile) {
+  mobileOnly.style.display = "none";
+}
 const muid = [];
 const real = {
   x: 0,
