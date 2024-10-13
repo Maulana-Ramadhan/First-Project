@@ -108,6 +108,7 @@ html, document, body, body div {
 }
 
 #createWorldMenu {
+  gap: 5vmin;
   background-color: red;
   z-index: 1000;
   width: 80vmin;
