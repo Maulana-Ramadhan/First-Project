@@ -115,7 +115,7 @@ html, document, body, body div {
   z-index: 1;
   background: #4e4e4e;
   width: 90vw;
-  transform: translateX(5vw);
+  transform: translateX(2.5vw);
 }
 #inputName {
   position: relative;
