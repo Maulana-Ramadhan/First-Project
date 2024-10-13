@@ -99,10 +99,12 @@ html, document, body, body div {
   z-index: 10;
   background-color: aqua;
 }
-/*#MainMenu > div {
+
+#MainMenu > div {
   position: relative;
 }
 #MainMenu > div:nth-child(odd) {
+  width: 100%;
   background-color: #505050;
   border: solid black 1px;
   height: 10vh;
@@ -136,5 +138,5 @@ html, document, body, body div {
 #joinWorld {
   display: none;
 }
-*/
+
 
