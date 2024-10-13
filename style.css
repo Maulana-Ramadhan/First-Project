@@ -77,12 +77,10 @@ html, document, body, body div {
   /*right: -300px;*/
 }
 #inputName {
-  position: relative;
   size: 2;
   grid-area: 1 / 1 / 2 / 4;
 }
 #PickColor {
-  position: relative;
   grid-area: 1 / 4 / 3 / 6;
 }
 #ConfirmInputName {
