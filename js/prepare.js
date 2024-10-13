@@ -124,8 +124,8 @@ function online() {
         },
         status: true,
         color: muid[0],
-        name: muid[2],
         uid: muid[1],
+        name: muid[2],
       });
       
       console.log(muid);
