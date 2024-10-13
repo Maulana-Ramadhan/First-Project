@@ -78,7 +78,7 @@ html, document, body, body div {
   z-index: 1;
   background: #4e4e4e;
   width: 275px;
-  height: 50;
+  height: 50px;
   /*right: -300px;*/
 }
 #analog {
