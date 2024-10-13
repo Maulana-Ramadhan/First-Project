@@ -70,16 +70,28 @@ html, document, body, body div {
   background: #4e4e4e;
   width: 250px;
   height: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 75px) repeat(2, 50px) 25px;
+  grid-template-rows: repeat(2, 50px);
+
   /*right: -300px;*/
 }
 #inputName {
   position: relative;
   size: 2;
+  grid-area: 1 / 1 / 2 / 4;
 }
 #PickColor {
   position: relative;
   width: 25px;
   height: 25px;
+  grid-area: 1 / 4 / 3 / 6;
+}
+#ConfirmInputName {
+  grid-area: 2 / 2 / 3 / 3;
+}
+#opclCIN {
+  grid-area: 1 / 6 / 3 / 7;
 }
 #analog {
   width: 100px;
