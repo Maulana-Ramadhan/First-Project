@@ -9,6 +9,7 @@ html, document, body, body div {
   width: 100vw;
   height: 100vh;
   outline: 1px black solid;
+  box-sizing: border-box;
 }
 #MainMenu {
   position: relative;
@@ -104,6 +105,8 @@ MainMenu > details {
   position: relative;
   width: 100vw;
   height: 10vh;
+  background-color: #505050;
+  
 }
 
 #containerInputName {
