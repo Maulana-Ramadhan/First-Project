@@ -13,3 +13,6 @@
     });
   }});
 }).catch(console.error);*/
+function CreateNewMap() {
+  
+}
