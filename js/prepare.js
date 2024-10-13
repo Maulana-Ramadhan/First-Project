@@ -120,7 +120,7 @@ function online() {
     if (user) {
       muid[2] = muid[1];
       muid[1] = user.uid;
-      
+      elPlayers[muid[1]] = elPlayers[muid[2]];
       fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
         position: {
           x: 0,
