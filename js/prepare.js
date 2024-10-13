@@ -3,7 +3,8 @@ window.addEventListener("visibilitychange", e => { if (window.closed) {
 }});
 ConfirmInputName.addEventListener('click', (e) => {
   e.preventDefault();
-  if (settings.status) muid[1] = inputName.value;
+  if (settings.status) muid[2] = inputName.value;
+  else muid[1] = inputName.value;
   muid[0] = PickColor.value;
   (elPlayers.mySelf||elPlayers[muid[1]]).style.backgroundColor = muid[0];
   localStorage.setItem("myData",JSON.stringify({name:muid[1],color:muid[0]}));
