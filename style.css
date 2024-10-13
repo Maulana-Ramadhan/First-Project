@@ -28,17 +28,8 @@ html, document, body, body div {
   height: 15vmin;
   font-size: 5vmin;
 }
-#inputName {
-  position: relative;
-  size: 2;
-}
 #containerFullScreen {
   position: relative;
-}
-#PickColor {
-  position: relative;
-  width: 25px;
-  height: 25px;
 }
 #MainGame{
   --minus: 0;
@@ -77,9 +68,18 @@ html, document, body, body div {
   position: absolute;
   z-index: 1;
   background: #4e4e4e;
-  width: 275px;
+  width: 250px;
   height: 50px;
   /*right: -300px;*/
+}
+#inputName {
+  position: relative;
+  size: 2;
+}
+#PickColor {
+  position: relative;
+  width: 25px;
+  height: 25px;
 }
 #analog {
   width: 100px;
