@@ -101,7 +101,7 @@ html, document, body, body div {
 #MainMenu > div:nth-child(odd) {
   position: relative;
   background-color: #505050;
-  border: solid black 2px;
+  border: solid black 5px;
   height: 10vh;
 }
 
