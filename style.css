@@ -70,29 +70,21 @@ html, document, body, body div {
   background: #4e4e4e;
   width: 250px;
   height: 50px;
-  display: grid;
-  grid-template-areas: 'name name name color color' 
-                       't input t color color';
-
   /*right: -300px;*/
 }
 #inputName {
   position: relative;
   size: 2;
-  grid-area: name;
 }
 #ConfirmInputName {
   position: relative;
-  grid-area: input;
 }
 #PickColor {
   position: relative;
-  grid-area: color;
   background-color: green;
 }
 #opclCIN {
   position: relative;
-  grid-area: opcl;
   background-color: red;
 }
 #analog {
