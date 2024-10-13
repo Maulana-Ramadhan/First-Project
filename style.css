@@ -108,6 +108,7 @@ html, document, body, body div {
 }
 
 #containerInputName {
+  display: none;
   z-index: 1;
   background: #4e4e4e;
   width: 250px;
@@ -127,6 +128,14 @@ html, document, body, body div {
 #opclCIN {
   position: relative;
   background-color: red;
+}
+
+#myWorld {
+  display: none;
+}
+
+#joinWorld {
+  display: none;
 }
 
 
