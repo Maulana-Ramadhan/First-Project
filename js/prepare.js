@@ -24,6 +24,7 @@ document.documentElement.addEventListener("fullscreenchange", () => {
 });
 if (!navigator.userAgentData.mobile) {
   mobileOnly.style.display = "none";
+  MainGame.style.setProperty('--minus', '100px');
 }
 const muid = [];
 const real = {
