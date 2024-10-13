@@ -42,9 +42,9 @@ if(localStorage.getItem("myData")) {
   const el = document.createElement("div");
   el.id = "mySelf";
   el.classList.add("players");
-  el.style.backgroundColor = muid[2];
+  el.style.backgroundColor = muid[1];
   MainGame.appendChild(el);
-  elPlayers[muid[1]] = el;
+  elPlayers.mySelf = el;
 }
 function online() {
   fbg.signInAnonymously(fbg.auth).catch(console.log);
