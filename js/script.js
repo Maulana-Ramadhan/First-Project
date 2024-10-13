@@ -40,28 +40,28 @@ function main() {
   function whach() {
     fbg.set(fbg.ref(fbg.database, 'data/users/' + muid[1] + '/position/'), real); 
     moveDirection(real.direction,elPlayers[muid[1]]);
-    elPlayers[muid[1]].style.transform = `translate(${real.position[0]}px, ${real.position[1]}px)`;
-    if (real.position[0] < varM.scrPo[0]-varM.MG[0]) MainGame.style.transform = varM.moveMS(0,+1);
-    if (real.position[0] > varM.scrPo[0]+varM.MG[0]) MainGame.style.transform = varM.moveMS(0,-1);
-    if (real.position[1] < varM.scrPo[1]-varM.MG[1]) MainGame.style.transform = varM.moveMS(1,+1);
-    if (real.position[1] > varM.scrPo[1]+varM.MG[1]) MainGame.style.transform = varM.moveMS(1,-1);
+    elPlayers[muid[1]].style.transform = `translate(${real.x}px, ${real.y}px)`;
+    if (real.x < varM.scrPo[0]-varM.MG[0]) MainGame.style.transform = varM.moveMS(0,+1);
+    if (real.x > varM.scrPo[0]+varM.MG[0]) MainGame.style.transform = varM.moveMS(0,-1);
+    if (real.y < varM.scrPo[1]-varM.MG[1]) MainGame.style.transform = varM.moveMS(1,+1);
+    if (real.y > varM.scrPo[1]+varM.MG[1]) MainGame.style.transform = varM.moveMS(1,-1);
   }
   function which() {
     const c = (varM.x**2+varM.y**2)**(1/2);
     if (Math.abs(varM.x/c) > Math.abs(varM.y/c)) {
-      if (varM.x/c > 0) { real.position[0] += settings.size; real.direction = "right"; }
-      else { real.position[0] -= settings.size; real.direction = "left"; }
+      if (varM.x/c > 0) { real.x += settings.size; real.direction = "right"; }
+      else { real.x -= settings.size; real.direction = "left"; }
     } else {
-      if (varM.y/c > 0) { real.position[1] += settings.size; real.direction = "front"; }
-      else { real.position[1] -= settings.size; real.direction = "back"; }
+      if (varM.y/c > 0) { real.y += settings.size; real.direction = "front"; }
+      else { real.y -= settings.size; real.direction = "back"; }
     } whach();
   }
   function whoch() {
     switch(varM.key) {
-      case 'w': real.position[1] -= settings.size; real.direction = "front"; break;
-      case 'd': real.position[0] += settings.size; real.direction = "right"; break;
-      case 's': real.position[1] += settings.size; real.direction = "back"; break;
-      case 'a': real.position[0] -= settings.size; real.direction = "left"; break; 
+      case 'w': real.y -= settings.size; real.direction = "front"; break;
+      case 'd': real.x += settings.size; real.direction = "right"; break;
+      case 's': real.y += settings.size; real.direction = "back"; break;
+      case 'a': real.x -= settings.size; real.direction = "left"; break; 
     } whach();
   }
   document.addEventListener('keydown', (e) => {
