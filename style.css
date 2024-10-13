@@ -10,7 +10,8 @@ html, document, body, body div {
   height: 100vh;
   outline: 1px black solid;
 }
-#containerFullScreen {
+#MainMenu {
+  position: relative;
   padding: 10vmin;
   box-sizing: border-box;
   width: 100vw;
@@ -28,9 +29,7 @@ html, document, body, body div {
   height: 15vmin;
   font-size: 5vmin;
 }
-#containerFullScreen {
-  position: relative;
-}
+
 #MainGame{
   --minus: 0;
   overflow: hidden;
