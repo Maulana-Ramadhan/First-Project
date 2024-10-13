@@ -129,10 +129,11 @@ class NewMap {
     this.current = "smallRoad";
     this.rng.branchRoad = (a) => {
       const ranD = this.rng.inRange(1, 100+(100*(this.Cmap.length-1))), indeks = this.branchRoad.get();
-      for (let i = 4-a; i < 3; i++) 
-      if (indeks[i] > ranD) {
-        this.branchRoad.mins(i);
-        return 4 - i;
+      for (let i = 4-a; i < 3; i++) {
+        if (indeks[i] > ranD) {
+          this.branchRoad.mins(i);
+          return 4 - i;
+        }
       }
       return 1;
     };
