@@ -114,7 +114,8 @@ html, document, body, body div {
   display: none;
   z-index: 1;
   background: #4e4e4e;
-  width: 250px;
+  width: 90vw;
+  transform: translateX(5vw);
   height: 50px;
 }
 #inputName {
