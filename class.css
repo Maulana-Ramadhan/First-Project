@@ -12,7 +12,6 @@
 }
 .menuConCon {
   display: none;
-  z-index: 1;
   background: #4e4e4e;
   width: 90vw;
   transform: translateX(1.25vw);
