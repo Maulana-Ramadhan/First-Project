@@ -103,12 +103,14 @@ html, document, body, body div {
 MainMenu > details {
   position: relative;
   width: 100vw;
-  height: 10vw;
+  height: 10vh;
 }
 
 #containerInputName {
   z-index: 1;
   background: #4e4e4e;
+  width: 250px;
+  height: 50px;
 }
 #inputName {
   position: relative;
