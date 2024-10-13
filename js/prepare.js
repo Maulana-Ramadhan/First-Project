@@ -119,6 +119,10 @@ function online() {
       fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
         position: [0,0],
         direction: 0,
+        status: true,
+        name: muid[0],
+        uid: muid[1],
+        color: muid[2],
       });
       console.log(muid);
       fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), {
