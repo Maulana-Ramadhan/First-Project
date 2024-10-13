@@ -117,8 +117,11 @@ function online() {
       delete elPlayers.mySelf;
       
       fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
-        position: [0,0],
-        direction: 0,
+        position: {
+          x: 0,
+          y: 0,
+          direction: 0,
+        },
         status: true,
         name: muid[0],
         color: muid[1],
