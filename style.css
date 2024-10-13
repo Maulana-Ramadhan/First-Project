@@ -85,6 +85,7 @@ html, document, body, body div {
 }
 #PickColor {
   grid-area: 1 / 4 / 3 / 6;
+  background-color: green;
 }
 #opclCIN {
   grid-area: 1 / 6 / 3 / 7;
