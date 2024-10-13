@@ -115,7 +115,6 @@ function online() {
     if (user) {
       muid[2] = muid[1];
       muid[1] = user.uid;
-      delete elPlayers.mySelf;
       
       fbg.set(fbg.ref(fbg.database, 'data/users/' + user.uid), {
         position: {
