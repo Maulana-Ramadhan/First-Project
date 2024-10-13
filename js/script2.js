@@ -45,8 +45,7 @@ OPCLjoinWorld.addEventListener("click", a => {
     newWorldNumber.value = "";
   });
   createNewWorld.addEventListener("click", a => {
-    if (newWorldName.value != "")
-    new NewMap(newWorldName.value,newWorldNumber.value);
+    if (newWorldName.value != "") new NewMap(newWorldName.value,newWorldNumber.value);
   });
 });
   
