@@ -79,7 +79,7 @@ html, document, body, body div {
   background: #4e4e4e;
   width: 375px;
   height: 100px;
-  right: -300px;
+  /*right: -300px;*/
 }
 #analog {
   width: 100px;
