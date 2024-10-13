@@ -19,21 +19,21 @@ OPCLcontainerInputName.addEventListener("click", a => {
 OPCLmyWorld.addEventListener("click", a => {
   if (opcl.mw) {
     myWorld.style.display = "none";
-    opcl.cin = false;
+    opcl.mw = false;
   }
   else {
     myWorld.style.display = "block";
-    opcl.cin = true;
+    opcl.mw = true;
   }
 });
 OPCLjoinWorld.addEventListener("click", a => {
   if (opcl.jw) {
     joinWorld.style.display = "none";
-    opcl.cin = false;
+    opcl.jw = false;
   }
   else {
     joinWorld.style.display = "block";
-    opcl.cin = true;
+    opcl.jw = true;
   }
 });
   
