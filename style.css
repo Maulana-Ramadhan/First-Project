@@ -93,7 +93,7 @@ html, document, body, body div {
   overflow-x: scroll;
   position: relative;
   box-sizing: border-box;
-  width: 95vw;
+  max-width: 95vw;
   transform: translateX(2.5vw);
   margin-top: 2.5vw;
   z-index: 10;
