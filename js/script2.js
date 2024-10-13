@@ -1,4 +1,4 @@
-(function() {
+(function opcl() {
 
 const opcl = {
   cin: false,
