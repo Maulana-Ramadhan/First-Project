@@ -161,9 +161,9 @@ function online() {
           el.style.backgroundColor = sp.child(thid).val().color;
           console.log(el.style.backgroundColor);
           MainGame.appendChild(el);
-          fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid), (spm) => {
+          fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid + '/position/'), (spm) => {
             const me = spm.val();
-            el.style.transform = `translate(${me.position[0]}px, ${me.position[1]}px)`;
+            el.style.transform = `translate(${me.x}px, ${me.y}px)`;
             moveDirection(me.direction,el);
           });
         }
