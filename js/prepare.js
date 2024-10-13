@@ -36,12 +36,11 @@ function moveDirection(a,el) { el.style.borderRadius = "0"; switch (a) {
 if(localStorage.getItem("myData")) {
   const myData = JSON.parse(localStorage.getItem("myData"));
   muid[0] = myData.name;
-  muid[1] = myData.uid;
-  muid[2] = myData.color;
+  muid[1] = myData.color;
   inputName.value = muid[0];
-  PickColor.value = muid[2];
+  PickColor.value = muid[1];
   const el = document.createElement("div");
-  el.id = muid[0];
+  el.id = "mySelf";
   el.classList.add("players");
   el.style.backgroundColor = muid[2];
   MainGame.appendChild(el);
