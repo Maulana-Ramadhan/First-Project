@@ -3,11 +3,14 @@ window.addEventListener("visibilitychange", e => { if (window.closed) {
 }});
 ConfirmInputName.addEventListener('click', (e) => {
   e.preventDefault();
-  if (settings.status) muid[2] = inputName.value;
-  else muid[1] = inputName.value;
   muid[0] = PickColor.value;
   elPlayers[muid[1]].style.backgroundColor = muid[0];
-  localStorage.setItem("myData",JSON.stringify({name:muid[1],color:muid[0]}));
+  if (settings.status) {
+    muid[2] = inputName.value;
+    localStorage.setItem("myData",JSON.stringify({name:muid[2],color:muid[0],id:muid[1]}));
+  } else {
+    muid[1] = inputName.value;
+  }
 });
 fullScreenButton.addEventListener('click', () => {
   if (!document.fullscreenEnabled) {
