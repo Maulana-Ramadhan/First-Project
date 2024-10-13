@@ -146,7 +146,7 @@ function online() {
             MainGame.appendChild(el);
             fbg.onValue(fbg.ref(fbg.database, 'data/users/' + i.uid + '/position/'), (spm) => {
               const me = spm.val();
-              el.style.transform = `translate(${me.position[0]}px, ${me.position[1]}px)`;
+              el.style.transform = `translate(${me.x}px, ${me.y}px)`;
               moveDirection(me.direction,el);
             });
           }
