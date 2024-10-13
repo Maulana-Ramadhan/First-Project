@@ -45,7 +45,7 @@ OPCLjoinWorld.addEventListener("click", a => {
     newWorldNumber.value = "";
   });
   createNewWorld.addEventListener("click", a => {
-    
+    createMAp(Srand(newWorldNumber.value))
   });
 });
   
