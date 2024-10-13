@@ -71,8 +71,8 @@ html, document, body, body div {
   width: 250px;
   height: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 75px) repeat(2, 50px) 25px;
-  grid-template-rows: repeat(2, 50px);
+  grid-template-columns: repeat(3, 3fr) repeat(2, 2fr) 1fr;
+  grid-template-rows: repeat(2, 2fr);
 
   /*right: -300px;*/
 }
