@@ -129,6 +129,7 @@ function online() {
         color: muid[1],
         uid: muid[2],
       });
+      
       console.log(muid);
       /*fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid), {
         status: true,
@@ -173,6 +174,7 @@ function online() {
     } else {
       fbg.set(fbg.ref(fbg.database, 'data/thatIn/' + user.uid + 'status'), false);
     }
+    settings.status = true;
   });
 }
 
