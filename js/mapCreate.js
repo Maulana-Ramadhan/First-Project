@@ -140,7 +140,7 @@ const whichMany = [[],[]];
 whichMany.plusing = [];
 const current = "smallRoad";
 for (const i of structure[current].walls) map[i[0]][i[1]] = 1;
-restartMap();
+//restartMap();
 function createMAp() {
   console.clear();
   for (const [k, v] of Cmap.entries()) {
