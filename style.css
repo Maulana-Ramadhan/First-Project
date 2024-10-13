@@ -103,7 +103,8 @@ html, document, body, body div {
 }
 #MainMenu > div:nth-child(odd) {
   background-color: #505050;
-  border: solid black 5px;
+  margin: 2px;
+  border: solid black 1px;
   height: 10vh;
 }
 
