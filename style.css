@@ -41,7 +41,7 @@ html, document, body, body div {
   height: 25px;
 }
 #MainGame{
-  overflow: visible;
+  overflow: hidden;
   transform: translate(0,0);
   transition: transform .25s linear;
   display: flex;
