@@ -107,6 +107,7 @@ html, document, body, body div {
   height: 10vh;
   background-color: #505050;
   border: solid black 1px;
+  font-size: 10vh;
 }
 
 #containerInputName {
