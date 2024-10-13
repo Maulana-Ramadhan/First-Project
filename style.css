@@ -65,12 +65,10 @@ html, document, body, body div {
   height: 100px;
 }
 #containerInputName {
-  position: absolute;
   z-index: 1;
   background: #4e4e4e;
   width: 250px;
   height: 50px;
-  /*right: -300px;*/
 }
 #inputName {
   position: relative;
