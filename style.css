@@ -29,7 +29,6 @@ html, document, body, body div {
   height: 15vmin;
   font-size: 5vmin;
 }
-
 #MainGame{
   --minus: 0;
   overflow: hidden;
