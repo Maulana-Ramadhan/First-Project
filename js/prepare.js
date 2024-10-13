@@ -158,7 +158,7 @@ function online() {
           const el = document.createElement("div");
           el.id = thid;
           el.classList.add("players");
-          el.style.backgroundColor = sp.child(thid).val();
+          el.style.backgroundColor = sp.child(thid).val().color;
           console.log(el.style.backgroundColor);
           MainGame.appendChild(el);
           fbg.onValue(fbg.ref(fbg.database, 'data/users/' + thid), (spm) => {
