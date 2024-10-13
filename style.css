@@ -71,7 +71,8 @@ html, document, body, body div {
   width: 250px;
   height: 50px;
   display: grid;
-  grid-template-areas: 'name name name color color opcl' 't input t color color opcl';
+  grid-template-areas: 'name name name color color opcl' 
+                       't input t color color opcl';
 
   /*right: -300px;*/
 }
@@ -92,7 +93,7 @@ html, document, body, body div {
 #opclCIN {
   position: relative;
   grid-area: opcl;
-  background-color: #878787;
+  background-color: red;
 }
 #analog {
   width: 100px;
