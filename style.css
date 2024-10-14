@@ -21,10 +21,10 @@ body {
   font-size: 5vmin;
 }
 
-#MainGame > div {
+.MainGame > div {
   
 }
-#UserInteraction > div{
+.UserInteraction > div{
   
 }
 #MainGame{
