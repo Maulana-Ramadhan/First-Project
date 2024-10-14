@@ -16,14 +16,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+} .flexMiddle > * {
+  position: relative;
 }
 .widthRel {
   width: 100%;
   position: relative;
 }
-.rel {
-  position: relative;
-}
+
 .blc {
   display: block;
 }
