@@ -16,12 +16,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-} .flexMiddle > * {
-  position: relative;
 }
 .widthRel {
   width: 100%;
-  position: relative;
 }
 
 .blc {
