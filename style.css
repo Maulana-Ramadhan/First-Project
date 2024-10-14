@@ -1,10 +1,6 @@
 :root {
   --size: 25px;
 }
-body {
-  width: 100vw;
-  height: 100vh;
-}
 html, document, body, body div{
   outline: 1px black solid;
   padding: 0;
@@ -15,13 +11,24 @@ html, document, body, body div{
 html, document, body{
   position: absolute;
 }
+body {
+  width: 100vw;
+  height: 100vh;
+}
 #fullScreenButton {
-  position: relative;
   width: 50vmin;
   height: 15vmin;
   font-size: 5vmin;
 }
+
+#MainGame > div {
+  
+}
+#UserInteraction > div{
+  
+}
 #MainGame{
+  position: absolute;
   --minus: 0;
   overflow: hidden;
   display: flex;
@@ -50,7 +57,6 @@ html, document, body{
 #mobileOnly {
   bottom: 40vh;
   left: 0;
-  position: absolute;
   width: 100vw;
   height: 100px;
 }
@@ -92,23 +98,21 @@ html, document, body{
   top: 60px;
 }
 
+
 #MainMenu {
   overflow-y: scroll;
-  position: relative;
   box-sizing: border-box;
   width: 95vw;
   transform: translateX(2.5vw);
   margin-top: 2.5vw;
   background-color: aqua;
 }
-
 #MainMenu > div:nth-child(odd) {
   background-color: #505050;
   border: solid black 1px;
   height: 10vh;
   box-sizing: border-box;
 }
-
 #createWorldMenu {
   gap: 5vmin;
   background-color: red;
