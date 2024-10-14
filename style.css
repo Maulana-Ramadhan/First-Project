@@ -116,3 +116,6 @@ html, document, body, body div {
   top: calc((100vh - 80vmin) / 2);
   left: calc((100vw - 80vmin) / 2);
 }
+#createWorldMenu > * {
+  display: block;
+}
