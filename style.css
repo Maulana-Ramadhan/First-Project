@@ -56,6 +56,10 @@ body {
   transition: transform .25s linear;
   overflow: visible;
 }
+#UserInteraction {
+  position: absolute;
+  bottom: 0;
+}
 #mobileOnly {
   overflow: scroll;
   bottom: 0;
@@ -104,9 +108,7 @@ body {
   top: 60px;
 }
 
-
 #MainMenu {
-  
   overflow-y: scroll;
   box-sizing: border-box;
   width: 95vw;
