@@ -23,6 +23,9 @@
   top: calc((100vh - 80vmin) / 2);
   left: calc((100vw - 80vmin) / 2);
 }
+#createWorld {
+  height: 50px;
+}
 #warningCreateWorldMenu {
   opacity: 0;
   animation-duration: 2s;
