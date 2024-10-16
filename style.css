@@ -62,8 +62,6 @@ body {
 }
 #mobileOnly {
   overflow: scroll;
-  bottom: 0;
-  left: 0;
   width: 100vw;
   height: 100px;
   position: absolute;
