@@ -37,9 +37,9 @@ body {
   height: 100vh;
 }
 #MainGame{
+  --minus: 0;
   width: 100vw;
   position: absolute;
-  --minus: 0;
   overflow: hidden;
   display: flex;
   align-items: center;
