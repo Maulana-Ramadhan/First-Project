@@ -54,7 +54,7 @@ OPCLjoinWorld.addEventListener("click", a => {
     } else {
       AllMap[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
       createWorldMenu.style.display = "none";
-      myWorld.innerHTML += `<div>${newWorldName}</div>`;
+      myWorld.innerHTML += `<div class="worldList">${newWorldName}</div>`;
       newWorldName.value = "";
       newWorldNumber.value = "";
     }
