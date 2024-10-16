@@ -1,0 +1,84 @@
+#UserInteraction {
+  width: 100vw;
+  height: 100vh;
+}
+#MainGame{
+  display: none;
+  width: 100vw;
+  width: 100vh;
+  position: absolute;
+  overflow: hidden;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+}
+#canvasMap{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  transform: translate(0,0);
+  transition: transform .25s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.players{
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  border-top-left-radius: calc(var(--size) / 2);
+  border-top-right-radius: calc(var(--size) / 2);
+  transform: translate(0,0);
+  transition: transform .25s linear;
+  overflow: visible;
+}
+#UserInteraction {
+  position: absolute;
+  bottom: 0;
+}
+#mobileOnly {
+  overflow: scroll;
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+}
+#analog {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 10px;
+  border-radius: 50px;
+  outline: red solid 1px;
+}
+.intr{
+  position: absolute;
+  height: 30px;
+  width: 40px;
+  outline: 1px solid red;
+}
+#bIntr1{
+  left: 140px;
+  top: 10px;
+}
+#bIntr2{
+  left: 220px;
+  top: 10px;
+}
+#bIntr3{
+  left: 300px;
+  top: 10px;
+}
+#bIntr4{
+  left: 135px;
+  top: 60px;
+}
+#bIntr5{
+  left: 215px;
+  top: 60px;
+}
+#bIntr6{
+  left: 295px;
+  top: 60px;
+}
