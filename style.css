@@ -38,7 +38,6 @@ body {
 }
 #MainGame{
   width: 100vw;
-  height: 100vh;
   position: absolute;
   --minus: 0;
   overflow: hidden;
