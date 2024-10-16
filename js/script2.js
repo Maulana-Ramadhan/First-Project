@@ -56,6 +56,7 @@ OPCLjoinWorld.addEventListener("click", a => {
       createWorldMenu.style.display = "none";
       newWorldName.value = "";
       newWorldNumber.value = "";
+      myWorld.innerHTML += `<div></div>`;
     }
   });
   warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorldMenu.style.animationName = "");
