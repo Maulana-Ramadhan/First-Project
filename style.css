@@ -32,7 +32,6 @@ body {
   height: 100vh;
 }
 #UserInteraction {
-  background-color: blue;
   width: 100vw;
   height: 100vh;
 }
@@ -53,7 +52,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blue;
 }
 .players{
   width: var(--size);
@@ -65,7 +63,6 @@ body {
   overflow: visible;
 }
 #mobileOnly {
-  background-color: blue;
   bottom: 0;
   left: 0;
   width: 100vw;
@@ -117,7 +114,6 @@ body {
   width: 95vw;
   transform: translateX(2.5vw);
   margin-top: 2.5vw;
-  background-color: aqua;
 }
 #MainMenu > div:nth-child(odd) {
   background-color: #505050;
@@ -126,10 +122,8 @@ body {
   box-sizing: border-box;
 }
 #createWorldMenu {
-  
   position: absolute;
   gap: 5vmin;
-  background-color: red;
   z-index: 1000;
   width: 80vmin;
   height: 80vmin;
