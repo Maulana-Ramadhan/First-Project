@@ -50,7 +50,7 @@ OPCLjoinWorld.addEventListener("click", a => {
       warningCreateWorldMenu.style.animationName = "fadeOut";
     } else if (Object.keys(AllMap).some(a => a == newWorldName.value)) {
       warningCreateWorldMenu.innerText = "Map With The Same Has Already Exist";
-      warningCreateWo=rldMenu.style.animationName = "fadeOut";
+      warningCreateWorldMenu.style.animationName = "fadeOut";
     } else AllMap[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
   });
   warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorldMenu.style.animationName = "");
