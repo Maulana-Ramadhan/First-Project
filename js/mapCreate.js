@@ -113,8 +113,6 @@ const whichPath = [
   [0, -1, "left"],
 ];
 
-const AllMap = {};
-
 class NewMap {
   constructor(name,seed){
     this.datas = {};
@@ -187,6 +185,12 @@ class NewMap {
     this.branchRoad.plus(1/(this.Cmap.length||1));
   }
 }
+
+const AllMap = {};
+function addChildEl({id,class}) {
+  // body...
+}
+
 
 /*const map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
 const Cmap = [[0, 0]];
