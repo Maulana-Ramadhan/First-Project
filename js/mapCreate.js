@@ -187,8 +187,13 @@ class NewMap {
 }
 
 const AllMap = {};
-function addChildEl({id,class}) {
-  // body...
+function createEl({tagEl,id,className,event,html,text}) {
+  const me = document.createElement(tagEl);
+  id||(me.id = id);
+  className||me.classList.add(...className);
+  event||me.addEventListener(event[0], event[1]);
+  (html||(me.innerHTML = html))||(text||(me.innerText = text));
+  return me;
 }
 
 
