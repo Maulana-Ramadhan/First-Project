@@ -36,32 +36,31 @@ OPCLjoinWorld.addEventListener("click", a => {
     joinWorld.style.display = "block";
     opcl.jw = true;
   }
-  console.log(createWorld);
-  createWorld.addEventListener("click", a => {
-    console.log("value");
-    createWorldMenu.style.display = "flex";
-  });
-  cancelNewWorld.addEventListener("click", a => {
+});
+createWorld.addEventListener("click", a => {
+  console.log("value");
+  createWorldMenu.style.display = "flex";
+});
+cancelNewWorld.addEventListener("click", a => {
+  createWorldMenu.style.display = "none";
+  newWorldName.value = "";
+  newWorldNumber.value = "";
+});
+createNewWorld.addEventListener("click", a => {
+  if (newWorldName.value == "")  {
+    warningCreateWorldMenu.innerText = "Map Name Cannot Be Empty";
+    warningCreateWorldMenu.style.animationName = "fadeOut";
+  } else if (Object.keys(AllMap).some(a => a == newWorldName.value)) {
+    warningCreateWorldMenu.innerText = "Map With The Same Has Already Exist";
+    warningCreateWorldMenu.style.animationName = "fadeOut";
+  } else {
+    AllMap[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
     createWorldMenu.style.display = "none";
+    myWorld.innerHTML += `<div class="worldList">${newWorldName}</div>`;
     newWorldName.value = "";
     newWorldNumber.value = "";
-  });
-  createNewWorld.addEventListener("click", a => {
-    if (newWorldName.value == "")  {
-      warningCreateWorldMenu.innerText = "Map Name Cannot Be Empty";
-      warningCreateWorldMenu.style.animationName = "fadeOut";
-    } else if (Object.keys(AllMap).some(a => a == newWorldName.value)) {
-      warningCreateWorldMenu.innerText = "Map With The Same Has Already Exist";
-      warningCreateWorldMenu.style.animationName = "fadeOut";
-    } else {
-      AllMap[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
-      createWorldMenu.style.display = "none";
-      myWorld.innerHTML += `<div class="worldList">${newWorldName}</div>`;
-      newWorldName.value = "";
-      newWorldNumber.value = "";
-    }
-  });
-  warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorldMenu.style.animationName = "");
+  }
 });
+warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorldMenu.style.animationName = "");
   
 }());
