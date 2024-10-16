@@ -1,3 +1,11 @@
+#settingGame {
+  display: none;
+  position: absolute;
+  width: 100vmin;
+  height: 100vmin;
+  top: calc((100vh - 100vmin) / 2);
+  left: calc((100vw - 100vmin) / 2);
+}
 #fullScreenButton {
   width: 50vmin;
   height: 15vmin;
