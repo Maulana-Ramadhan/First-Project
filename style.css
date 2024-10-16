@@ -23,9 +23,13 @@ body {
 
 .MainGame div {
   position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
 .UserInteraction div{
   position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
 #UserInteraction {
   background-color: blue;
