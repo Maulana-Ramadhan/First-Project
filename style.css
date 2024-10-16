@@ -22,10 +22,10 @@ body {
 }
 
 .MainGame > div {
-  
+  position: absolute;
 }
 .UserInteraction > div{
-  
+  position: absolute;
 }
 #MainGame{
   position: absolute;
