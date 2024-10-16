@@ -27,7 +27,7 @@ body {
 .UserInteraction div{
   position: absolute;
 }
-.UserInteraction {
+#UserInteraction {
   background-color: blue;
 }
 #MainGame{
