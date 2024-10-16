@@ -37,6 +37,7 @@ OPCLjoinWorld.addEventListener("click", a => {
     opcl.jw = true;
   }
   createWorld.addEventListener("click", a => {
+    console.log("value");
     createWorldMenu.style.display = "flex";
   });
   cancelNewWorld.addEventListener("click", a => {
@@ -45,7 +46,6 @@ OPCLjoinWorld.addEventListener("click", a => {
     newWorldNumber.value = "";
   });
   createNewWorld.addEventListener("click", a => {
-    console.log("value");
     if (newWorldName.value == "")  {
       warningCreateWorldMenu.innerText = "Map Name Cannot Be Empty";
       warningCreateWorldMenu.style.animationName = "fadeOut";
