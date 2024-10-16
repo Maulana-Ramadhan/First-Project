@@ -25,5 +25,6 @@
 }
 #warningCreateWorldMenu {
   opacity: 0;
-  animation: 3s ease-out fadeOut;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
 }
