@@ -106,7 +106,6 @@ body {
 
 
 #MainMenu {
-  position: absolute;
   overflow-y: scroll;
   box-sizing: border-box;
   width: 95vw;
