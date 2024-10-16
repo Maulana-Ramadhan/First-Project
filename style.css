@@ -82,26 +82,32 @@ body {
   outline: 5px solid red;
 }
 #bIntr1{
+  background-color: #ba36829f;
   left: 140px;
   top: 10px;
 }
 #bIntr2{
+  background-color: #8436ba9f;
   left: 220px;
   top: 10px;
 }
 #bIntr3{
+  background: #365bba9f;
   left: 300px;
   top: 10px;
 }
 #bIntr4{
+  background-color: #36ba899f;
   left: 135px;
   top: 60px;
 }
 #bIntr5{
+  background-color: #85ba369f;
   left: 215px;
   top: 60px;
 }
 #bIntr6{
+  background-color: #ba36369f;
   left: 295px;
   top: 60px;
 }
