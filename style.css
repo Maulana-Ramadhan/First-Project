@@ -112,6 +112,7 @@ body {
   width: 95vw;
   transform: translateX(2.5vw);
   margin-top: 2.5vw;
+  background-color: #ba36829f;
 }
 #MainMenu > div:nth-child(odd) {
   width: 100%;
