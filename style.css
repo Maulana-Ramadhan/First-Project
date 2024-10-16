@@ -120,6 +120,7 @@ body {
   box-sizing: border-box;
 }
 #createWorldMenu {
+  display: none;
   position: absolute;
   gap: 5vmin;
   z-index: 1000;
