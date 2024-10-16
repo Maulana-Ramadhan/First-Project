@@ -36,6 +36,7 @@ OPCLjoinWorld.addEventListener("click", a => {
     joinWorld.style.display = "block";
     opcl.jw = true;
   }
+  console.log(createWorld);
   createWorld.addEventListener("click", a => {
     console.log("value");
     createWorldMenu.style.display = "flex";
