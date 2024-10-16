@@ -36,7 +36,7 @@ body {
 }
 #canvasMap{
   --minus: 0;
-  height: calc(100% - var(--minus));
+  height: calc(100vh - var(--minus));
   width: 100%;
   position: absolute;
   overflow: visible;
