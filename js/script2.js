@@ -57,7 +57,12 @@ createNewWorld.addEventListener("click", a => {
     AllMap[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
     createWorldMenu.style.display = "none";
     myWorld.appendChild(createEl({
-      
+      tagEl: "div",
+      className: ["worldList"],
+      text: newWorldName.value,
+      event: ["click", (a) => {
+        //////
+      }]
     }));
     newWorldName.value = "";
     newWorldNumber.value = "";
