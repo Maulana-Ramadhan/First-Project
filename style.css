@@ -26,11 +26,12 @@ body {
   height: 100vh;
 }
 #MainGame{
+  display: none;
   width: 100vw;
   width: 100vh;
   position: absolute;
   overflow: hidden;
-  display: flex;
+  /*display: flex;*/
   align-items: center;
   justify-content: center;
 }
