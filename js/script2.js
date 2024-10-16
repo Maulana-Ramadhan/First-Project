@@ -56,11 +56,10 @@ createNewWorld.addEventListener("click", a => {
   } else {
     AllMap[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
     createWorldMenu.style.display = "none";
-    myWorld.innerHTML += `<div class="worldList">${newWorldName}</div>`;
+    myWorld.innerHTML += `<div class="worldList">${newWorldName.value}</div>`;
     newWorldName.value = "";
     newWorldNumber.value = "";
   }
 });
 warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorldMenu.style.animationName = "");
-  
 }());
