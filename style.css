@@ -58,6 +58,7 @@ body {
   overflow: visible;
 }
 #mobileOnly {
+  background-color: blue;
   bottom: 40vh;
   left: 0;
   width: 100vw;
