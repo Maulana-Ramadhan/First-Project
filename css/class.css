@@ -44,3 +44,6 @@
   flex-direction: column;
   gap: 5px;
 }
+.worldList{
+  font-size: 10px;
+}
