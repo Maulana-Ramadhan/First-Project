@@ -114,6 +114,7 @@ body {
   margin-top: 2.5vw;
 }
 #MainMenu > div:nth-child(odd) {
+  width: 100%;
   background-color: #505050;
   border: solid black 1px;
   height: 10vh;
