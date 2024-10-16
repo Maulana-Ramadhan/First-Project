@@ -126,7 +126,7 @@ body {
   box-sizing: border-box;
 }
 #createWorldMenu {
-  display: none;
+  
   position: absolute;
   gap: 5vmin;
   background-color: red;
