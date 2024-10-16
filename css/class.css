@@ -10,18 +10,15 @@
 
 :root {
   --size: 25px;
-}
-html, document, body, body div{
+} html, document, body, body div{
   outline: 1px black solid;
   padding: 0;
   margin: 0;
   overflow: hidden;
   box-sizing: border-box;
-}
-html, document, body{
+} html, document, body{
   position: absolute;
-}
-body {
+} body {
   width: 100vw;
   height: 100vh;
 }
