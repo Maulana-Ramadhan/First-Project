@@ -48,7 +48,7 @@ OPCLjoinWorld.addEventListener("click", a => {
     if (newWorldName.value == "")  {
       warningCreateWorldMenu.innerText = "Map Name Cannot Be Empty";
       warningCreateWorldMenu.style.animationName = "fadeOut";
-    } else if (Object.keys(AllMap).every(a => a != newWorldName.value)) {
+    } else if (Object.keys(AllMap).some(a => a == newWorldName.value)) {
       warningCreateWorldMenu.innerText = "Map With The Same Has Already Exist";
       warningCreateWo=rldMenu.style.animationName = "fadeOut";
     } else All.map[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
