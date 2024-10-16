@@ -4,6 +4,9 @@
   height: 100vmin;
   top: calc((100vh - 100vmin) / 2);
   left: calc((100vw - 100vmin) / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #fullScreenButton {
   width: 50vmin;
