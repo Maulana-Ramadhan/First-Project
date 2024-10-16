@@ -56,7 +56,6 @@ body {
   background-color: blue;
 }
 .players{
-  --content: "smile";
   width: var(--size);
   height: var(--size);
   border-top-left-radius: calc(var(--size) / 2);
