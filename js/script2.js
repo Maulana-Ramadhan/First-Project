@@ -53,7 +53,9 @@ OPCLjoinWorld.addEventListener("click", a => {
       warningCreateWorldMenu.style.animationName = "fadeOut";
     } else {
       AllMap[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
-      cancelNewWorld.onclick();
+      createWorldMenu.style.display = "none";
+      newWorldName.value = "";
+      newWorldNumber.value = "";
     }
   });
   warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorldMenu.style.animationName = "");
