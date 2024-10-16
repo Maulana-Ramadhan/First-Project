@@ -21,10 +21,10 @@ body {
   font-size: 5vmin;
 }
 
-.MainGame > div {
+.MainGame div {
   position: absolute;
 }
-.UserInteraction > div{
+.UserInteraction div{
   position: absolute;
 }
 /* .UserInteraction {
