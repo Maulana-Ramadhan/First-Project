@@ -35,8 +35,7 @@ body {
   justify-content: center;
 }
 #canvasMap{
-  --minus: 0;
-  height: calc(100vh - var(--minus));
+  height: 100%;
   width: 100%;
   position: absolute;
   overflow: visible;
