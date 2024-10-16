@@ -33,8 +33,12 @@ body {
 }
 #UserInteraction {
   background-color: blue;
+  width: 100vw;
+  height: 100vh;
 }
 #MainGame{
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   --minus: 0;
   overflow: hidden;
