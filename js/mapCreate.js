@@ -190,6 +190,7 @@ class NewMap {
     for (const [k2,v2] of Object.entries(v1)) {
       ik += ECTOel(me?"red":ECTObc[v2],k2*10,k1*10);
     }}
+    canvasMap.innerHTML = ik;
   }
 }
 
