@@ -49,6 +49,12 @@
   flex-direction: column;
   gap: 5px;
 }
+.contMainMenu {
+  width: 100%;
+  background-color: #505050;
+  border: solid black 1px;
+  box-sizing: border-box;
+}
 .worldList{
   font-size: 50px;
 }
