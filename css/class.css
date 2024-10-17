@@ -20,7 +20,14 @@
   position: relative;
   height: 100vh;
   width: 100vw
-} 
+} #loadingScreen {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .flexMiddle {
   flex-direction: column;
