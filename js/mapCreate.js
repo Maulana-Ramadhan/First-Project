@@ -82,11 +82,11 @@ structure.conStructorB(("treasureRoom"),[[
   [1, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 1, 1, 0, 1, 1, 0, 1],
   [1, 0, 1, 0, 0, 0, 1, 0, 1],
-  [1, 0, 0, 0, 3, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 1, 0, 0, 0, 1, 0, 1],
   [1, 0, 1, 1, 0, 1, 1, 0, 1],
   [1, 0, 0, 0, 0, 0, 0, 0, 1],
-  [1, 1, 1, 1, 2, 1, 1, 1, 1],],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1],],
   [[0,[[4,0],[0,5],[8,5]],[50,50,50],[2]], //[configuration,[semua tiles yang diganti],[minimal, maksimal | yang harus diganti],[dengan tiles apa jika tidak diganti],[[tiles yang diacak],[bobot setiap tiles]]]
   [1,[true,true,true,true]],],
 ]);
