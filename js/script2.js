@@ -89,7 +89,7 @@ myWorld.appendChild(createEl({
     loadingScreen.style.display = "flex";
     for (let i = 0; i < 10000; i++) AllMap.mau.createMAp();
     loadingScreen.style.display = "none";
-    MainGame.style.display = "block";
+    MainGame.style.display = "flex";
     
   }]
 }));
