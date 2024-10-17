@@ -33,11 +33,20 @@
   bottom: 0;
   width: 100vw;
 }
-#settingMainGame {
-  
+
+
+#UI {
+  position: relative;
   width: 100vw;
 }
+#settingMainGame {
+  position: absolute;
+  right: 0;
+}
+
+
 #controller {
+  position: relative;
   width: 100vw;
   height: 100px;
 }
