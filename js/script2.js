@@ -23,7 +23,7 @@ OPCLmyWorld.addEventListener("click", a => {
     opcl.mw = false;
   }
   else {
-    myWorld.style.display = "block";
+    myWorld.style.display = "flex";
     opcl.mw = true;
   }
 });
