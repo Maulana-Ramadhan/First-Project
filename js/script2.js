@@ -84,7 +84,7 @@ myWorld.appendChild(createEl({
   className: ["worldList"],
   text: "mau",
   event: ["click", ({srcElement:el}) => {
-    MainGame.style.display = "none";
+    MainMenu.style.display = "none";
     loadingScreen.style.display = "flex";
     for (let i = 0; i < 1000; i++) AllMap[newWorldName.value].createMAp();
   }]
