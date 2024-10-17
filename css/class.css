@@ -31,6 +31,9 @@
 .widthRel {
   width: 100%;
 }
+.textCCMM {
+  height: 40vh;
+}
 
 .blc {
   display: block;
