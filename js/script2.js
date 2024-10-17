@@ -60,9 +60,10 @@ createNewWorld.addEventListener("click", a => {
       tagEl: "div",
       className: ["worldList"],
       text: newWorldName.value,
-      event: ["click", (a) => {
+      event: ["click", ({srcElement:el}) => {
         MainGame.style.display = "none";
         loadingScreen.style.display = "flex";
+        el.innerText
       }]
     }));
     newWorldName.value = "";
