@@ -2,7 +2,6 @@ function NFSTR() {}
 const enCodetoObject = ["air","solid","walk","door","chest"];
 const configuration = ["choosedPlace","allowRotate","start"];
 const ECTObc = ["","black","skyblue","brown","gray"];
-const ECTOel = (a,x,y) => `<div class="thus" style="background-color:${a};transform:translate(${x}px,${y}px)"></div>`;
 NFSTR.prototype.metStructor = {
   reverseC(){return this.enCodetoObject.toReversed().map((ki)=>k.map((l,j)=>this.enCodetoObject[i][j]))},
   reverseR(){return this.enCodetoObject.map((k,i)=>k.toReversed().map((l,j)=>this.enCodetoObject[i][j]))},
@@ -187,12 +186,12 @@ class NewMap {
   loadMap() {
     let i = "";
     for (let i = 0; i < Things.length; i++) {
-    for (let i = 0; i < Things.length; i++) {
-      ik += ECTOel(ECTObc[v2],k2*10,k1*10);
+    for (let j = 0; j < Things.length; j++) {
+      ik += createElT(ECTObc[v2],k2*10,k1*10);
     }}
     for (const [k1,v1] of Object.entries(map)) {
     for (const [k2,v2] of Object.entries(v1)) {
-      ik += ECTOel(me?"red":ECTObc[v2],k2*10,k1*10);
+      ik += createElT(me?"red":ECTObc[v2],k2*10,k1*10);
     }}
     canvasMap.innerHTML = ik;
   }
@@ -207,6 +206,7 @@ function createEl({tagEl,id,className,event,html,text}) {
   (text&&(me.innerText = text))&&(html&&(me.innerHTML = html));
   return me;
 }
+const createElT = (a,x,y) => `<div class="thus" style="background-color:${a};transform:translate(${x}px,${y}px)"></div>`;
 
 
 /*
