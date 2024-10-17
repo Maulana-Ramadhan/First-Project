@@ -69,9 +69,9 @@ structure.conStructorR(("megaRoad"),[[
   [1,[true,true,true,true]]
 ]);
 structure.conStructorB(("basicSquare"),[[
-  [1, 1, 1, 1, 1],
+  [1, 1, 0, 1, 1],
   [1, 0, 0, 0, 1],
-  [1, 0, 0, 0, 1],
+  [0, 0, 0, 0, 0],
   [1, 0, 0, 0, 1],
   [1, 1, 0, 1, 1],],
   [[0,[[2,0],[0,3],[4,3]],[50,50,50],[2]],
