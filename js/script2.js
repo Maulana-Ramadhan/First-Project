@@ -38,7 +38,7 @@ OPCLjoinWorld.addEventListener("click", a => {
   }
 });
 createWorld.addEventListener("click", a => {
-  console.log(getComputedStyle(createWorld).getPropertyValue("display"));
+  console.log(getComputedStyle(OPCLmyWorld).getPropertyValue("display"));
   createWorldMenu.style.display = "flex";
 });
 cancelNewWorld.addEventListener("click", a => {
