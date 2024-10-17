@@ -191,6 +191,7 @@ class NewMap {
     for (let j = -15; j <= 15; j++) {
       this.map[i][j]&&(ik += createElT(ECTObc[this.map[i][j]],i*10,j*10));
     }}
+    /////////////////////////
     canvasMap.innerHTML = ik;
     elPlayers.forEach((a) => {
       canvasMap.appendChild(a);
