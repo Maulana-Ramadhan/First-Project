@@ -190,6 +190,7 @@ class NewMap {
       this.map[i][j]&&(ik += createElT(ECTObc[this.map[i][j]],i*10,j*10));
     }}
     canvasMap.innerHTML = ik;
+    
   }
 }
 
