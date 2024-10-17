@@ -188,12 +188,16 @@ class NewMap {
 
 const AllMap = {};
 function createEl({tagEl,id,className,event,html,text}) {
-  console.log(tagEl,id,className,event,html,text);
   const me = document.createElement(tagEl);
   id||(me.id = id);
+  console.log(id||"more than you know");
   className||me.classList.add(...className);
+  console.log(className||"more than you know");
   event||me.addEventListener(event[0], event[1]);
+  console.log(event||"more than you know");
   (text||(me.innerText = text))||(html||(me.innerHTML = html));
+  console.log(text||"more than you know");
+  console.log(html||"more than you know");
   return me;
 }
 
