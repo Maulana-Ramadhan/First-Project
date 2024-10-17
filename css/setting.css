@@ -1,8 +1,8 @@
 #settingGame {
   display: none;
   position: absolute;
-  width: 100vmin;
-  height: 100vmin;
+  width: 100vw;
+  height: 100vh;
   top: calc((100vh - 100vmin) / 2);
   left: calc((100vw - 100vmin) / 2);
   /*display: flex;*/
