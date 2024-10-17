@@ -32,3 +32,6 @@
   animation-duration: 2s;
   animation-timing-function: ease-out;
 }
+#myWorld {
+  gap: 5px;
+}
