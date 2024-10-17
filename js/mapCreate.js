@@ -185,8 +185,11 @@ class NewMap {
     this.branchRoad.plus(1/(this.Cmap.length||1));
   }
   loadMap() {
-    this.map
-  }
+  for (const [k1,v1] of Object.entries(map)) {
+  for (const [k2,v2] of Object.entries(v1)) {
+    let me; if (parseInt(temp[1][temp[1].length-1]) < temp[3]) temp[3] = temp[1][temp[1].length-1] ;
+    ik += ECTOel(me?"red":ECTObc[v2],k2*10,k1*10);
+  }}}
 }
 
 const AllMap = {};
