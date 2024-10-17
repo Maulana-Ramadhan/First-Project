@@ -16,6 +16,7 @@
   box-sizing: border-box;
 }
 #createWorldMenu {
+  background-color: red;
   display: none;
   position: absolute;
   gap: 5vmin;
