@@ -196,8 +196,7 @@ function createEl({tagEl,id,className,event,html,text}) {
   event||me.addEventListener(event[0], event[1]);
   console.log(event||"more than you know");
   (text||(me.innerText = text))||(html||(me.innerHTML = html));
-  console.log(text||"more than you know");
-  console.log(html||"more than you know");
+  console.log((text||"more than you know")||(html||"more than i know"));
   return me;
 }
 
