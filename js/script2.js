@@ -79,7 +79,7 @@ exitSettingGame.addEventListener("click", a => {
   settingGame.style.display = "none";
 });
 
-AllMap.mau = new NewMap(newWorldName.value,newWorldNumber.value);
+AllMap.mau = new NewMap("mau",7);
 myWorld.appendChild(createEl({
   tagEl: "div",
   className: ["worldList"],
