@@ -9,12 +9,6 @@
   background-color: #ba36829f;
   gap: 10px;
 }
-#MainMenu > div {
-  width: 100%;
-  background-color: #505050;
-  border: solid black 1px;
-  box-sizing: border-box;
-}
 #createWorldMenu {
   background-color: red;
   display: none;
