@@ -82,7 +82,7 @@ exitSettingGame.addEventListener("click", a => {
 myWorld.appendChild(createEl({
   tagEl: "div",
   className: ["worldList"],
-  text: newWorldName.value,
+  text: "mau",
   event: ["click", ({srcElement:el}) => {
     MainGame.style.display = "none";
     loadingScreen.style.display = "flex";
