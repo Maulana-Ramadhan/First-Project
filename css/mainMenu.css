@@ -5,6 +5,7 @@
   transform: translateX(2.5vw);
   margin-top: 2.5vw;
   background-color: #ba36829f;
+  gap: 10px;
 }
 #MainMenu > div:nth-child(odd) {
   width: 100%;
