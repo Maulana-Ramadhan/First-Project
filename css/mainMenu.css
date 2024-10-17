@@ -9,7 +9,7 @@
   background-color: #ba36829f;
   gap: 10px;
 }
-#MainMenu > div:nth-child(odd) {
+#MainMenu > div {
   width: 100%;
   background-color: #505050;
   border: solid black 1px;
