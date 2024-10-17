@@ -30,6 +30,7 @@
   overflow: visible;
 }
 #mobileOnly {
+  position: absolute;
   overflow: scroll;
   width: 100vw;
   height: 100px;
