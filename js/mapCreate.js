@@ -190,9 +190,9 @@ const AllMap = {};
 function createEl({tagEl,id,className,event,html,text}) {
   const me = document.createElement(tagEl);
   id&&(me.id = id);
-  className||me.classList.add(...className);
-  event||me.addEventListener(event[0], event[1]);
-  (text||(me.innerText = text))||(html||(me.innerHTML = html));
+  className&&me.classList.add(...className);
+  event&&me.addEventListener(event[0], event[1]);
+  (text&&(me.innerText = text))&&(html&&(me.innerHTML = html));
   return me;
 }
 
