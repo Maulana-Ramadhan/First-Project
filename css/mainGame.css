@@ -31,12 +31,11 @@
 }
 #mobileOnly {
   position: absolute;
-  overflow: scroll;
+  bottom: 0;
   width: 100vw;
 }
 #controller {
   position: absolute;
-  overflow: scroll;
   width: 100vw;
   height: 100px;
 }
