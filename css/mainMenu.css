@@ -41,5 +41,14 @@
   background-color: green;
 }
 #settingGame{
+  background-color: red;
+  display: none;
+  position: absolute;
+  gap: 5vmin;
+  z-index: 1000;
+  width: 80vmin;
+  height: 80vmin;
+  top: calc((100vh - 80vmin) / 2);
+  left: calc((100vw - 80vmin) / 2);
   
 }
