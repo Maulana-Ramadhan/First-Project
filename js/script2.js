@@ -73,5 +73,8 @@ warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorl
 settingMainMenu.addEventListener("click", a => {
   settingGame.style.display = "flex";
 });
+exitSettingGame.addEventListener("click", a => {
+  
+});
 
 }());
