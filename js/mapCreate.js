@@ -36,7 +36,7 @@ NFSTR.prototype.conStructorR = function(name,proto) {
 const structure = new NFSTR();
 structure.conStructorR(("smallRoad"),[[
   [0],],
-  [1,[true,true,true,true]],
+  [2,[true,true,true,true]],
   [-2,2],
   [[0,-1],[1,-1],[1,0],[1,1],[0,1]],
   [[-1,0],[-1,-1],[0,-1],[1,-1],[1,0]],
@@ -49,7 +49,7 @@ structure.conStructorR(("mediumRoad"),[[
   [1],[0],[0],[1],
   [1],[0],[0],[1],
   [1],[1],[1],[1]],
-  [1,[true,true,true,true]],
+  [2,[true,true,true,true]],
 ]);
 structure.conStructorR(("largeRoad"),[[
   [1],[1],[1],[1],[1],
@@ -57,7 +57,7 @@ structure.conStructorR(("largeRoad"),[[
   [1],[0],[0],[0],[1],
   [1],[0],[0],[0],[1],
   [1],[1],[1],[1],[1],],
-  [1,[true,true,true,true]]
+  [2 ,[true,true,true,true]]
 ]);
 structure.conStructorR(("megaRoad"),[[
   [1],[1],[1],[1],[1],[1],
@@ -66,7 +66,7 @@ structure.conStructorR(("megaRoad"),[[
   [1],[0],[0],[0],[0],[1],
   [1],[0],[0],[0],[0],[1],
   [1],[1],[1],[1],[1],[1],],
-  [1,[true,true,true,true]]
+  [2,[true,true,true,true]]
 ]);
 structure.conStructorB(("basicSquare"),[[
   [1, 1, 0, 1, 1],
@@ -75,7 +75,7 @@ structure.conStructorB(("basicSquare"),[[
   [1, 0, 0, 0, 1],
   [1, 1, 0, 1, 1],],
   [[0,[[[2,0],[0,3],[4,3]],[2,2,2],[50,50,50]]],
-  [1,[true,true,true,true]],]
+  [2,[true,true,true,true]],]
 ]);
 structure.conStructorB(("treasureRoom"),[[
   [1, 1, 1, 1, 0, 1, 1, 1, 1],
