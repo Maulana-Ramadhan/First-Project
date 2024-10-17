@@ -189,18 +189,10 @@ class NewMap {
 const AllMap = {};
 function createEl({tagEl,id,className,event,html,text}) {
   const me = document.createElement(tagEl);
-  id||(me.id = id);
-  console.log(id||"more than you know");
-  console.log(me);
+  id&&(me.id = id);
   className||me.classList.add(...className);
-  console.log(className||"more than you know");
-  console.log(me);
   event||me.addEventListener(event[0], event[1]);
-  console.log(event||"more than you know");
-  console.log(me);
   (text||(me.innerText = text))||(html||(me.innerHTML = html));
-  console.log((text||"more than you know")||(html||"more than i know"));
-  console.log(me);
   return me;
 }
 
