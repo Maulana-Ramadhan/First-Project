@@ -1,6 +1,6 @@
 function NFSTR() {}
 const enCodetoObject = ["air","solid","walk","door","chest"];
-const configuration = ["choosedPlace","allowRotate","start"];
+const configuration = ["choosedPlace","placeChoose","allowRotate","start"];
 const ECTObc = ["","black","skyblue","brown","gray"];
 NFSTR.prototype.metStructor = {
   reverseC(){return this.enCodetoObject.toReversed().map((ki)=>k.map((l,j)=>this.enCodetoObject[i][j]))},
