@@ -4,7 +4,6 @@ const opcl = {
   cin: false,
   mw: false,
   jw: false,
-  
 };
 
 OPCLcontainerInputName.addEventListener("click", a => {
@@ -37,6 +36,7 @@ OPCLjoinWorld.addEventListener("click", a => {
     opcl.jw = true;
   }
 });
+
 createWorld.addEventListener("click", a => {
   console.log(getComputedStyle(OPCLmyWorld).getPropertyValue("display"));
   createWorldMenu.style.display = "flex";
@@ -69,4 +69,9 @@ createNewWorld.addEventListener("click", a => {
   }
 });
 warningCreateWorldMenu.addEventListener('animationend', (e) => warningCreateWorldMenu.style.animationName = "");
+
+settingMainMenu.addEventListener("click", a => {
+  
+});
+
 }());
