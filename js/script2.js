@@ -88,7 +88,7 @@ myWorld.appendChild(createEl({
     MainMenu.style.display = "none";
     loadingScreen.style.display = "flex";
     setTimeout(function() {
-      for (let i = 0; i < 1000; i++) AllMap.mau.createMAp();
+      for (let i = 0; i < 500; i++) AllMap.mau.createMAp();
       loadingScreen.style.display = "none";
       MainGame.style.display = "flex";
       const me = JSON.stringify(AllMap);
