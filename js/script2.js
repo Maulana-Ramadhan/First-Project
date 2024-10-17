@@ -88,11 +88,11 @@ myWorld.appendChild(createEl({
     MainMenu.style.display = "none";
     loadingScreen.style.display = "flex";
     setTimeout(function() {
-      for (let i = 0; i < 10000; i++) AllMap.mau.createMAp();
+      for (let i = 0; i < 100000; i++) AllMap.mau.createMAp();
       loadingScreen.style.display = "none";
       MainGame.style.display = "flex";
       
-    }, 0);
+    }, 10);
   }]
 }));
 }());
