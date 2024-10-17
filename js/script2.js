@@ -51,7 +51,7 @@ createNewWorld.addEventListener("click", a => {
     warningCreateWorldMenu.innerText = "Map Name Cannot Be Empty";
     warningCreateWorldMenu.style.animationName = "fadeOut";
   } else if (Object.keys(AllMap).some(a => a == newWorldName.value)) {
-    warningCreateWorldMenu.innerText = "Map With The Same Has Already Exist";
+    warningCreateWorldMenu.innerText = "Map With The Same Name Has Already Exist";
     warningCreateWorldMenu.style.animationName = "fadeOut";
   } else {
     AllMap[newWorldName.value] = new NewMap(newWorldName.value,newWorldNumber.value);
