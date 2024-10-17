@@ -188,7 +188,7 @@ class NewMap {
     let i = "";
     for (let i = 0; i < Things.length; i++) {
     for (let i = 0; i < Things.length; i++) {
-      
+      ik += ECTOel(me?"red":ECTObc[v2],k2*10,k1*10);
     }}
     for (const [k1,v1] of Object.entries(map)) {
     for (const [k2,v2] of Object.entries(v1)) {
