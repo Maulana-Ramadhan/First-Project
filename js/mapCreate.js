@@ -188,6 +188,7 @@ class NewMap {
 
 const AllMap = {};
 function createEl({tagEl,id,className,event,html,text}) {
+  console.log(tagEl,id,className,event,html,event);
   const me = document.createElement(tagEl);
   id||(me.id = id);
   className||me.classList.add(...className);
