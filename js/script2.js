@@ -74,7 +74,7 @@ settingMainMenu.addEventListener("click", a => {
   settingGame.style.display = "flex";
 });
 exitSettingGame.addEventListener("click", a => {
-  
+  settingGame.style.display = "none";
 });
 
 }());
