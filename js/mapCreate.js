@@ -186,7 +186,7 @@ class NewMap {
   loadMap() {
     let i = "";
     for (let i = -15; i < 15; i++) {
-    for (let j = 0; j < Things.length; j++) {
+    for (let j = -15; j < 15; j++) {
       ik += createElT(ECTObc[this.map[i][j]],i*10,j*10);
     }}
     canvasMap.innerHTML = ik;
