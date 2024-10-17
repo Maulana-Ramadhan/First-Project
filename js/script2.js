@@ -79,4 +79,14 @@ exitSettingGame.addEventListener("click", a => {
   settingGame.style.display = "none";
 });
 
+myWorld.appendChild(createEl({
+  tagEl: "div",
+  className: ["worldList"],
+  text: newWorldName.value,
+  event: ["click", ({srcElement:el}) => {
+    MainGame.style.display = "none";
+    loadingScreen.style.display = "flex";
+    for (let i = 0; i < 1000; i++) AllMap[newWorldName.value].createMAp();
+  }]
+}));
 }());
