@@ -91,7 +91,7 @@ myWorld.appendChild(createEl({
       for (let i = 0; i < 100000; i++) AllMap.mau.createMAp();
       loadingScreen.style.display = "none";
       MainGame.style.display = "flex";
-      
+      localStorage.setItem(`AllMap_${mau}`, JSON.parse(AllMap));
     }, 10);
   }]
 }));
