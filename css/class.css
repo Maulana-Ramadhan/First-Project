@@ -66,6 +66,13 @@
   top: calc((100vh - 80vmin) / 2);
   left: calc((100vw - 80vmin) / 2);
 }
+.conPopUp {
+  width: 100vh;
+  height: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 .worldList{
   font-size: 50px;
 }
