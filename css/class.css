@@ -39,6 +39,8 @@
   display: block;
 }
 .menuConCon {
+  padding-top: 5px;
+  padding-bottom: 5px;
   display: none;
   background: #4e4e4e;
   width: 90vw;
