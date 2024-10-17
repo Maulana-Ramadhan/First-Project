@@ -113,7 +113,7 @@ const whichPath = [
 ];
 
 class NewMap {
-  constructor(name,seed){
+  constructor(name,seed) {
     this.datas = {};
     this.name = name;
     this.rng = Srand(seed);
@@ -187,7 +187,7 @@ class NewMap {
     let i = "";
     for (let i = 0; i < Things.length; i++) {
     for (let j = 0; j < Things.length; j++) {
-      ik += createElT(ECTObc[v2],k2*10,k1*10);
+      ik += createElT(ECTObc[this.map[i][j]],i*10,j*10);
     }}
     for (const [k1,v1] of Object.entries(map)) {
     for (const [k2,v2] of Object.entries(v1)) {
