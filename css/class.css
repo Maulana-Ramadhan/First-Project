@@ -41,6 +41,7 @@
 .menuConCon {
   padding-top: 5px;
   padding-bottom: 5px;
+  box-sizing: content-box;
   display: none;
   background: #4e4e4e;
   width: 90vw;
