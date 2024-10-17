@@ -63,7 +63,7 @@ createNewWorld.addEventListener("click", a => {
       event: ["click", ({srcElement:el}) => {
         MainGame.style.display = "none";
         loadingScreen.style.display = "flex";
-        el.innerText
+        AllMap[newWorldName.value]
       }]
     }));
     newWorldName.value = "";
