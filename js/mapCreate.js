@@ -192,7 +192,7 @@ function createEl({tagEl,id,className,event,html,text}) {
   id||(me.id = id);
   className||me.classList.add(...className);
   event||me.addEventListener(event[0], event[1]);
-  (html||(me.innerHTML = html))||(text||(me.innerText = text));
+  (text||(me.innerText = text))||(html||(me.innerHTML = html));
   return me;
 }
 
