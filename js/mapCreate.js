@@ -184,6 +184,9 @@ class NewMap {
     this.whichMany.plusing = [];
     this.branchRoad.plus(1/(this.Cmap.length||1));
   }
+  loadMap() {
+    this.map
+  }
 }
 
 const AllMap = {};
