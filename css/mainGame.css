@@ -8,7 +8,8 @@
   justify-content: center;
 }
 #canvasMap{
-  height: 100vh;
+  --minus: 0;
+  height: calc(100vh - var(--minus));
   width: 100vw;
   position: absolute;
   overflow: hidden;
