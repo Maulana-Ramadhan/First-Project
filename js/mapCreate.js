@@ -203,3 +203,70 @@ function createEl({tagEl,id,className,event,html,text}) {
   (text&&(me.innerText = text))&&(html&&(me.innerHTML = html));
   return me;
 }
+
+
+/*
+const map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
+const Cmap = [[0, 0]];
+const branchRoad = [1, 10, 30];
+branchRoad.plus = function (a) {
+  for (let i = this.length - 1, j = a; i > 0; i--, j+=a) {
+    this[i] += j;
+  }
+};
+branchRoad.mins = function (a) {
+  this[a] = 10;
+};
+branchRoad.get = function () {
+  return [this[0], this[0] + this[1], this[0] + this[1] + this[2]];
+};
+const whichMany = [[],[]];
+whichMany.plusing = [];
+const current = "smallRoad";
+function createMAp(rng) {
+  console.clear();
+  for (const [k, v] of Cmap.entries()) {
+    for (let i = structure[current].limit[0]; i <= structure[current].limit[1]; i++) 
+    if (!map?.[v[0] + i]) map[v[0] + i] = {};
+    for (let j = 0, i = whichPath[j]; j < 4; j++, i = whichPath[j]) {
+      if (map[v[0] + i[0]][v[1] + i[1]] != 2) {
+        if (
+        (map[v[0] + i[0]][v[1] + i[1] + 1] == 2)? (
+          (map[v[0] + i[0]][v[1] + i[1] - 1] == 2)? (
+            (map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || (map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+          ): (
+            ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2)) &&
+            ((map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+          )
+        ): (
+          (map[v[0] + i[0]][v[1] + i[1] - 1] == 2)? (
+            ((map[v[0] + i[0] + 1][v[1] + i[1]] != 2 || map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] != 2 || map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2)) &&
+            ((map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2) && (map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2))
+          ): (
+            (map[v[0] + i[0] + 1][v[1] + i[1]] == 2 || (map[v[0] + i[0] + 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] + 1][v[1] + i[1] - 1] != 2)) && (map[v[0] + i[0] - 1][v[1] + i[1]] == 2 || (map[v[0] + i[0] - 1][v[1] + i[1] + 1] != 2 && map[v[0] + i[0] - 1][v[1] + i[1] - 1] != 2))
+          )
+        )) whichMany[0].push([v[0] + i[0], v[1] + i[1], i[2]]);
+      } else whichMany[1].push([v[0] + i[0], v[1] + i[1], i[2]]);
+    }
+    if (whichMany[0].length == 0) {
+      if (Cmap.length > 2) {
+        Cmap.splice(k, 1);
+        continue;
+      } else {
+        whichMany.shift();
+      }
+    }
+    for (const [i,x] of Object.entries(rng.sample(whichMany[0], rng.branchRoad(whichMany[0].length)))) {
+      map[x[0]][x[1]] = 2;
+      for (const i of structure[current].walls) if (!map[x[0] + i[0]][x[1] + i[1]]) map[x[0] + i[0]][x[1] + i[1]] = 1;
+      if (i == 0) Cmap[k] = x;
+      else whichMany.plusing.push(x);
+    }
+    whichMany[0] = [];
+    whichMany[1] = [];
+  }
+  Cmap.push(...whichMany.plusing);
+  whichMany.plusing = [];
+  branchRoad.plus(1/(Cmap.length||1));
+}
+*/
