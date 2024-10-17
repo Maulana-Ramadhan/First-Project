@@ -33,8 +33,12 @@
   position: absolute;
   overflow: scroll;
   width: 100vw;
-  height: 100px;
+}
+#controller {
   position: absolute;
+  overflow: scroll;
+  width: 100vw;
+  height: 100px;
 }
 #analog {
   position: absolute;
