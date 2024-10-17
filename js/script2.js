@@ -87,7 +87,7 @@ myWorld.appendChild(createEl({
   event: ["click", ({srcElement:el}) => {
     MainMenu.style.display = "none";
     loadingScreen.style.display = "flex";
-    for (let i = 0; i < 1000; i++) AllMap.mau.createMAp();
+    for (let i = 0; i < 10000; i++) AllMap.mau.createMAp();
   }]
 }));
 }());
