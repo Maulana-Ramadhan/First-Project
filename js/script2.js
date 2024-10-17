@@ -62,6 +62,7 @@ createNewWorld.addEventListener("click", a => {
       text: newWorldName.value,
       event: ["click", (a) => {
         MainGame.style.display = "none";
+        
       }]
     }));
     newWorldName.value = "";
