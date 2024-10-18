@@ -200,7 +200,7 @@ class NewMap {
     canvasMap.innerHTML = innerHTML;
     Object.values(elPlayers).forEach((a) => {
         ctx.fillRect(0,0,10,10);
-        ctx.fillStyle = ECTObc[this.map[i][j]];
+        ctx.fillStyle = muid[0];
       //canvasMap.appendChild(a);
     });
   }
