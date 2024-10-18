@@ -97,7 +97,6 @@ myWorld.appendChild(createEl({
       AllMap[el.innerText].loadMap();
       loadingScreen.style.display = "none";
       MainGame.style.display = "flex";
-      //localStorage.setItem(`AllMap_mau`, );
     }, 100);
   }]
 }));
