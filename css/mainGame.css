@@ -6,11 +6,7 @@
   justify-content: center;
 }
 #canvasMap{
-  --minus: 0;
-  height: calc(100vh - var(--minus));
-  width: 100vw;
   position: absolute;
-  overflow: hidden;
   transform: translate(0,0);
   transition: transform .25s linear;
   display: flex;
