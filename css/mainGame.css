@@ -1,7 +1,5 @@
 #MainGame{
   display: none;
-  width: 100vw;
-  width: 100vh;
   position: absolute;
   overflow: hidden;
   align-items: center;
