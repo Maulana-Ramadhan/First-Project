@@ -1,8 +1,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-storage.js";
+import { getStorage } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-storage.js";
 import { getDatabase, ref, set, get, onValue, child, push, update } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
+
 
 
 
