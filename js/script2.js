@@ -63,9 +63,11 @@ createNewWorld.addEventListener("click", a => {
       event: ["click", ({srcElement:el}) => {
         MainMenu.style.display = "none";
         loadingScreen.style.display = "flex";
-        for (let i = 0; i < 1000; i++) AllMap[el.innerText].createMAp();
-        AllMap[el.innerText].loadMap();
-        loadingScreen.style.display = "none";
+        setTimeout(function() {
+          for (let i = 0; i < 500; i++) AllMap.mau.createMAp();
+          loadingScreen.style.display = "none";
+          MainGame.style.display = "flex";
+        }, 100);
       }]
     }));
     newWorldName.value = "";
