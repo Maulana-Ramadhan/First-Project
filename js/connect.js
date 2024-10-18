@@ -23,12 +23,12 @@ const analytics = getAnalytics(app);
 const database = getDatabase(app);
 const auth = getAuth(app);
 const storage = getStorage();
-const storageRef = refS(storage);
 window.fbg = {
   initializeApp,
   getAnalytics,
   getDatabase, ref, set, get, onValue, child, push, update,
   getAuth, signInAnonymously, onAuthStateChanged,
+  getStorage, refS
   
-  app, analytics, database, auth,
+  app, analytics, database, auth, storage
 };
