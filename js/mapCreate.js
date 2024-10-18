@@ -192,7 +192,7 @@ class NewMap {
     for (let j = -15; j <= 15; j++) {
       //this.map[i][j]&&(innerHTML += createElT(ECTObc[this.map[i][j]],i*10,j*10));
       if (this.map[i][j]) {
-        ctx.fillRect(i*10,j*10,10,10)
+        ctx.fillRect(i*10,j*10,10,10);
       }
     }}
     /////////////////////////
