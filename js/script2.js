@@ -94,6 +94,7 @@ myWorld.appendChild(createEl({
     loadingScreen.style.display = "flex";
     setTimeout(function() {
       for (let i = 0; i < 500; i++) AllMap[innerText].createMAp();
+      AllMap[el.innerText].loadMap();
       loadingScreen.style.display = "none";
       MainGame.style.display = "flex";
       //localStorage.setItem(`AllMap_mau`, );
