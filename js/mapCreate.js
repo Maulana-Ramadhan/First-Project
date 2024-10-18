@@ -193,6 +193,7 @@ class NewMap {
       //this.map[i][j]&&(innerHTML += createElT(ECTObc[this.map[i][j]],i*10,j*10));
       if (this.map[i][j]) {
         ctx.fillRect(i*10,j*10,10,10);
+        ctx.fillStyle = ECTObc[this.map[i][j]];
       }
     }}
     /////////////////////////
