@@ -28,7 +28,7 @@ window.fbg = {
   getAnalytics,
   getDatabase, ref, set, get, onValue, child, push, update,
   getAuth, signInAnonymously, onAuthStateChanged,
-  getStorage, refS
+  getStorage, refS,
   
   app, analytics, database, auth, storage
 };
