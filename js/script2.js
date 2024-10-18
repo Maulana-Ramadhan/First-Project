@@ -93,7 +93,7 @@ myWorld.appendChild(createEl({
     MainMenu.style.display = "none";
     loadingScreen.style.display = "flex";
     setTimeout(function() {
-      for (let i = 0; i < 500; i++) AllMap[innerText].createMAp();
+      for (let i = 0; i < 500; i++) AllMap[el.innerText].createMAp();
       AllMap[el.innerText].loadMap();
       loadingScreen.style.display = "none";
       MainGame.style.display = "flex";
