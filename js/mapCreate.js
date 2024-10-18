@@ -186,10 +186,14 @@ class NewMap {
     this.branchRoad.plus(1/(this.Cmap.length||1));
   }
   loadMap() {
-    let innerHTML = "";
+    const ctx = canvasMap.getContext("2d");
+    //let innerHTML = "";
     for (let i = -15; i <= 15; i++) {
     for (let j = -15; j <= 15; j++) {
-      this.map[i][j]&&(innerHTML += createElT(ECTObc[this.map[i][j]],i*10,j*10));
+      //this.map[i][j]&&(innerHTML += createElT(ECTObc[this.map[i][j]],i*10,j*10));
+      if (this.map[i][j]) {
+        ctx.fillRect(i*10,j*10)
+      }
     }}
     /////////////////////////
     canvasMap.innerHTML = innerHTML;
@@ -212,6 +216,7 @@ const createElT = (a,x,y) => `<div class="thus" style="background-color:${a};tra
 
 canvasMap.setAttribute("width",window.innerWidth);
 canvasMap.setAttribute("height",window.innerHeight);
+
 
 /*
 const map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
