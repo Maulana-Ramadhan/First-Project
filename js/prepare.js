@@ -124,7 +124,3 @@ function online() {
   });
 }
 
-/*belajar*/
-
-
-
