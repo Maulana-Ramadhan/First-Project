@@ -63,7 +63,7 @@ createNewWorld.addEventListener("click", a => {
       event: ["click", ({srcElement:el}) => {
         MainMenu.style.display = "none";
         loadingScreen.style.display = "flex";
-        setTimeout(function() {
+        setTimeout(() => {
           for (let i = 0; i < 500; i++) AllMap.mau.createMAp();
           loadingScreen.style.display = "none";
           MainGame.style.display = "flex";
