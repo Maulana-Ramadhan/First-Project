@@ -199,7 +199,8 @@ class NewMap {
     /////////////////////////
     canvasMap.innerHTML = innerHTML;
     Object.values(elPlayers).forEach((a) => {
-      canvasMap.appendChild(a);
+      
+      //canvasMap.appendChild(a);
     });
   }
 }
