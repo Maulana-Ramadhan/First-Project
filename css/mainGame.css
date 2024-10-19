@@ -6,6 +6,7 @@
   justify-content: center;
 }
 #canvasMap{
+  width: 100%;
   position: absolute;
   transform: translate(0,0);
   transition: transform .25s linear;
