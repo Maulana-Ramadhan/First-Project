@@ -11,6 +11,7 @@
 }
 #canvasMap {
   height: max(var(--MGHSize),100%);
+  height: max(var(--MGWSize),100%);
   flex-grow: 0;
   flex-shrink: 0;
   overflow: visible;
