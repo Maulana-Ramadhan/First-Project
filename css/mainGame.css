@@ -8,6 +8,8 @@
   justify-content: center;
 }
 #canvasMap{
+  flex-grow: 0;
+  flex-shrink: 0;
   overflow: visible;
   width: 100%;
   position: relative;
