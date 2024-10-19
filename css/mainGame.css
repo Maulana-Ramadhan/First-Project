@@ -8,6 +8,7 @@
   justify-content: center;
 }
 #canvasMap{
+  overflow: visible;
   width: 100%;
   position: absolute;
   transform: translate(0,0);
