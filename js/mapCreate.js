@@ -218,9 +218,6 @@ function createEl({tagEl,id,className,event,html,text}) {
 }
 const createElT = (a,x,y) => `<div class="thus" style="background-color:${a};transform:translate(${x}px,${y}px)"></div>`;
 
-canvasMap.setAttribute("width",window.innerWidth);
-canvasMap.setAttribute("height",window.innerHeight);
-
 
 /*
 const map = {"-1": {"-1": 1, "0": 1, "1": 1,}, "0": {"-1": 1, "0": 2, "1": 1}, "1": {"-1": 1, "0": 1, "1": 1,}, };
