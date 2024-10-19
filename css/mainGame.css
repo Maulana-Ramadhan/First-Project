@@ -1,7 +1,6 @@
 #MainGame{
   width: 100vw;
   height: 100vh;
-  background-color: green;
   display: none;
   position: absolute;
   overflow: hidden;
@@ -13,7 +12,6 @@
   position: absolute;
   transform: translate(0,0);
   transition: transform .25s linear;
-  background-color: red;
 }
 .players{
   position: absolute;
