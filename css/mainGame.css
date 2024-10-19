@@ -9,8 +9,6 @@
   flex-grow: 0;
   flex-shrink: 0;
   overflow: visible;
-  position: absolute;
-  
 }
 #mobileOnly {
   position: absolute;
