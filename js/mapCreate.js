@@ -199,8 +199,9 @@ class NewMap {
     /////////////////////////
     //canvasMap.innerHTML = innerHTML;
     Object.values(elPlayers).forEach((a) => {
-        ctx.fillRect(0,0,10,10);
         ctx.fillStyle = a[0];
+        ctx.fillRect(0,0,10,10);
+        ctx.fill();
       //canvasMap.appendChild(a);
     });
   }
