@@ -1,4 +1,5 @@
 #MainGame{
+  background-color: green;
   display: none;
   position: absolute;
   overflow: hidden;
