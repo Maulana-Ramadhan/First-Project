@@ -12,6 +12,7 @@
 }
 #canvasMap {
   overflow: visible;
+  image-rendering: pixelated;
 }
 #mobileOnly {
   flex-grow: 0;
