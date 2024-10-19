@@ -10,7 +10,12 @@
 #canvasMap{
   overflow: visible;
   width: 100%;
-  position: absolute;
+  position: relative;
+}
+#mobileOnly {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
 }
 .players{
   position: absolute;
@@ -21,11 +26,6 @@
   transform: translate(0,0);
   transition: transform .25s linear;
   overflow: visible;
-}
-#mobileOnly {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
 }
 
 
