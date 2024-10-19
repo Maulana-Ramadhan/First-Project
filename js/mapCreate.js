@@ -202,7 +202,6 @@ class NewMap {
         ctx.fillStyle = a[0];
         ctx.fillRect(0,0,10,10);
         ctx.fill();
-      //canvasMap.appendChild(a);
     });
   }
 }
