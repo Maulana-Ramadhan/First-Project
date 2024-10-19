@@ -6,8 +6,6 @@
   overflow: hidden;
 }
 #canvasMap {
-  flex-grow: 0;
-  flex-shrink: 0;
   overflow: visible;
 }
 #mobileOnly {
