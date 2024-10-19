@@ -5,12 +5,15 @@
   position: absolute;
   overflow: hidden;
 }
+#conCanvasMap {
+  flex-grow: 1;
+}
 #canvasMap {
   overflow: visible;
 }
 #mobileOnly {
-  position: absolute;
-  bottom: 0;
+  flex-grow: 0;
+  position: relative;
   width: 100vw;
 }
 .players{
