@@ -217,8 +217,7 @@ function createEl({tagEl,id,className,event,html,text}) {
   return me;
 }
 const createElT = (a,x,y) => `<div class="thus" style="background-color:${a};transform:translate(${x}px,${y}px)"></div>`;
-
-canvasMap.stye[canvasMap.width<canvasMap.height?"width":"height"] = "100%";
+canvasMap.style[canvasMap.width<canvasMap.height?"width":"height"] = "100%";
 
 
 
