@@ -67,7 +67,7 @@ createNewWorld.addEventListener("click", a => {
           for (let i = 0; i < 500; i++) AllMap[el.innerText].createMAp();
           AllMap[el.innerText].loadMap();
           loadingScreen.style.display = "none";
-          MainGame.style.display = "flex";
+          MainGame.style.display = "block";
         }, 100);
       }]
     }));
