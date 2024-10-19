@@ -4,10 +4,10 @@
   display: none;
   position: absolute;
   overflow: hidden;
+  flex-direction: column;
 }
 #conCanvasMap {
   flex-grow: 1;
-  flex-direction: column;
 }
 #canvasMap {
   overflow: visible;
